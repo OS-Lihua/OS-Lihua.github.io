@@ -1,0 +1,56 @@
+- class_name: 与我相关
+  link_list:
+    - name: github
+      link: https://github.com/OS-Lihua
+      avatar: https://avatars.githubusercontent.com/u/64675051?s=400&u=8da306ab570c18fb9fd47438deea91937307984a&v=4
+      descr: 程序员交友网站
+    - name: BiliBili
+      link: https://space.bilibili.com/472108472?spm_id_from=333.1007.0.0
+      avatar: https://i2.hdslb.com/bfs/face/dace8f40ae285dc087db9b014b7b777c5f346bae.jpg@160w_160h_1c_1s_!web-avatar.webp
+      descr: B站
+    - name: LeetCode
+      link: https://leetcode.cn/u/jia-ru-wo-shi-li-hua/
+      avatar: https://assets.leetcode.cn/aliyun-lc-upload/users/jia-ru-wo-shi-li-hua/avatar_1689697917.png?x-oss-process=image%2Fformat%2Cwebp
+      descr: 力扣
+
+- class_name: 知识学习网站
+  class_desc: 值得推荐的知识网站
+  link_list:
+    - name: 登链社区
+      link: https://learnblockchain.cn/
+      avatar: https://learnblockchain.cn/
+      descr: WEB3
+    - name: 小林Coding
+      link: https://xiaolincoding.com/
+      avatar: https://xiaolincoding.com/logo.png
+      descr: 图解系列
+    - name: 代码随想录
+      link: https://www.programmercarl.com/
+      avatar: https://code-thinking-1253855093.file.myqcloud.com/pics/20210614201246512.png
+      descr: 算法
+    - name: labuladong算法
+      link: https://labuladong.gitee.io/algo/
+      avatar: https://labuladong.gitee.io/algo/logo.svg
+      descr: 算法小抄
+    - name: 阿秀的学习笔记
+      link: https://interviewguide.cn/
+      avatar: https://interviewguide.cn/images/personal/logo.png
+      descr: 学习笔记
+    - name: CS自学指南
+      link: https://csdiy.wiki/
+      avatar: https://csdiy.wiki/images/title.png
+      descr: 学习指南
+
+
+- class_name: 工具链接
+  class_desc: 工具网站
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-tw/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网志框架
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: /img/favicon.png
+      descr: 风格框架
+
