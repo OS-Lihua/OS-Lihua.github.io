@@ -1,3 +1,14 @@
+- class_name: 我的朋友
+  link_list:
+    - name: lewis
+      link: https://prelude-blog.vercel.app/
+      descr: good man
+    - name: unic
+      link: https://www.yunique.top/
+      descr: good man
+    - name: zitian
+      link: https://renkosky.github.io/
+      descr: good man
 - class_name: 与我相关
   link_list:
     - name: github
@@ -12,7 +23,6 @@
       link: https://leetcode.cn/u/jia-ru-wo-shi-li-hua/
       avatar: https://assets.leetcode.cn/aliyun-lc-upload/users/jia-ru-wo-shi-li-hua/avatar_1689697917.png?x-oss-process=image%2Fformat%2Cwebp
       descr: 力扣
-
 - class_name: 知识学习网站
   class_desc: 值得推荐的知识网站
   link_list:
@@ -40,7 +50,6 @@
       link: https://csdiy.wiki/
       avatar: https://csdiy.wiki/images/title.png
       descr: 学习指南
-
 
 - class_name: 工具链接
   class_desc: 工具网站
