@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: OS-Lihua   #标题
-subtitle: 'Lihua的星球'  # 副标题
-description: '思想深邃的星球'  # 描述
+title: YaCo   #标题
+subtitle: 'YaCo的宇宙'  # 副标题
+description: 'blog'  # 描述
 keywords: 博客
-author: Lihua  #作者
+author: YaCo  #作者
 language: zh-CN
 timezone: ''
 
