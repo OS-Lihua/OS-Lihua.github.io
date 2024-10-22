@@ -56,6 +56,7 @@ social:
   fab fa-linkedin: https://www.linkedin.com/in/yacoyaco/ || LinkedIn
   # fab fa-hand-paper: https://bonjour.bio/yaco || Bonjour
   fab fa-bilibili: https://space.bilibili.com/472108472 || Bilibili
+  fab fa-zhihu: https://www.zhihu.com/people/3-85-1-69 || Zhihu
 # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
 
 # search (搜索)
@@ -105,7 +106,7 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /img/avatar.jpg
+favicon: /img/logo.png
 
 # Avatar (头像)
 avatar:
@@ -297,7 +298,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use: # Valine,Disqus
+  use: Livere # Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -322,7 +323,7 @@ disqusjs:
 # livere (来必力)
 # https://www.livere.com/
 livere:
-  uid:
+  uid: MTAyMC82MDIwMC8zNjY2OA
 
 # gitalk
 # https://github.com/gitalk/gitalk
