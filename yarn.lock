@@ -844,11 +844,6 @@ hexo-util@^2.0.0, hexo-util@^2.7.0:
     prismjs "^1.17.1"
     strip-indent "^3.0.0"
 
-hexo-webp-cloud-proxy@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npmmirror.com/hexo-webp-cloud-proxy/-/hexo-webp-cloud-proxy-1.0.3.tgz"
-  integrity sha512-OB77IJB7Z0DKLFVySkMDXiKpNRiHRS60XsO9TJOcQ8yOZaIb7GUSnMUneLjEY4ixXfvlQPwZtcejY3JO53YUBA==
-
 hexo@^6.3.0:
   version "6.3.0"
   resolved "https://registry.npmmirror.com/hexo/-/hexo-6.3.0.tgz"
