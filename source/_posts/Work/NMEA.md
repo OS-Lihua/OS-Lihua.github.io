@@ -7,7 +7,7 @@ tags:
 
 categories: 
 	- Android
-
+cover: https://image.yaco.email/NMEA.png
 ---
 
 

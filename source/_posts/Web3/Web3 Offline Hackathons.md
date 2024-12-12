@@ -1,4 +1,4 @@
-title: 我们获奖了
+title: 第一次参加线下黑客松
 date: 2024/04/21 23:48:59
 tags: 
     - Web3
@@ -6,15 +6,8 @@ tags:
     - 团队
 categories: 
     - 随笔
-
+cover: https://image.yaco.email/TraveOnChain.png
 ---
-
-
-
-1. 感谢openbuild
-2. 感谢chainlink
-3. 感谢morph
-4. 感谢团队的每一位小伙伴
 
 这算是个日记向的更新吧，有点开心，学了快 1个多月 web3 相关的知识
 
@@ -37,11 +30,16 @@ categories:
 
 有趣的是：我们竟然获奖了
 
+1. 感谢openbuild
+2. 感谢chainlink
+3. 感谢morph
+4. 感谢团队的每一位小伙伴
+
 **NO.1**
 
 **哈哈哈，开心**
 
-由衷的感谢 openbuild、chainlink、morph等主办单位，这次是到目前为止我参加下来最热闹和激动人心的活动(虽然暂时我也就参加了3-4场web3线下活动)
+由衷的感谢 openbuild、chainlink、morph等主办单位，这次是到目前为止我参加下来最热闹和激动人心的活动(虽然暂时我也就参加了2-3场web3线下活动)
   	
 我们的小伙伴也非常的给力，团结而富有激情。
   	

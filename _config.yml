@@ -4,9 +4,9 @@
 
 # Site
 title: YaCo   #标题
-subtitle: 'YaCo的宇宙'  # 副标题
-description: 'blog'  # 描述
-keywords: 博客
+subtitle: Universe  # 副标题
+description: Home  # 描述
+keywords: Universe
 author: YaCo  #作者
 language: zh-CN
 timezone: ''

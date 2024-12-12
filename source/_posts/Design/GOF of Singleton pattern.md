@@ -66,6 +66,3 @@ Single *Single::instance()
     return inst_ptr_;
 };
 ```
-## 图示
-**// TODO**
-**// 后面会加上UML的截图**

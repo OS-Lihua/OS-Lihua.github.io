@@ -2,7 +2,7 @@ title: C++开发知识梳理
 date: 2023/07/28 00:12:00
 tags: C++开发
 categories: 知识梳理
-
+cover: https://image.yaco.email/cpp.png
 ---
 
 # C++开发学习知识点梳理

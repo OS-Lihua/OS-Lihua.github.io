@@ -4,7 +4,7 @@ tags:
     - 智能指针
     - RAII
 categories: Cpp
-
+cover: https://image.yaco.email/smartpoint.png
 ---
 # 手动实现智能指针
 

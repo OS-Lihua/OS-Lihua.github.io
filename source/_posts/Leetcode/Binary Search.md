@@ -4,7 +4,7 @@ tags:
     - 数组
     - 二分查找
 categories: LeetCode
-
+cover: https://image.yaco.email/BinarySearch.png
 ---
 **二分查找相关题目的关键就是区间的定义**
 

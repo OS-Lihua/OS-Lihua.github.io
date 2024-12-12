@@ -4,7 +4,7 @@ tags:
     - C++
     - 大三律
 categories: Cpp
-
+cover: https://image.yaco.email/cpp_op.png
 ---
 # 类
 

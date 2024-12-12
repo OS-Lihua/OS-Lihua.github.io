@@ -1,0 +1,81 @@
+// 自定义样式增强
+
+// 文章卡片悬浮效果
+#recent-posts > .recent-post-item {
+  transition: all .3s;
+}
+#recent-posts > .recent-post-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+// 按钮样式优化
+.button--animated {
+  transition: all 0.3s ease-out;
+}
+.button--animated:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+// 页面顶部进度条
+.pace-progress {
+  background: var(--theme-color);
+}
+
+// 代码块样式优化
+figure.highlight {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+// 文章内容链接下划线动画
+#article-container a:not(.fancybox):hover {
+  text-decoration: none;
+  border-bottom: 2px solid var(--theme-color);
+}
+
+// 侧边栏卡片样式优化
+#aside-content .card-widget {
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+#aside-content .card-widget:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+// 首页文章卡片标题动画
+#recent-posts > .recent-post-item >.recent-post-info > .article-title:hover {
+  transform: translateX(10px);
+}
+
+// 滚动条美化
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--theme-color);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+// 标签云动画
+#aside-content .card-tag-cloud a:hover {
+  color: var(--theme-color) !important;
+  transform: scale(1.1);
+}
+
