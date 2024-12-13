@@ -2,34 +2,53 @@
   link_list:
     - name: lewis
       link: https://prelude-blog.vercel.app/
+      avatar: https://avatars.githubusercontent.com/u/108063429
       descr: good man
     - name: unic
       link: https://www.yunique.top/
+      avatar: https://www.yunique.top/upload/Yunique-vert.png
       descr: good man
     - name: zitian
       link: https://renkosky.github.io/
+      avatar: https://renkosky.github.io/images/avatar.gif
       descr: good man
 - class_name: 与我相关
   link_list:
     - name: github
       link: https://github.com/OS-Lihua
-      avatar: https://avatars.githubusercontent.com/u/64675051?s=400&u=8da306ab570c18fb9fd47438deea91937307984a&v=4
+      avatar: https://avatars.githubusercontent.com/u/64675051
       descr: 程序员交友网站
     - name: BiliBili
-      link: https://space.bilibili.com/472108472?spm_id_from=333.1007.0.0
-      avatar: https://i2.hdslb.com/bfs/face/dace8f40ae285dc087db9b014b7b777c5f346bae.jpg@160w_160h_1c_1s_!web-avatar.webp
+      link: https://space.bilibili.com/472108472
+      avatar: https://avatars.githubusercontent.com/u/64675051
       descr: B站
-    - name: LeetCode
-      link: https://leetcode.cn/u/jia-ru-wo-shi-li-hua/
-      avatar: https://assets.leetcode.cn/aliyun-lc-upload/users/jia-ru-wo-shi-li-hua/avatar_1689697917.png?x-oss-process=image%2Fformat%2Cwebp
-      descr: 力扣
+    - name: Youtube
+      link: https://www.youtube.com/@0xYaCo
+      avatar: https://yt3.googleusercontent.com/NfDQebfK-WngFvUohfXPBgHFL9o3J20ECCZAb1yl0Lx_T7gceazLAfDDFRNvfhbwsg_gMneIgw=s160-c-k-c0x00ffffff-no-rj
+      descr: 油管
 - class_name: 知识学习网站
-  class_desc: 值得推荐的知识网站
+  class_desc: 我的收藏
   link_list:
     - name: 登链社区
       link: https://learnblockchain.cn/
-      avatar: https://learnblockchain.cn/
+      avatar: https://image.yaco.email/upchain.png
       descr: WEB3
+    - name: HackQuest
+      link:  https://www.hackquest.io/
+      avatar: https://image.yaco.email/hackquest.png
+      descr: Web3 开发者平台
+    - name: Cyfrin Updraft
+      link:  https://updraft.cyfrin.io/
+      avatar: https://image.yaco.email/CyfrinUpdraft.png
+      descr: 教导下一代 web3 开发人员
+    - name: WTF Academy
+      link:  https://www.wtf.academy/
+      avatar: https://image.yaco.email/WTFAcademy.png
+      descr: 开发者的 Web3 开源大学
+    - name: DappLearning
+      link: https://dapplearning.org/
+      avatar: https://avatars.githubusercontent.com/u/93908965?s=50&v=4
+      descr: 开源的开发者社区
     - name: 小林Coding
       link: https://xiaolincoding.com/
       avatar: https://xiaolincoding.com/logo.png
@@ -39,13 +58,9 @@
       avatar: https://code-thinking-1253855093.file.myqcloud.com/pics/20210614201246512.png
       descr: 算法
     - name: labuladong算法
-      link: https://labuladong.gitee.io/algo/
-      avatar: https://labuladong.gitee.io/algo/logo.svg
+      link: https://labuladong.online/algo/
+      avatar: https://labuladong.online/algo/logo.svg
       descr: 算法小抄
-    - name: 阿秀的学习笔记
-      link: https://interviewguide.cn/
-      avatar: https://interviewguide.cn/images/personal/logo.png
-      descr: 学习笔记
     - name: CS自学指南
       link: https://csdiy.wiki/
       avatar: https://csdiy.wiki/images/title.png
