@@ -1,12 +1,14 @@
+---
 title: 第一次参加线下黑客松
-date: 2024/04/21 23:48:59
-tags: 
-    - Web3
-    - 荣誉
-    - 团队
-categories: 
-    - 随笔
-cover: https://image.yaco.email/TraveOnChain.png
+date: '2024/04/21 23:48:59'
+tags:
+  - Web3
+  - 荣誉
+  - 团队
+categories:
+  - 随笔
+cover: 'https://image.yaco.email/TraveOnChain.png'
+abbrlink: 2745687355
 ---
 
 这算是个日记向的更新吧，有点开心，学了快 1个多月 web3 相关的知识

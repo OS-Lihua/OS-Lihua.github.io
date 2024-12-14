@@ -1,13 +1,14 @@
+---
 title: NMEA 信息获取
-date: 2024/04/24 13:35:00
-tags: 
-    - NMEA
-    - GPS
-    - Location
-
-categories: 
-	- Android
-cover: https://image.yaco.email/NMEA.png
+date: '2024/04/24 13:35:00'
+tags:
+  - NMEA
+  - GPS
+  - Location
+categories:
+  - Android
+cover: 'https://image.yaco.email/NMEA.png'
+abbrlink: 3155365094
 ---
 
 

@@ -1,8 +1,10 @@
+---
 title: Hexo 安装 和 配置
-date: 2023/07/14 19:25:00
+date: '2023/07/14 19:25:00'
 tags: hexo
 categories: 博客
-cover: https://image.yaco.email/hexo.png
+cover: 'https://image.yaco.email/hexo.png'
+abbrlink: 4120312060
 ---
 
 

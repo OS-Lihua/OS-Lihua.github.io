@@ -1,10 +1,12 @@
+---
 title: 类
-date: 2023/07/01 15:33:00
-tags: 
-    - C++
-    - 大三律
+date: '2023/07/01 15:33:00'
+tags:
+  - C++
+  - 大三律
 categories: Cpp
-cover: https://image.yaco.email/cpp_op.png
+cover: 'https://image.yaco.email/cpp_op.png'
+abbrlink: 4068600522
 ---
 # 类
 

@@ -699,8 +699,9 @@ aside:
       icon: fab fa-github
       text: Follow Me
       link: https://github.com/OS-Lihua
+  # 公共栏
   card_announcement:
-    enable: true
+    enable: false
     content: Welcome to Yaco's Universe！
   card_recent_post:
     enable: true

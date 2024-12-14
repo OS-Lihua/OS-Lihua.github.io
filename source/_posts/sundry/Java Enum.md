@@ -1,10 +1,11 @@
+---
 title: Java枚举
-date: 2023/08/21 23:47:00
-tags: 
-    - Java
-    - 枚举
+date: '2023/08/21 23:47:00'
+tags:
+  - Java
+  - 枚举
 categories: Java
-
+abbrlink: 3020691415
 ---
 # 如何写一个优雅的 java 枚举
 

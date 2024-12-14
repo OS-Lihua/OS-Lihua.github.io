@@ -1,8 +1,10 @@
+---
 title: Blog pages 配置
-date: 2023/07/17 00:00:30
+date: '2023/07/17 00:00:30'
 tags: 博客页面
 categories: 博客
-cover: https://image.yaco.email/hexo_github.png
+cover: 'https://image.yaco.email/hexo_github.png'
+abbrlink: 1950715347
 ---
 
 ## 用于一系列页面的配置

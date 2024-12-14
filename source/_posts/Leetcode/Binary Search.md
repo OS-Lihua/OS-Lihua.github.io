@@ -1,10 +1,12 @@
+---
 title: 二分查找
-date: 2023/07/20 23:30:00
-tags: 
-    - 数组
-    - 二分查找
+date: '2023/07/20 23:30:00'
+tags:
+  - 数组
+  - 二分查找
 categories: LeetCode
-cover: https://image.yaco.email/BinarySearch.png
+cover: 'https://image.yaco.email/BinarySearch.png'
+abbrlink: 3907716225
 ---
 **二分查找相关题目的关键就是区间的定义**
 

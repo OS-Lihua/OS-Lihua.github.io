@@ -1,10 +1,12 @@
+---
 title: 手动实现智能指针
-date: 2023/06/19 14:25:00
-tags: 
-    - 智能指针
-    - RAII
+date: '2023/06/19 14:25:00'
+tags:
+  - 智能指针
+  - RAII
 categories: Cpp
-cover: https://image.yaco.email/smartpoint.png
+cover: 'https://image.yaco.email/smartpoint.png'
+abbrlink: 1436050551
 ---
 # 手动实现智能指针
 

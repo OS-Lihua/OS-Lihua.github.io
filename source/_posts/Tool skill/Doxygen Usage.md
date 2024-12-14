@@ -1,11 +1,13 @@
+---
 title: Doxygen 用法
-date: 2023/06/27 16:15:00
-tags: 
-    - UML
-    - 自动生成
-categories: 
-    - UML
-cover: https://image.yaco.email/DargonEg.png
+date: '2023/06/27 16:15:00'
+tags:
+  - UML
+  - 自动生成
+categories:
+  - UML
+cover: 'https://image.yaco.email/DargonEg.png'
+abbrlink: 1844275311
 ---
 # 使用 Doxygen 从源代码生成 UML 类图
 
