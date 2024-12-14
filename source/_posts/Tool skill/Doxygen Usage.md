@@ -5,7 +5,7 @@ tags:
   - UML
   - 自动生成
 categories:
-  - UML
+  - Tool
 cover: 'https://image.yaco.email/DargonEg.png'
 abbrlink: 1844275311
 ---
