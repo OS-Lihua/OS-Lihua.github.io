@@ -1,0 +1,45 @@
+link_list:
+  - name: 段永平
+    avatar: https://www.peoples.ru/undertake/founder/duan_yongping/yongping_1.jpg
+    desc: 步步高创始人，投资大师，苹果和茅台的重要投资者
+    quote: 敢为天下后，后中争先，要本分，不开快车。
+
+  - name: 黄峥
+    avatar: https://n.sinaimg.cn/sinakd202088s/642/w787h655/20200808/8442-ixkvvue2791871.png
+    desc: 拼多多创始人，以技术创新重构零售产业
+    quote: 对的事情，重复做，时间会给你答案。
+
+  - name: 巴菲特
+    avatar: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit.jpg/375px-Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit.jpg
+    desc: 伯克希尔·哈撒韦公司CEO，"奥马哈圣人"，价值投资代表人物
+    quote: 别人贪婪时我恐惧，别人恐惧时我贪婪。
+
+  - name: 马云
+    avatar: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Enabling_eCommerce-_Small_Enterprises%2C_Global_Players_%2839008130265%29_%28cropped%29.jpg/330px-Enabling_eCommerce-_Small_Enterprises%2C_Global_Players_%2839008130265%29_%28cropped%29.jpg
+    desc: 阿里巴巴集团创始人，改变了中国电商格局
+    quote: 今天很残酷，明天更残酷，后天很美好，但绝大多数人死在明天晚上。
+
+  - name: Elon Musk
+    avatar: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Elon_Musk_Royal_Society_%28cropped%29.jpg/330px-Elon_Musk_Royal_Society_%28cropped%29.jpg
+    desc: 特斯拉、SpaceX创始人，推动电动汽车和太空探索革命
+    quote: 当某件事足够重要时，即使机会渺茫，你也要去做。
+
+  - name: 雷军
+    avatar: https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/%E9%9B%B7%E5%86%9B_Lei_Jun_20240425_1.jpg/330px-%E9%9B%B7%E5%86%9B_Lei_Jun_20240425_1.jpg
+    desc: 小米科技创始人，互联网手机革命推动者
+    quote: 永远相信美好的事情即将发生。
+
+  - name: 张一鸣
+    avatar: https://upload.wikimedia.org/wikipedia/commons/e/e0/The_CEO_Magazine_Cover.jpg
+    desc: 字节跳动创始人，抖音和TikTok缔造者
+    quote: 选择比努力更重要，但努力也很重要。
+
+  - name: Alexandra Elbakyan
+    avatar: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Alexandra_Elbakyan.jpg/330px-Alexandra_Elbakyan.jpg
+    desc: Sci-Hub创始人，科研知识开放获取的推动者，被誉为"科学界的罗宾汉"
+    quote: 知识应该属于全人类，而不是少数人的特权。
+
+  - name: 李想
+    avatar: https://th.bing.com/th/id/OIP.fm7HGbwLUgXVgRdWNfCGzQHaE8?rs=1&pid=ImgDetMain
+    desc: 理想汽车创始人，推动新能源汽车发展的创新者
+    quote: 把不可能变成可能，这就是理想。
