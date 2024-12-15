@@ -7,7 +7,6 @@ order: 1
 ---
 
 <div class="bookshelf">
-  <h2>我的书架</h2>
   <div class="book-grid">
     {% for category in site.data.book %}
     {% if category.link_list and category.link_list.length > 0 %}
@@ -56,8 +55,8 @@ order: 1
 
 .book-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 30px;
 }
 
 .book-link {
@@ -73,8 +72,10 @@ order: 1
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
+  min-height: 250px;
+  aspect-ratio: 3 / 4;
 }
 
 .book-item:hover {
@@ -95,6 +96,7 @@ order: 1
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   object-fit: cover;
+  pointer-events: none; /* Disable default click behavior on images */
 }
 
 .book-info {
@@ -127,25 +129,34 @@ order: 1
 
 @media (max-width: 1200px) {
   .book-list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
 
 @media (max-width: 900px) {
-  .book-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .book-cover img {
     height: 180px;
   }
 }
 
 @media (max-width: 600px) {
-  .book-list {
-    grid-template-columns: 1fr;
-  }
   .book-cover img {
     height: 200px;
   }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const bookLinks = document.querySelectorAll('.book-link');
+  bookLinks.forEach(link => {
+    const cover = link.querySelector('.book-cover');
+    if (cover) {
+      cover.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default cover click behavior
+        window.open(link.href, '_blank'); // Open link in a new tab
+      });
+    }
+  });
+});
+</script>

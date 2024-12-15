@@ -7,7 +7,6 @@ order: 1
 ---
 
 <div class="people">
-  <h2>人物介绍</h2>
   <div class="people-grid">
     {% for person in site.data.people.link_list %}
     <div class="person-card">
