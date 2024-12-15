@@ -31,7 +31,8 @@ order: 1
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.person-card');
   cards.forEach(card => {
-    card.addEventListener('click', function() {
+    card.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default behavior like image viewing
       card.classList.toggle('is-flipped');
     });
   });
@@ -62,6 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
   width: 100%;
   height: 200px;
   overflow: visible; /* Allow elements to overflow the card boundary */
+  background-color: var(--card-color) !important; /* Ensure card color is not overridden */
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Add a light border to enhance the rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a deeper shadow for more depth */
 }
 
 .person-card.is-flipped .card-front {
@@ -84,10 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  background-color: transparent; /* Set transparent to allow parent color to show */
 }
 
 .card-front {
-  background-color: #f9f9f9;
+  background-color: transparent; /* Set transparent to allow parent color to show */
   display: flex;
   align-items: center;
   padding: 20px;
@@ -95,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
   justify-content: flex-start;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
+  border: none; /* Remove border to avoid unwanted lines */
 }
 
 .avatar {
@@ -131,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .card-back {
-  background-color: #eaeaea;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -140,6 +146,8 @@ document.addEventListener('DOMContentLoaded', function() {
   padding: 20px;
   position: relative;
   overflow: visible;
+  border: none; /* Remove border to avoid unwanted lines */
+  background-color: transparent; /* Set transparent to allow parent color to show */
 }
 
 .card-back .avatar {
@@ -160,4 +168,32 @@ document.addEventListener('DOMContentLoaded', function() {
   color: #333;
   margin-top: 10px; /* Reduced margin to bring text closer to the avatar */
 }
+
+:root {
+  --card-color-1: #FFDDC1;
+  --card-color-2: #FFE4E1;
+  --card-color-3: #FFFACD;
+  --card-color-4: #E6E6FA;
+  --card-color-5: #D3F8E2;
+  --card-color-6: #E0BBE4;
+  --card-color-7: #D5AAFF;
+  --card-color-8: #C1E1C1;
+  --card-color-9: #FFB6C1;
+  --card-color-10: #FADADD;
+  --card-color-11: #B5EAD7;
+  --card-color-12: #C7CEEA;
+}
+
+.people-grid .person-card:nth-child(12n+1) { --card-color: var(--card-color-1); }
+.people-grid .person-card:nth-child(12n+2) { --card-color: var(--card-color-2); }
+.people-grid .person-card:nth-child(12n+3) { --card-color: var(--card-color-3); }
+.people-grid .person-card:nth-child(12n+4) { --card-color: var(--card-color-4); }
+.people-grid .person-card:nth-child(12n+5) { --card-color: var(--card-color-5); }
+.people-grid .person-card:nth-child(12n+6) { --card-color: var(--card-color-6); }
+.people-grid .person-card:nth-child(12n+7) { --card-color: var(--card-color-7); }
+.people-grid .person-card:nth-child(12n+8) { --card-color: var(--card-color-8); }
+.people-grid .person-card:nth-child(12n+9) { --card-color: var(--card-color-9); }
+.people-grid .person-card:nth-child(12n+10) { --card-color: var(--card-color-10); }
+.people-grid .person-card:nth-child(12n+11) { --card-color: var(--card-color-11); }
+.people-grid .person-card:nth-child(12n+0) { --card-color: var(--card-color-12); }
 </style>
