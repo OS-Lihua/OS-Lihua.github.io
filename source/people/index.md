@@ -55,27 +55,28 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .person-card {
-  perspective: 1000px;
+  perspective: 1500px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.8s;
+  transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1); /* Slow down the flipping animation */
   cursor: pointer;
   width: 100%;
   height: 200px;
-  overflow: visible; /* Allow elements to overflow the card boundary */
-  background-color: var(--card-color) !important; /* Ensure card color is not overridden */
-  transition: background-color 0.3s ease;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Add a light border to enhance the rounded corners */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a deeper shadow for more depth */
+  overflow: visible;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.8)), var(--card-color); /* Combine gradient with card color */
+  border-radius: 12px; /* Slightly larger radius for softer edges */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3); /* Make shadow more pronounced and positioned to bottom-right */
+  transition: all 0.3s ease;
 }
 
-.person-card.is-flipped .card-front {
-  transform: rotateY(180deg);
+.person-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover for interactivity */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 30px 60px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
 }
 
-.person-card.is-flipped .card-back {
-  transform: rotateY(0deg);
+.person-card.is-flipped {
+  transform: rotateY(180deg); /* Rotate the entire card for flipping effect */
 }
 
 .card-front, .card-back {
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: transparent; /* Set transparent to allow parent color to show */
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); /* Ensure smooth transition for flipping */
 }
 
 .card-front {
@@ -103,6 +104,19 @@ document.addEventListener('DOMContentLoaded', function() {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: none; /* Remove border to avoid unwanted lines */
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Start with back side rotated */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: visible;
+  border: none; /* Remove border to avoid unwanted lines */
+  background-color: transparent; /* Set transparent to allow parent color to show */
 }
 
 .avatar {
@@ -135,19 +149,6 @@ document.addEventListener('DOMContentLoaded', function() {
   font-size: 1em;
   text-align: center;
   color: #666;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  position: relative;
-  overflow: visible;
-  border: none; /* Remove border to avoid unwanted lines */
-  background-color: transparent; /* Set transparent to allow parent color to show */
 }
 
 .card-back .avatar {
