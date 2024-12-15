@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>书籍 | YaCo</title><meta name="author" content="YaCo"><meta name="copyright" content="YaCo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Home">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>书籍 | YaCo</title><meta name="author" content="YaCo"><meta name="copyright" content="YaCo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我的书架                         技术                                                                                                         深入理解计算机系统               Randal E. Bryant &#x2F; David R. O&#39;Hallaro">
 <meta property="og:type" content="website">
 <meta property="og:title" content="书籍">
 <meta property="og:url" content="https://os-lihua.github.io/book/index.html">
 <meta property="og:site_name" content="YaCo">
-<meta property="og:description" content="Home">
+<meta property="og:description" content="我的书架                         技术                                                                                                         深入理解计算机系统               Randal E. Bryant &#x2F; David R. O&#39;Hallaro">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://picsum.photos/320/240">
 <meta property="article:published_time" content="2024-06-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-13T15:55:38.337Z">
+<meta property="article:modified_time" content="2024-12-15T11:07:15.785Z">
 <meta property="article:author" content="YaCo">
 <meta property="article:tag" content="Universe">
 <meta name="twitter:card" content="summary">
@@ -57,7 +57,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-12-13 23:55:38'
+  postUpdate: '2024-12-15 19:07:15'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -196,7 +196,651 @@ window.addEventListener('load',()=> { preloader.endLoading() })
 if (true) {
   document.addEventListener('pjax:send', () => { preloader.initLoading() })
   document.addEventListener('pjax:complete', () => { preloader.endLoading() })
-}</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/image/"><i class="fa-fw fas fa-camera-retro"></i><span> 照片</span></a></li><li><a class="site-page child" href="/people/"><i class="fa-fw fas fa-user-friends"></i><span> 人物</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/project/"><i class="fa-fw fas fa-project-diagram"></i><span> 项目</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/img/universe.png')"><nav id="nav"><span id="blog-info"><a href="/" title="YaCo"><span class="site-name">YaCo</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/image/"><i class="fa-fw fas fa-camera-retro"></i><span> 照片</span></a></li><li><a class="site-page child" href="/people/"><i class="fa-fw fas fa-user-friends"></i><span> 人物</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/project/"><i class="fa-fw fas fa-project-diagram"></i><span> 项目</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">书籍</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC82MDIwMC8zNjY2OA"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">YaCo</div><div class="author-info__description">Home</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/OS-Lihua" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://x.com/__Lihua__" target="_blank" title="X"><i class="fab fa-x"></i></a><a class="social-icon" href="https://www.linkedin.com/in/yacoyaco/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a><a class="social-icon" href="https://space.bilibili.com/472108472" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a><a class="social-icon" href="https://www.zhihu.com/people/3-85-1-69" target="_blank" title="Zhihu"><i class="fab fa-zhihu"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/2551021931.html" title="WindSurf 登录验证失败"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image.yaco.email/windsurf-start.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WindSurf 登录验证失败"/></a><div class="content"><a class="title" href="/posts/2551021931.html" title="WindSurf 登录验证失败">WindSurf 登录验证失败</a><time datetime="2024-12-14T16:00:00.000Z" title="发表于 2024-12-15 00:00:00">2024-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3155365094.html" title="NMEA 信息获取"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image.yaco.email/NMEA.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="NMEA 信息获取"/></a><div class="content"><a class="title" href="/posts/3155365094.html" title="NMEA 信息获取">NMEA 信息获取</a><time datetime="2024-04-24T05:35:00.000Z" title="发表于 2024-04-24 13:35:00">2024-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2745687355.html" title="第一次参加线下黑客松"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image.yaco.email/TraveOnChain.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一次参加线下黑客松"/></a><div class="content"><a class="title" href="/posts/2745687355.html" title="第一次参加线下黑客松">第一次参加线下黑客松</a><time datetime="2024-04-21T15:48:59.000Z" title="发表于 2024-04-21 23:48:59">2024-04-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3020691415.html" title="Java枚举"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picsum.photos/320/240" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java枚举"/></a><div class="content"><a class="title" href="/posts/3020691415.html" title="Java枚举">Java枚举</a><time datetime="2023-08-21T15:47:00.000Z" title="发表于 2023-08-21 23:47:00">2023-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2453214445.html" title="C++开发知识梳理"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image.yaco.email/cpp.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++开发知识梳理"/></a><div class="content"><a class="title" href="/posts/2453214445.html" title="C++开发知识梳理">C++开发知识梳理</a><time datetime="2023-07-27T16:12:00.000Z" title="发表于 2023-07-28 00:12:00">2023-07-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+}</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/image/"><i class="fa-fw fas fa-camera-retro"></i><span> 照片</span></a></li><li><a class="site-page child" href="/people/"><i class="fa-fw fas fa-user-friends"></i><span> 人物</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/project/"><i class="fa-fw fas fa-project-diagram"></i><span> 项目</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/img/universe.png')"><nav id="nav"><span id="blog-info"><a href="/" title="YaCo"><span class="site-name">YaCo</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/image/"><i class="fa-fw fas fa-camera-retro"></i><span> 照片</span></a></li><li><a class="site-page child" href="/people/"><i class="fa-fw fas fa-user-friends"></i><span> 人物</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/project/"><i class="fa-fw fas fa-project-diagram"></i><span> 项目</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">书籍</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><div class="bookshelf">
+  <h2>我的书架</h2>
+  <div class="book-grid">
+    
+    
+    <div class="book-category">
+      <h3>技术</h3>
+      <div class="book-list">
+        
+        <a href="https://csapp.cs.cmu.edu/" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://csapp.cs.cmu.edu/3e/images/csapp3e-cover.jpg" alt="深入理解计算机系统">
+            </div>
+            <div class="book-info">
+              <h4 title="深入理解计算机系统">深入理解计算机系统</h4>
+              <p class="author" title="Randal E. Bryant / David R. O'Hallaron">Randal E. Bryant / David R. O'Hallaron</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/C++Primer" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers300/collections/userbooks/98ab2c410a55cf1d5700bbade8416997dd6b98a73fedcb6da6cdffdc5676b4b3.jpg" alt="C++ Primer (第5版)">
+            </div>
+            <div class="book-info">
+              <h4 title="C++ Primer (第5版)">C++ Primer (第5版)</h4>
+              <p class="author" title="Stanley Lippman / Josée Lajoie / Barbara E. Moo">Stanley Lippman / Josée Lajoie / Barbara E. Moo</p>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+    
+    
+    <div class="book-category">
+      <h3>区块链</h3>
+      <div class="book-list">
+        
+        <a href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bitcoin.org/img/icons/logotop.svg" alt="比特币白皮书">
+            </div>
+            <div class="book-info">
+              <h4 title="比特币白皮书">比特币白皮书</h4>
+              <p class="author" title="中本聪">中本聪</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/ethereumbook/ethereumbook" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/6d9fd6b3bddca41bd3af2bdca93428c0c906fa58f5ad3a9152f9862f2c6f4bf8.jpg" alt="精通以太坊">
+            </div>
+            <div class="book-info">
+              <h4 title="精通以太坊">精通以太坊</h4>
+              <p class="author" title="Andreas M. Antonopoulos / Gavin Wood">Andreas M. Antonopoulos / Gavin Wood</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://nigdaemon.gitbook.io/how-to-defi-advanced-zhogn-wen-b" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://nigdaemon.gitbook.io/~gitbook/image?url=https%3A%2F%2Ftva1.sinaimg.cn%2Flarge%2F008i3skNgy1gs9kko3re8j30um0u07ff.jpg&width=400&dpr=2&quality=100&sign=14513cb2&sv=2" alt="How to DeFi">
+            </div>
+            <div class="book-info">
+              <h4 title="How to DeFi">How to DeFi</h4>
+              <p class="author" title="CoinGecko">CoinGecko</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://thenetworkstate.com/" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://thenetworkstate.com/_next/image?url=%2Fimages%2Fcover-tns-small.png&w=256&q=75" alt="网络国家">
+            </div>
+            <div class="book-info">
+              <h4 title="网络国家">网络国家</h4>
+              <p class="author" title="Balaji Srinivasan">Balaji Srinivasan</p>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+    
+    
+    <div class="book-category">
+      <h3>科幻</h3>
+      <div class="book-list">
+        
+        <a href="https://z-lib.rest/s/三体-刘慈欣" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers400/collections/userbooks/4bc85a1428bd70960aec3a263ae7671f21fe06f56d9d169fb7b43cb3a3ef09a7.jpg" alt="三体（全集）">
+            </div>
+            <div class="book-info">
+              <h4 title="三体（全集）">三体（全集）</h4>
+              <p class="author" title="刘慈欣">刘慈欣</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/赡养人类-刘慈欣" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers400/collections/userbooks/9fec93176c44757ed21c6cb43d9226dee353aa0299268a296ec83b8a3a742711.jpg" alt="赡养人类">
+            </div>
+            <div class="book-info">
+              <h4 title="赡养人类">赡养人类</h4>
+              <p class="author" title="刘慈欣">刘慈欣</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/地火-刘慈欣" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers400/collections/foreignfiction/d900457fc39ede57e8ca79a8158b398eb48c9cf3c71ef567256b7b757af3c1b7.jpg" alt="地火">
+            </div>
+            <div class="book-info">
+              <h4 title="地火">地火</h4>
+              <p class="author" title="刘慈欣">刘慈欣</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/2018-刘慈欣" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers400/collections/genesis/2607993fc290e14afdf542aeefcdceb717d50e0020275d6b3a69b4d51199313a.jpg" alt="2018">
+            </div>
+            <div class="book-info">
+              <h4 title="2018">2018</h4>
+              <p class="author" title="刘慈欣">刘慈欣</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/诗云-刘慈欣" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers400/collections/userbooks/a0a60b6175896b18f029637f516dd72547cac0b2213c6a17b8e8cc696bb3c3e2.jpg" alt="诗云">
+            </div>
+            <div class="book-info">
+              <h4 title="诗云">诗云</h4>
+              <p class="author" title="刘慈欣">刘慈欣</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/圆圆的肥皂泡-刘慈欣" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/chinese/414e58189deeb6b2d49a443b8c0888d14973f1c1a25d4176737ff9fb70554932.jpg" alt="圆圆的肥皂泡">
+            </div>
+            <div class="book-info">
+              <h4 title="圆圆的肥皂泡">圆圆的肥皂泡</h4>
+              <p class="author" title="刘慈欣">刘慈欣</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/白垩纪往事-刘慈欣" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/chinese/121b2309d2c6229c633536ffd80f6b3afd9a0582e2d1a4e95e69f5df75b9f657.jpg" alt="白垩纪往事">
+            </div>
+            <div class="book-info">
+              <h4 title="白垩纪往事">白垩纪往事</h4>
+              <p class="author" title="刘慈欣">刘慈欣</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/上海堡垒" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/73978d93516f40ecdb6bb2d6a87c0b6c57a03d929907f296e0862c99647903cd.jpg" alt="上海堡垒">
+            </div>
+            <div class="book-info">
+              <h4 title="上海堡垒">上海堡垒</h4>
+              <p class="author" title="江南">江南</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/类人-王晋康" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/chinese/ce6068918810b8ac75da298b429fda3c96b2ae02a32e2c59b95181cd4751419c.jpg" alt="类人">
+            </div>
+            <div class="book-info">
+              <h4 title="类人">类人</h4>
+              <p class="author" title="王晋康">王晋康</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/混沌蝴蝶-刘慈欣" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/4b87ba07fcf8febdc2a89cdf5886d190b13c8a1a2285040fd6f1c3a139c560a6.jpg" alt="混沌蝴蝶">
+            </div>
+            <div class="book-info">
+              <h4 title="混沌蝴蝶">混沌蝴蝶</h4>
+              <p class="author" title="刘慈欣">刘慈欣</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/超新星纪元-刘慈欣" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/20c97829c4b5596f9ae8b0c89d2e78e36098036ba78465f22e399676781c82ef.jpg" alt="超新星纪元">
+            </div>
+            <div class="book-info">
+              <h4 title="超新星纪元">超新星纪元</h4>
+              <p class="author" title="刘慈欣">刘慈欣</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/光荣与梦想-刘慈欣" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/f8a0e4769bb72a18480682eb030316924c483033e0c6e66bf883695ecb334acf.jpg" alt="光荣与梦想">
+            </div>
+            <div class="book-info">
+              <h4 title="光荣与梦想">光荣与梦想</h4>
+              <p class="author" title="刘慈欣">刘慈欣</p>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+    
+    
+    <div class="book-category">
+      <h3>网文</h3>
+      <div class="book-list">
+        
+        <a href="https://z-lib.rest/s/斗破苍穹" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/6d543005c0091e010fcd146205774e78288bb5116cb559175b1dca709ab27b4d.jpg" alt="斗破苍穹">
+            </div>
+            <div class="book-info">
+              <h4 title="斗破苍穹">斗破苍穹</h4>
+              <p class="author" title="天蚕土豆">天蚕土豆</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/武动乾坤" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/b18df0bdd2cdefb23170ea3596c5b95930b0d167f475d54d688a8b21f6777897.jpg" alt="武动乾坤">
+            </div>
+            <div class="book-info">
+              <h4 title="武动乾坤">武动乾坤</h4>
+              <p class="author" title="天蚕土豆">天蚕土豆</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/窃明" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/e9efb567a2b3c6b70138e4c05580e60fa5bbff8c7392730574913387dfac166e.jpg" alt="窃明">
+            </div>
+            <div class="book-info">
+              <h4 title="窃明">窃明</h4>
+              <p class="author" title="熊召政">熊召政</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/临高启明" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/28262988ab6f25afc2b65ac8eef6196723b01abfcb5abcb062550377030d0b85.jpg" alt="临高启明">
+            </div>
+            <div class="book-info">
+              <h4 title="临高启明">临高启明</h4>
+              <p class="author" title="吹牛者">吹牛者</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/斗罗大陆" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/704f2ccdb98d8d6a485e2c64b9a18dbc89c67276fcfed9fe67f88b04efb99aae.jpg" alt="斗罗大陆">
+            </div>
+            <div class="book-info">
+              <h4 title="斗罗大陆">斗罗大陆</h4>
+              <p class="author" title="唐家三少">唐家三少</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/第九特区" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/d1d6ba22d62834074efd55eaef71675df22062bd2c02c5582672105f9e6a1698.jpg" alt="第九特区">
+            </div>
+            <div class="book-info">
+              <h4 title="第九特区">第九特区</h4>
+              <p class="author" title="伪戒">伪戒</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/符皇" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/ecb87c2fef5530afbfa5d82973c5f052d717f6d7c61c31df14f514930041a066.jpg" alt="符皇">
+            </div>
+            <div class="book-info">
+              <h4 title="符皇">符皇</h4>
+              <p class="author" title="萧瑾瑜">萧瑾瑜</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://www.qidian.com/book/3686556/" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bookcover.yuewen.com/qdbimg/349573/3686556/600.webp" alt="灭世魔帝">
+            </div>
+            <div class="book-info">
+              <h4 title="灭世魔帝">灭世魔帝</h4>
+              <p class="author" title="沉默的糕点">沉默的糕点</p>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+    
+    
+    <div class="book-category">
+      <h3>文学</h3>
+      <div class="book-list">
+        
+        <a href="https://z-lib.rest/s/明朝那些事儿" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/4af03420909b0d312cefd2ce10a10681d64577cd4609fd044272b5cc45aa2de9.jpg" alt="明朝那些事儿">
+            </div>
+            <div class="book-info">
+              <h4 title="明朝那些事儿">明朝那些事儿</h4>
+              <p class="author" title="当年明月">当年明月</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/三国演义" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/c978ce3636de44a45b9beb63fb5979f3f78c7c1c2d5a38802a04d7ea4d90a48d.jpg" alt="三国演义">
+            </div>
+            <div class="book-info">
+              <h4 title="三国演义">三国演义</h4>
+              <p class="author" title="罗贯中">罗贯中</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/浮生六记" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/78b07e507c8d65b30a4dd3855de457b92df6c64188b4bd061b9fe280707db340.jpg" alt="浮生六记">
+            </div>
+            <div class="book-info">
+              <h4 title="浮生六记">浮生六记</h4>
+              <p class="author" title="沈复">沈复</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/鲁滨逊漂流记" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/3d9b1df068533ffc083d289a692aa4d2698b2be7ddcfb67b2e9ad1890108aaa0.jpg" alt="鲁滨逊漂流记">
+            </div>
+            <div class="book-info">
+              <h4 title="鲁滨逊漂流记">鲁滨逊漂流记</h4>
+              <p class="author" title="丹尼尔·笛福">丹尼尔·笛福</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/云雀叫了一整天" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/d7f191d3dcbe6cc60ffebf2bcd5555d47cde22c7424c82bae2cf961b02b9234a.jpg" alt="云雀叫了一整天">
+            </div>
+            <div class="book-info">
+              <h4 title="云雀叫了一整天">云雀叫了一整天</h4>
+              <p class="author" title="木心">木心</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/我不喜欢这个世界-我只喜欢你" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/7c1ef7bf0165a48eb5c99e860a933cb386d6fec614b7fc3b1a3c85d6069be2e4.jpg" alt="我不喜欢这个世界，我只喜欢你">
+            </div>
+            <div class="book-info">
+              <h4 title="我不喜欢这个世界，我只喜欢你">我不喜欢这个世界，我只喜欢你</h4>
+              <p class="author" title="乔一">乔一</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/book/14009157/51eb05/%E8%A7%A3%E5%AF%86.html" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/6edbab74673b48170e35fff0c34f0d7ccb9fba67afe29a33d36527f287e3fb5b.jpg" alt="解密">
+            </div>
+            <div class="book-info">
+              <h4 title="解密">解密</h4>
+              <p class="author" title="麦家">麦家</p>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+    
+    
+    <div class="book-category">
+      <h3>社科</h3>
+      <div class="book-list">
+        
+        <a href="https://z-lib.rest/s/李光耀观天下" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/03bea379c3e7a802777776c0a1358e8d31d11bd2fcd8082a5398da45ce6880f0.jpg" alt="李光耀观天下">
+            </div>
+            <div class="book-info">
+              <h4 title="李光耀观天下">李光耀观天下</h4>
+              <p class="author" title="李光耀">李光耀</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/中县干部" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/3c35a370f91a5adc1b04ed2353646a4ee0de658aaef12adcfb4453ffb866036c.jpg" alt="中县干部">
+            </div>
+            <div class="book-info">
+              <h4 title="中县干部">中县干部</h4>
+              <p class="author" title="冯军旗">冯军旗</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://www.marxists.org/chinese/marx/capital/" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/genesis/6288d40d733a43130175d7ada4c19a727064498e93b9ac9dd6182bc06e45748c.jpg" alt="资本论">
+            </div>
+            <div class="book-info">
+              <h4 title="资本论">资本论</h4>
+              <p class="author" title="卡尔·马克思">卡尔·马克思</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/魔鬼经济学" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/genesis/468c35392236031749b1addaf0c58c2808a42c1a527bc8f10f5d9551f08fca6a.jpg" alt="魔鬼经济学">
+            </div>
+            <div class="book-info">
+              <h4 title="魔鬼经济学">魔鬼经济学</h4>
+              <p class="author" title="史蒂芬·列维特 / 史蒂芬·都伯纳">史蒂芬·列维特 / 史蒂芬·都伯纳</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://m.qidian.com/book/1111193.html" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bookcover.yuewen.com/qdbimg/349573/1111193/180.webp" alt="迷失在一六二九">
+            </div>
+            <div class="book-info">
+              <h4 title="迷失在一六二九">迷失在一六二九</h4>
+              <p class="author" title="陆双鹤">陆双鹤</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://z-lib.rest/s/十宗罪" target="_blank" rel="noopener noreferrer" class="book-link">
+          <div class="book-item">
+            <div class="book-cover">
+              <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/596cee52413b0cb4e30b6e3348c88080061e1109ac407fc7648f8e78181b1c37.jpg" alt="十宗罪">
+            </div>
+            <div class="book-info">
+              <h4 title="十宗罪">十宗罪</h4>
+              <p class="author" title="蜘蛛">蜘蛛</p>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<style>
+.bookshelf {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.book-grid {
+  display: grid;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.book-category h3 {
+  color: #2c3e50;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.book-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.book-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.book-cover {
+  width: 100%;
+  padding: 8px 8px 0;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.book-cover img {
+  width: auto;
+  height: 160px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.book-info {
+  padding: 12px;
+  text-align: center;
+  background: #fff;
+}
+
+.book-info h4 {
+  margin: 0;
+  color: #34495e;
+  font-size: 0.95em;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-height: 2.8em;
+}
+
+.book-info .author {
+  color: #7f8c8d;
+  font-size: 0.85em;
+  margin: 8px 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+  .book-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .book-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .book-cover img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .book-list {
+    grid-template-columns: 1fr;
+  }
+  .book-cover img {
+    height: 200px;
+  }
+}
+</style>
+</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC82MDIwMC8zNjY2OA"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">YaCo</div><div class="author-info__description">Home</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/OS-Lihua" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://x.com/__Lihua__" target="_blank" title="X"><i class="fab fa-x"></i></a><a class="social-icon" href="https://www.linkedin.com/in/yacoyaco/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a><a class="social-icon" href="https://space.bilibili.com/472108472" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a><a class="social-icon" href="https://www.zhihu.com/people/3-85-1-69" target="_blank" title="Zhihu"><i class="fab fa-zhihu"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/2551021931.html" title="WindSurf 登录验证失败"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image.yaco.email/windsurf-start.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WindSurf 登录验证失败"/></a><div class="content"><a class="title" href="/posts/2551021931.html" title="WindSurf 登录验证失败">WindSurf 登录验证失败</a><time datetime="2024-12-14T16:00:00.000Z" title="发表于 2024-12-15 00:00:00">2024-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3155365094.html" title="NMEA 信息获取"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image.yaco.email/NMEA.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="NMEA 信息获取"/></a><div class="content"><a class="title" href="/posts/3155365094.html" title="NMEA 信息获取">NMEA 信息获取</a><time datetime="2024-04-24T05:35:00.000Z" title="发表于 2024-04-24 13:35:00">2024-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2745687355.html" title="第一次参加线下黑客松"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image.yaco.email/TraveOnChain.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一次参加线下黑客松"/></a><div class="content"><a class="title" href="/posts/2745687355.html" title="第一次参加线下黑客松">第一次参加线下黑客松</a><time datetime="2024-04-21T15:48:59.000Z" title="发表于 2024-04-21 23:48:59">2024-04-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3020691415.html" title="Java枚举"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picsum.photos/320/240" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java枚举"/></a><div class="content"><a class="title" href="/posts/3020691415.html" title="Java枚举">Java枚举</a><time datetime="2023-08-21T15:47:00.000Z" title="发表于 2023-08-21 23:47:00">2023-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2453214445.html" title="C++开发知识梳理"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image.yaco.email/cpp.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++开发知识梳理"/></a><div class="content"><a class="title" href="/posts/2453214445.html" title="C++开发知识梳理">C++开发知识梳理</a><time datetime="2023-07-27T16:12:00.000Z" title="发表于 2023-07-28 00:12:00">2023-07-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             <a class="card-more-btn" href="/categories/" title="查看更多">
@@ -204,7 +848,7 @@ if (true) {
             </div>
             <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Android/"><span class="card-category-list-name">Android</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Cpp/"><span class="card-category-list-name">Cpp</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/LeetCode/"><span class="card-category-list-name">LeetCode</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Tool/"><span class="card-category-list-name">Tool</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/"><span class="card-category-list-name">博客</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/"><span class="card-category-list-name">知识梳理</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><span class="card-category-list-name">设计模式</span><span class="card-category-list-count">1</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" style="font-size: 1.15em; color: rgb(112, 186, 44)">单例模式</a><a href="/tags/GOF/" style="font-size: 1.15em; color: rgb(98, 50, 171)">GOF</a><a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B/" style="font-size: 1.15em; color: rgb(21, 184, 176)">创建型</a><a href="/tags/%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2/" style="font-size: 1.15em; color: rgb(134, 146, 149)">博客页面</a><a href="/tags/hexo/" style="font-size: 1.15em; color: rgb(179, 44, 109)">hexo</a><a href="/tags/UML/" style="font-size: 1.15em; color: rgb(109, 61, 9)">UML</a><a href="/tags/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90/" style="font-size: 1.15em; color: rgb(115, 192, 25)">自动生成</a><a href="/tags/WindSurf/" style="font-size: 1.15em; color: rgb(103, 160, 152)">WindSurf</a><a href="/tags/AI/" style="font-size: 1.15em; color: rgb(22, 114, 47)">AI</a><a href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/" style="font-size: 1.15em; color: rgb(12, 127, 157)">解决问题</a><a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 1.15em; color: rgb(98, 125, 112)">数组</a><a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.15em; color: rgb(78, 1, 120)">二分查找</a><a href="/tags/Web3/" style="font-size: 1.15em; color: rgb(150, 135, 119)">Web3</a><a href="/tags/%E8%8D%A3%E8%AA%89/" style="font-size: 1.15em; color: rgb(128, 77, 101)">荣誉</a><a href="/tags/%E5%9B%A2%E9%98%9F/" style="font-size: 1.15em; color: rgb(84, 181, 192)">团队</a><a href="/tags/NMEA/" style="font-size: 1.15em; color: rgb(149, 78, 188)">NMEA</a><a href="/tags/GPS/" style="font-size: 1.15em; color: rgb(184, 107, 81)">GPS</a><a href="/tags/Location/" style="font-size: 1.15em; color: rgb(168, 7, 177)">Location</a><a href="/tags/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/" style="font-size: 1.15em; color: rgb(192, 146, 23)">智能指针</a><a href="/tags/RAII/" style="font-size: 1.15em; color: rgb(14, 188, 194)">RAII</a><a href="/tags/C/" style="font-size: 1.15em; color: rgb(129, 30, 72)">C++</a><a href="/tags/%E5%A4%A7%E4%B8%89%E5%BE%8B/" style="font-size: 1.15em; color: rgb(181, 79, 134)">大三律</a><a href="/tags/C-%E5%BC%80%E5%8F%91/" style="font-size: 1.15em; color: rgb(47, 182, 186)">C++开发</a><a href="/tags/Java/" style="font-size: 1.15em; color: rgb(121, 168, 36)">Java</a><a href="/tags/%E6%9E%9A%E4%B8%BE/" style="font-size: 1.15em; color: rgb(174, 125, 125)">枚举</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2022-09-13T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-12-14T19:51:24.198Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By YaCo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2/" style="font-size: 1.15em; color: rgb(129, 28, 33)">博客页面</a><a href="/tags/hexo/" style="font-size: 1.15em; color: rgb(30, 27, 107)">hexo</a><a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 1.15em; color: rgb(134, 154, 153)">数组</a><a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.15em; color: rgb(124, 56, 34)">二分查找</a><a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" style="font-size: 1.15em; color: rgb(117, 55, 176)">单例模式</a><a href="/tags/GOF/" style="font-size: 1.15em; color: rgb(110, 134, 155)">GOF</a><a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B/" style="font-size: 1.15em; color: rgb(11, 83, 2)">创建型</a><a href="/tags/UML/" style="font-size: 1.15em; color: rgb(134, 18, 28)">UML</a><a href="/tags/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90/" style="font-size: 1.15em; color: rgb(59, 23, 129)">自动生成</a><a href="/tags/WindSurf/" style="font-size: 1.15em; color: rgb(157, 154, 94)">WindSurf</a><a href="/tags/AI/" style="font-size: 1.15em; color: rgb(196, 41, 192)">AI</a><a href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/" style="font-size: 1.15em; color: rgb(174, 72, 5)">解决问题</a><a href="/tags/Web3/" style="font-size: 1.15em; color: rgb(123, 35, 97)">Web3</a><a href="/tags/%E8%8D%A3%E8%AA%89/" style="font-size: 1.15em; color: rgb(78, 174, 130)">荣誉</a><a href="/tags/%E5%9B%A2%E9%98%9F/" style="font-size: 1.15em; color: rgb(196, 30, 90)">团队</a><a href="/tags/NMEA/" style="font-size: 1.15em; color: rgb(2, 126, 8)">NMEA</a><a href="/tags/GPS/" style="font-size: 1.15em; color: rgb(111, 53, 153)">GPS</a><a href="/tags/Location/" style="font-size: 1.15em; color: rgb(143, 152, 200)">Location</a><a href="/tags/C-%E5%BC%80%E5%8F%91/" style="font-size: 1.15em; color: rgb(128, 198, 149)">C++开发</a><a href="/tags/C/" style="font-size: 1.15em; color: rgb(108, 131, 55)">C++</a><a href="/tags/%E5%A4%A7%E4%B8%89%E5%BE%8B/" style="font-size: 1.15em; color: rgb(149, 156, 178)">大三律</a><a href="/tags/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/" style="font-size: 1.15em; color: rgb(25, 89, 53)">智能指针</a><a href="/tags/RAII/" style="font-size: 1.15em; color: rgb(121, 161, 77)">RAII</a><a href="/tags/Java/" style="font-size: 1.15em; color: rgb(193, 154, 3)">Java</a><a href="/tags/%E6%9E%9A%E4%B8%BE/" style="font-size: 1.15em; color: rgb(68, 106, 188)">枚举</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2022-09-13T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-12-15T11:17:04.043Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By YaCo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
