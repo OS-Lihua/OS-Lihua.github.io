@@ -27,15 +27,22 @@ order: 1
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+function initPeopleCards() {
   const cards = document.querySelectorAll('.person-card');
   cards.forEach(card => {
     card.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent default behavior like image viewing
+      event.preventDefault();
       card.classList.toggle('is-flipped');
     });
   });
-});
+}
+
+// 在页面加载完成时初始化
+document.addEventListener('DOMContentLoaded', initPeopleCards);
+// 在pjax加载完成时初始化
+document.addEventListener('pjax:complete', initPeopleCards);
+// 在pjax:end事件时也初始化（某些主题可能使用这个事件）
+document.addEventListener('pjax:end', initPeopleCards);
 </script>
 
 <style>

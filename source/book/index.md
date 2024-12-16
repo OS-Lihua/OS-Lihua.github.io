@@ -96,7 +96,6 @@ order: 1
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   object-fit: cover;
-  pointer-events: none; /* Disable default click behavior on images */
 }
 
 .book-info {
@@ -147,16 +146,23 @@ order: 1
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+function initBookCovers() {
   const bookLinks = document.querySelectorAll('.book-link');
   bookLinks.forEach(link => {
     const cover = link.querySelector('.book-cover');
     if (cover) {
+      cover.style.cursor = 'pointer';
       cover.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default cover click behavior
-        window.open(link.href, '_blank'); // Open link in a new tab
+        event.preventDefault();
+        event.stopPropagation();
+        window.open(link.href, '_blank');
       });
     }
   });
-});
+}
+
+// 确保在各种情况下都能正确初始化
+document.addEventListener('DOMContentLoaded', initBookCovers);
+document.addEventListener('pjax:complete', initBookCovers);
+document.addEventListener('pjax:end', initBookCovers);
 </script>
