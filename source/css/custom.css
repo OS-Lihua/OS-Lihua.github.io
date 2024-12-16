@@ -1,3 +1,17 @@
 .card-recent-post img {
   border-radius: 8px; /* 设置圆角半径 */
 }
+
+/* 归档页面的图片样式 */
+.article-sort-item-img img,
+#archive .article-sort-item-img img {
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+/* 鼠标悬停效果 */
+.article-sort-item-img:hover img,
+#archive .article-sort-item-img:hover img {
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
