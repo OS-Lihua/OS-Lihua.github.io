@@ -213,13 +213,11 @@ a.inline-block.leading-5.pl-12{
 
 /* Navigation bar styles */
 .hamburger {
-
 	cursor: pointer;
 }
 
 .nav-links {
 	display: none;
-	
 }
 
 

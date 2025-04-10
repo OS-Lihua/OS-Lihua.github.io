@@ -1,66 +1,78 @@
 ---
+// 导入所需的组件和图标
 import Layout from "../layouts/Layout.astro";
 import Experience from "../components/portfolio/Experience.astro";
 import HeroIndex from "../components/portfolio/HeroIndex.astro";
 import Contact from "../components/portfolio/Contact.astro";
-import ListProjects from "../components/portfolio/ListProjects.astro";
+import ListProjects from "../components/projects/ListProjects.astro";
 import { Icon } from "astro-icon/components";
-const pageTitle = "Fernando Lopez | Frontend Developer | EFEELE ";
-const description = "I'm Fernando Lopez, a passionate frontend developer focused on design and usability. Here you can explore my projects and discover how I can transform your ideas into quality web solutions.";
+
+// 页面元数据配置
+const pageTitle = "YaCo | Web3 & AI Developer🚀☕  ";
+const description =
+  "我是YaCo，Web3和AI开发者。在这里，你可以探索我的项目，了解我，欢迎和我进行交流";
 const ogimage = {
-  url: "/images/imagedefault.webp",
-  alt: "Screenshot of a web portfolio with a modern and dark design. Featuring Fernando López, a Frontend Developer with 8 years of experience, highlighting his passion for development and technology. Includes contact sections, projects, and a technology stack with technologies like HTML5, JavaScript, TypeScript, Angular, Node.js, CSS, Tailwind, and more.",
+  url: "/images/YaCo.png",
+  alt: "",
 };
 import Heading from "../components/ui/Heading.astro";
 ---
 
+<!-- 使用Layout组件作为页面容器，并传入页面元数据 -->
 <Layout pageTitle={pageTitle} description={description} ogimage={ogimage}>
+  <!-- 首页人物区域组件 -->
   <HeroIndex />
 
-  <section
-    class="py-8 px-8 max-md:py-4 mb-4 scroll-m-16"
-    id="experience"
-  >
-    <div class="flex flex-col  pt-8 max-w-4xl mx-auto">
+  <!-- 工作经验部分 -->
+  <section class="py-8 px-8 max-md:py-4 mb-4 scroll-m-16" id="experience">
+    <div class="flex flex-col pt-8 max-w-4xl mx-auto">
+      <!-- 工作经验标题区域，包含图标和标题 -->
       <div class="flex gap-4 items-center justify-center">
-        <Icon class="text-3xl dark:text-white text-blacktext" name="briefcase" />
-        <Heading text="Experience" textGradient="Work" level={2}/>
+        <Icon
+          class="text-3xl dark:text-white text-blacktext"
+          name="briefcase"
+        />
+        <Heading text="Experience" textGradient="Work" level={2} />
       </div>
 
+      <!-- 工作经验内容组件 -->
       <Experience />
     </div>
   </section>
 
+  <!-- 项目展示部分 -->
   <section
     class="bg-gradient-to-t dark:from-[#0e0e10] from-[#fff] from-50% to-transparent to-100% scroll-m-16"
     id="projects"
   >
     <div class="flex flex-col gap-8 max-w-7xl mx-auto">
+      <!-- 项目标题区域，包含图标和标题 -->
       <ListProjects>
         <div class="flex gap-4 items-center justify-center text-center">
           <Icon class="text-3xl dark:text-white text-blacktext" name="code" />
-          <Heading text="Projects" textGradient="Completed" level={2}/>
+          <Heading text="Projects" textGradient="Completed" level={2} />
         </div>
+        <!-- 项目介绍文本，包含渐变文字效果 -->
         <p
           class="z-2 text-center mx-auto text-lg max-xl:text-base max-w-2xl dark:text-gray-200 text-blacktext my-6 leading-6 font-medium"
         >
-          I love <b
-            class=" bg-gradient-to-r  from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
-            >turning ideas into real projects.</b
+          我热衷于<b
+            class="bg-gradient-to-r from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
+            >将Web3&AI创意转化为实际项目。</b
           >
-          <br /> Here I show you some of the <b
-            class="d bg-gradient-to-r  from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
-            >developments</b
-          > I've worked on, applying technology, design, and lots of creativity.
+          <br /> 这里展示了我在<b
+            class="d bg-gradient-to-r from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
+            >区块链</b
+          >领域的一些项目和社区，结合了前沿技术、优秀设计和创新思维。
           <b
-            class=" bg-gradient-to-r  from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
-            >Check them out!</b
+            class="bg-gradient-to-r from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
+            >一起来探索吧！</b
           >
         </p>
       </ListProjects>
     </div>
   </section>
 
-
+  <!-- 联系信息部分 -->
   <Contact />
 </Layout>

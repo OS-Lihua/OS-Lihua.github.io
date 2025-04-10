@@ -2,29 +2,29 @@
 type ButtonVariant = "default" | "big" | "dark";
 
 interface Props {
-    link: string;
-    text: string;
-    iconName?: string;
-    variant?: ButtonVariant;
-    ariaLabel?: string;
-    disabled?: boolean;
-    isLoading?: boolean;
-    isExternal?: boolean;
-    isActive?: boolean;
-    class?: string;
+  link: string;
+  text: string;
+  iconName?: string;
+  variant?: ButtonVariant;
+  ariaLabel?: string;
+  disabled?: boolean;
+  isLoading?: boolean;
+  isExternal?: boolean;
+  isActive?: boolean;
+  class?: string;
 }
 
-const { 
-    link, 
-    text, 
-    iconName, 
-    variant = "default", 
-    ariaLabel,
-    disabled = false,
-    isLoading = false,
-    isExternal = false,
-    isActive = false,
-    class: className = ""
+const {
+  link,
+  text,
+  iconName,
+  variant = "default",
+  ariaLabel,
+  disabled = false,
+  isLoading = false,
+  isExternal = false,
+  isActive = false,
+  class: className = "",
 } = Astro.props as Props;
 import { Icon } from "astro-icon/components";
 
@@ -58,7 +58,7 @@ const baseClasses = `
 
 // Specific classes for each variant
 const variantClasses = {
-    default: `
+  default: `
         text-blacktext/90 
         dark:text-mint-50 
         dark:hover:text-white 
@@ -77,7 +77,7 @@ const variantClasses = {
         dark:from-riptide-500 
         dark:to-mint-500
     `,
-    big: `
+  big: `
         font-normal 
         gap-3 
         max-md:gap-1 
@@ -99,7 +99,7 @@ const variantClasses = {
         dark:from-riptide-500 
         dark:to-mint-500
     `,
-    dark: `
+  dark: `
         group 
         dark:text-mint-50 
         text-blacktext
@@ -120,9 +120,9 @@ const variantClasses = {
 
 // Icon classes for each variant
 const iconClasses = {
-    default: "size-5",
-    big: "size-5",
-    dark: "size-5 dark:text-mint-300 text-blacktext group-hover:text-blacktext dark:group-hover:text-white transition-colors",
+  default: "size-5",
+  big: "size-5",
+  dark: "size-5 dark:text-mint-300 text-blacktext group-hover:text-blacktext dark:group-hover:text-white transition-colors",
 };
 
 // Combine base classes with variant-specific classes
@@ -132,35 +132,47 @@ const buttonClasses = `${baseClasses} ${variantClasses[variant]}`;
 const buttonAriaLabel = ariaLabel || (iconName ? `${text} ${iconName}` : text);
 
 // Determine if it's an external link
-const isExternalLink = isExternal || link.startsWith('http');
+const isExternalLink = isExternal || link.startsWith("http");
 
 // Additional attributes for external links
-const externalAttributes = isExternalLink ? {
-    target: '_blank',
-    rel: 'noopener noreferrer'
-} : {};
+const externalAttributes = isExternalLink
+  ? {
+      target: "_blank",
+      rel: "noopener noreferrer",
+    }
+  : {};
 
 // Loading state
-const loadingText = isLoading ? 'Loading...' : text;
-const loadingAriaLabel = isLoading ? `${buttonAriaLabel} - Loading` : buttonAriaLabel;
+const loadingText = isLoading ? "Loading..." : text;
+const loadingAriaLabel = isLoading
+  ? `${buttonAriaLabel} - Loading`
+  : buttonAriaLabel;
 ---
 
 <div
-    class="w-fit h-fit from-transparent via-riptide-300 to-transparent dark:from-transparent dark:via-mint-500 dark:to-transparent  from-40% to-60% animate-rotate-border bg-conic/[from_var(--border-angle)] p-px hover:shadow-lg
+  class="w-fit h-fit from-transparent via-riptide-300 to-transparent dark:from-transparent dark:via-mint-500 dark:to-transparent from-40% to-60% animate-rotate-border bg-conic/[from_var(--border-angle)] p-px hover:shadow-lg
     hover:shadow-mint-500/30 rounded-full"
 >
-    <a 
-        class:list={[buttonClasses, className]} 
-        href={disabled ? '#' : link}
-        aria-label={loadingAriaLabel}
-        role="button"
-        aria-disabled={disabled}
-        aria-busy={isLoading}
-        aria-pressed={isActive}
-        {...externalAttributes}
-    >
-        {iconName && <Icon name={iconName} class={iconClasses[variant]} aria-hidden="true" />}
-        {isLoading && <Icon name="mdi:loading" class="animate-spin" aria-hidden="true" />}
-        {loadingText}
-    </a>
+  <a
+    class:list={[buttonClasses, className]}
+    href={disabled ? "#" : link}
+    aria-label={loadingAriaLabel}
+    role="button"
+    aria-disabled={disabled}
+    aria-busy={isLoading}
+    aria-pressed={isActive}
+    {...externalAttributes}
+  >
+    {
+      iconName && (
+        <Icon name={iconName} class={iconClasses[variant]} aria-hidden="true" />
+      )
+    }
+    {
+      isLoading && (
+        <Icon name="mdi:loading" class="animate-spin" aria-hidden="true" />
+      )
+    }
+    {loadingText}
+  </a>
 </div>

@@ -1,30 +1,29 @@
 ---
 import Heading from "../ui/Heading.astro";
 import Button from "../ui/Button.astro";
-
-const mail = "hello@efeele.dev";
-const title = "Ready to take your idea to the next level?";
-const subtitle = "Let's work together.";
-const buttonText = "Contact Me";
+// 联系信息配置
+const mail = "yaco@yaco.email";
+const title = "一起来玩！";
+const subtitle = "交个朋友~";
+const buttonText = "联系我";
 const buttonIcon = "paperplane";
 ---
 
+<!-- 联系信息部分 -->
 <section>
   <div
     class="w-full border-b bg-gradient-to-b from-mint-100 to-transparent dark:from-mint-800 dark:border-mint-950 border-mint-100"
   >
     <div class="mx-auto max-w-5xl px-8 py-24 max-sm:py-12">
-      <div class="flex items-center justify-between max-sm:flex-col max-sm:gap-8 max-sm:text-center">
+      <div
+        class="flex items-center justify-between max-sm:flex-col max-sm:gap-8 max-sm:text-center"
+      >
         <div class="max-w-lg">
-          <Heading
-            text={title}
-            textGradient={subtitle}
-            level={2}
-          />
+          <Heading text={title} textGradient={subtitle} level={2} />
         </div>
         <div
           class="transition-all duration-500 group-hover:animate-jump group-hover:animate-duration-[300ms] group-hover:animate-ease-in-out group-hover:scale-105 hover:scale-125"
-        >   
+        >
           <Button
             variant="big"
             link={`mailto:${mail}`}

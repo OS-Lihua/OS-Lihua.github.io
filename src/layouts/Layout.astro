@@ -2,9 +2,9 @@
 import "../styles/global.css";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+import SpeedInsights from "@vercel/speed-insights/astro";
 const {
-  pageTitle = "EFEELE | Programmer and Web Developer 🚀",
+  pageTitle = "YACO | Programmer and Web Developer 🚀",
   description = "Welcome to EFEELE's website, where I develop software and share knowledge.",
   ogimage = {
     url: "/images/imagedefault.webp",
@@ -14,13 +14,12 @@ const {
 
 const siteUrl = new URL(Astro.url).origin;
 const SEO = {
-  sitename: "EFEELE | Programmer and Web Developer 🚀",
+  sitename: "YaCo | Crypto & AI Developer 🚀",
   url: siteUrl,
-  locale: "en_US",
-  author: "Fernando Lopez | EFEELE",
-  twitter: "@efeeledev",
+  locale: "zh_CN",
+  author: "YaCo | YaCo",
+  twitter: "@0xYaCo",
 };
-
 
 const twitterimage = `${siteUrl}${ogimage.url}`;
 ---
@@ -33,20 +32,11 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
-    <!-- Favicon for different platforms -->
-    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="icon" href="/android-chrome-192x192.png" sizes="192x192" />
-    <link rel="icon" href="/android-chrome-512x512.png" sizes="512x512" />
-
-    <!-- Web manifest -->
-    <link rel="manifest" href="/site.webmanifest" />
 
     <meta name="description" content={description} />
     <meta name="author" content={SEO.author} />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.efeele.dev/">
+    <link rel="canonical" href="https://www.yaco.email/" />
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
@@ -64,12 +54,11 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <meta name="twitter:image" content={twitterimage} />
     <meta name="twitter:image:alt" content={ogimage.alt} />
     <meta name="twitter:site" content={SEO.twitter} />
-  
-    <meta name="theme-color" content="#0E0E11"/>
-    
+
+    <meta name="theme-color" content="#0E0E11" />
   </head>
   <body class="overflow-x-hidden">
-    <SpeedInsights/>
+    <SpeedInsights />
     <div class="blur-circle"></div>
     <div
       style="  background:linear-gradient(45deg, rgba(96, 250, 155, 0) 10.79%, rgba(96, 250, 170, 0.03) 40.92%, rgba(96, 250, 155, 0) 90.35%)"
@@ -78,7 +67,7 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     </div>
     <Header />
 
-    <div class="min-h-[85vh] ">
+    <div class="min-h-[85vh]">
       <slot />
     </div>
 

@@ -9,9 +9,9 @@ import ListPosts from "../components/blog/ListPosts.astro";
 import NavigationArticles from "../components/layout/NavigationArticles.astro";
 import Share from "../components/ui/Share.astro";
 const { frontmatter } = Astro.props;
-const currentUrl = `https://efeele.dev${Astro.url.pathname}`;
+const currentUrl = `https://www.yaco.email${Astro.url.pathname}`;
 const tweetText = encodeURIComponent(
-  `"${frontmatter.title}" - by ${frontmatter.author} | EFEELE`,
+  `"${frontmatter.title}" - by ${frontmatter.author} | EFEELE`
 );
 import Heading from "../components/ui/Heading.astro";
 ---
@@ -29,12 +29,12 @@ import Heading from "../components/ui/Heading.astro";
     copyButton.innerHTML = copyButtonLabel;
 
     codeBlock.setAttribute("tabindex", "0");
-    
+
     // wrap codeblock with relative parent element
     if (codeBlock.parentNode) {
       codeBlock.parentNode.insertBefore(wrapper, codeBlock);
       wrapper.appendChild(codeBlock);
-      
+
       // Add the copy button to the wrapper instead of the codeBlock
       // This ensures the button stays fixed relative to the code block container
       wrapper.appendChild(copyButton);
@@ -48,7 +48,7 @@ import Heading from "../components/ui/Heading.astro";
   async function copyCode(block: HTMLElement, button: HTMLButtonElement) {
     let code = block.querySelector("code");
     if (!code) return;
-    
+
     let text = code.innerText;
 
     await navigator.clipboard.writeText(text);
@@ -72,7 +72,7 @@ import Heading from "../components/ui/Heading.astro";
   >
     <div class="w-64 max-xl:hidden"></div>
     <article
-      class="flex flex-col gap-8 max-w-3xl max-md:w-full pb-10 pt-8 mt-8 px-14 max-md:px-10 max-sm:px-4  dark:bg-transparent bg-white dark:border-0 border border-neutral-100 rounded-2xl" 
+      class="flex flex-col gap-8 max-w-3xl max-md:w-full pb-10 pt-8 mt-8 px-14 max-md:px-10 max-sm:px-4 dark:bg-transparent bg-white dark:border-0 border border-neutral-100 rounded-2xl"
     >
       <header class="flex flex-col gap-4" id="start">
         <div class="flex gap-2 flex-wrap">
@@ -96,7 +96,7 @@ import Heading from "../components/ui/Heading.astro";
             <div
               aria-label="Photo of Fernando Aldair López Ponce (EFEELE) for the blog"
               class="size-10 bg-cover bg-center rounded-full drop-shadow-lg"
-              style="background-image: url(/images/efeeleprofile.webp);"
+              style="background-image: url(/images/yaco.png);"
             >
             </div>
             <a
@@ -122,7 +122,7 @@ import Heading from "../components/ui/Heading.astro";
         }
       </figure>
 
-      <div class="markdown " id="content">
+      <div class="markdown" id="content">
         <slot />
       </div>
       <Share currentUrl={currentUrl} tweetText={tweetText} />

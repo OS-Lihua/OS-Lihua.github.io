@@ -2,12 +2,11 @@
 import Social from "../ui/Social.astro";
 import { Icon } from "astro-icon/components";
 
-const name = "EFEELE";
-const email = "hello@efeele.dev";
-const github = "https://github.com/EFEELE";
-const linkedin = "https://www.linkedin.com/in/efeele/";
-const instagram = "https://www.instagram.com/efeele.dev/";
-const youtube = "https://www.youtube.com/@efeeledev";
+const name = "YaCo";
+const email = "yaco@yaco.email";
+const github = "https://github.com/OS-Lihua";
+const twitter = "https://www.x.com/0xYaCo";
+const youtube = "https://www.youtube.com/@0xYaCo";
 ---
 
 <footer
@@ -29,18 +28,39 @@ const youtube = "https://www.youtube.com/@efeeledev";
     </div>
     <div class="text-center">
       <a
-        href="https://github.com/EFEELE"
+        href="https://github.com/OS-Lihua"
         class="flex items-center justify-center gap-3 text-base font-normal italic max-sm:text-sm"
         aria-label="About the website development"
-        ><Icon name="code" aria-hidden="true" /> Developed by <strong>EFEELE</strong>, with Astro</a
+        ><Icon name="code" aria-hidden="true" /> Developed by <strong
+          >YaCo</strong
+        >, with Astro/NeonMint</a
       >
     </div>
-    <div class="flex items-center justify-center gap-5" role="list" aria-label="Social media links">
-      <Social link={email} iconName="envelope" label={`Send email to ${email}`} />
-      <Social link={instagram} iconName="instagram" label={`Visit ${name} on Instagram`} />
-      <Social link={youtube} iconName="youtube" label={`Visit ${name} on YouTube`} />
-      <Social link={github} iconName="github" label={`Visit ${name} on GitHub`} />
-      <Social link={linkedin} iconName="linkedin" label={`Visit ${name} on LinkedIn`} />
+    <div
+      class="flex items-center justify-center gap-5"
+      role="list"
+      aria-label="Social media links"
+    >
+      <Social
+        link={email}
+        iconName="envelope"
+        label={`Send email to ${email}`}
+      />
+      <Social
+        link={youtube}
+        iconName="youtube"
+        label={`Visit ${name} on YouTube`}
+      />
+      <Social
+        link={github}
+        iconName="github"
+        label={`Visit ${name} on GitHub`}
+      />
+      <Social
+        link={twitter}
+        iconName="twitter"
+        label={`Visit ${name} on Twitter`}
+      />
     </div>
   </nav>
 </footer>

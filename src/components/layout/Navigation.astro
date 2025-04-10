@@ -7,16 +7,28 @@ const { items = [] }: { items: (keyof typeof menu)[] } = Astro.props as {
 
 const menu = {
   about: { name: "About Me", path: "/about-me" },
-  blog: { 
-    name: "Blog", 
+  blog: {
+    name: "Blog",
     path: "/blog/",
-    dropdown: [
-      { name: "All Posts", path: "/blog/all-posts" },
-    ]
+    dropdown: [{ name: "All Posts", path: "/blog/all-posts" }],
   },
   home: { name: "Home", path: "/#home" },
   experience: { name: "Experience", path: "/#experience" },
   projects: { name: "Projects", path: "/#projects" },
+  // TODO: 完善以下内容
+  friends: { name: "Friends", path: "/" },
+  link: {
+    name: "Link",
+    dropdown: [
+      { name: "Book", path: "/link/book" },
+      { name: "Game", path: "/link/game" },
+      { name: "Idol", path: "/link/idol" },
+      { name: "Music", path: "/link/music" },
+      { name: "Movie", path: "/link/movie" },
+      { name: "Photo", path: "/link/photo" },
+      { name: "Video", path: "/link/video" },
+    ],
+  },
 };
 
 // Common base classes
@@ -25,36 +37,45 @@ const baseClasses = {
   link: "px-2 py-2 transition-all hover:text-mint-300 max-md:mx-auto max-md:w-full max-md:px-6 max-md:py-2 ",
   socialContainer: "flex items-center justify-center gap-5 md:hidden",
   dropdown: "relative group flex items-center",
-  dropdownMenu: "absolute left-0 top-full hidden group-hover:block bg-white dark:bg-zinc-800 shadow-lg rounded-md py-2 min-w-[200px] z-50",
-  dropdownItem: "block px-4 py-2 text-sm hover:bg-mint-100 dark:hover:bg-zinc-700 transition-colors"
+  dropdownMenu:
+    "absolute left-0 top-full hidden group-hover:block bg-white dark:bg-zinc-800 shadow-lg rounded-md py-2 min-w-[200px] z-50",
+  dropdownItem:
+    "block px-4 py-2 text-sm hover:bg-mint-100 dark:hover:bg-zinc-700 transition-colors",
 } as const;
 ---
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const isHome = window.location.pathname === "/";
-    
+
     // Classes for link states
     const linkClasses = {
-      active: ["text-mint-500","dark:text-mint-400", "font-bold", "[text-shadow:_1px_1px_11px_rgba(208,251,229,0.7)]"],
-      inactive: ["dark:text-zinc-300",  "text-blacktext"]
+      active: [
+        "text-mint-500",
+        "dark:text-mint-400",
+        "font-bold",
+        "[text-shadow:_1px_1px_11px_rgba(208,251,229,0.7)]",
+      ],
+      inactive: ["dark:text-zinc-300", "text-blacktext"],
     };
 
     function toggleLinkClasses(link: Element, isActive: boolean) {
       if (isActive) {
         link.classList.add(...linkClasses.active);
         link.classList.remove(...linkClasses.inactive);
-        link.setAttribute('aria-current', 'page');
+        link.setAttribute("aria-current", "page");
       } else {
         link.classList.remove(...linkClasses.active);
         link.classList.add(...linkClasses.inactive);
-        link.removeAttribute('aria-current');
+        link.removeAttribute("aria-current");
       }
     }
 
     function updateActiveLink() {
       const currentPath = window.location.pathname;
-      const currentHash = window.location.hash ? `#${window.location.hash.substring(1)}` : "";
+      const currentHash = window.location.hash
+        ? `#${window.location.hash.substring(1)}`
+        : "";
 
       document.querySelectorAll("nav a").forEach((link) => {
         const path = link.getAttribute("data-path");
@@ -71,15 +92,15 @@ const baseClasses = {
       const observerOptions = {
         root: null,
         rootMargin: "-50% 0px",
-        threshold: 0
+        threshold: 0,
       };
 
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const sectionId = entry.target.getAttribute("id");
             if (sectionId) {
-              navLinks.forEach(link => {
+              navLinks.forEach((link) => {
                 const path = link.getAttribute("data-path");
                 toggleLinkClasses(link, path === `/#${sectionId}`);
               });
@@ -88,7 +109,7 @@ const baseClasses = {
         });
       }, observerOptions);
 
-      sections.forEach(section => observer.observe(section));
+      sections.forEach((section) => observer.observe(section));
     }
 
     updateActiveLink();
@@ -97,17 +118,13 @@ const baseClasses = {
   });
 </script>
 
-<nav 
-  class={baseClasses.nav}
-  role="navigation"
-  aria-label="Main Navigation"
->
+<nav class={baseClasses.nav} role="navigation" aria-label="Main Navigation">
   {
     items.map((key: string) => {
       const item = menu[key as keyof typeof menu];
       if (!item) return null;
 
-      if ('dropdown' in item) {
+      if ("dropdown" in item) {
         return (
           <div class={baseClasses.dropdown}>
             <a
@@ -115,7 +132,9 @@ const baseClasses = {
               class={baseClasses.link}
               data-path={item.path}
               aria-label={item.name}
-              aria-current={item.path === Astro.url.pathname ? 'page' : undefined}
+              aria-current={
+                item.path === Astro.url.pathname ? "page" : undefined
+              }
             >
               {item.name}
             </a>
@@ -141,20 +160,20 @@ const baseClasses = {
           class={baseClasses.link}
           data-path={item.path}
           aria-label={item.name}
-          aria-current={item.path === Astro.url.pathname ? 'page' : undefined}
+          aria-current={item.path === Astro.url.pathname ? "page" : undefined}
         >
           {item.name}
         </a>
       );
     })
   }
-  
-  <div 
+
+  <div
     class={baseClasses.socialContainer}
     role="group"
     aria-label="Social Media Links"
   >
-    <Social link="https://github.com/EFEELE" iconName="github" />
-    <Social link="https://www.linkedin.com/in/efeele/" iconName="linkedin" />
+    <Social link="https://github.com/OS-Lihua" iconName="github" />
+    <Social link="https://www.x.com/0xYaCo" iconName="twitter" />
   </div>
 </nav>
