@@ -3,10 +3,10 @@ layout: /src/layouts/MarkdownPostLayout.astro
 title: Hexo 安装 和 配置
 pubDate: 2023-07-14
 author: YaCo
-tags: ["博客"]
-languages: ["hexo"]
 image:
     url: "https://image.yaco.email/hexo.png"
+tags: ["博客"]
+languages: ["hexo"]
 ---
 
 # Hexo 

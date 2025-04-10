@@ -8,7 +8,6 @@ image:
 tags: ["博客页面"]
 pubDate: 2023-07-17
 languages: ["markdown", "hexo"]
-
 ---
 
 ## 用于一系列页面的配置

@@ -13,7 +13,7 @@ languages: ["markdown", "cpp"]
 
 一般来说，类的声明形式：
 
-```cc
+```cpp
 // template <typename T>
 Class A
 {

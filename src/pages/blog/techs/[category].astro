@@ -11,36 +11,33 @@ interface Frontmatter {
   tags: string[];
   image: string;
 }
-export async function getStaticPaths(): Promise<
-  Array<{
-    params: { category: string };
-    props: { posts: MarkdownInstance<Frontmatter>[] };
-  }>
-> {
-  const allPosts: MarkdownInstance<Frontmatter>[] =
-    await Astro.glob<Frontmatter>("../posts/*.md");
 
-  const uniqueTags: string[] = [
-    ...new Set(
-      allPosts
-        .map(
-          (post: MarkdownInstance<Frontmatter>) => post.frontmatter.languages
-        )
-        .flat()
-    ),
-  ];
+// 保持 getStaticPaths 原结构不变
+export async function getStaticPaths() {
+  // 获取所有文章
+  const allPosts = await Astro.glob<Frontmatter>("../posts/*.md");
 
-  return uniqueTags.map((category) => {
+  // 提取所有不重复的 language 标签
+  const allLanguages = allPosts
+    .map((post) => post.frontmatter.languages)
+    .flat();
+  const uniqueLanguages = [...new Set(allLanguages)];
+
+  // 生成路径（保持原有逻辑）
+  return uniqueLanguages.map((language) => {
+    // 筛选包含当前 language 的文章
     const filteredPosts = allPosts.filter((post) =>
-      post.frontmatter.languages.includes(category)
+      post.frontmatter.languages.includes(language)
     );
+
     return {
-      params: { category },
+      params: { category: language },
       props: { posts: filteredPosts },
     };
   });
 }
 
+// 组件逻辑保持不变
 const { category } = Astro.params;
 const { posts } = Astro.props;
 ---

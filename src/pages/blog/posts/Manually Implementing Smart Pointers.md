@@ -8,13 +8,12 @@ image:
 pubDate: 2023-06-19
 tags: ["智能指针","RAII"]
 languages: ["cpp"]
-
 ---
 # 手动实现智能指针
 
 
 
-```cc
+```cpp
 /// unique_ptr
 template <typename T>
 class smart_ptr {
@@ -58,7 +57,7 @@ private:
 
 **智能指针的理解：就是通过被管理类的实例去构造一个管理的类，意思就是：老子[程序员]不想管了，你来帮我管好它**
 
-```cc
+```cpp
 //shared_ptr
 class shared_count {
 public:
