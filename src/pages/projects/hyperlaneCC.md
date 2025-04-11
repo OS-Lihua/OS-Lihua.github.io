@@ -14,7 +14,7 @@ image:
 **Hyperlane CC** 是一个无需许可的模块化跨链协议，致力于构建Web3的通用互操作层。作为中国区域的官方社区，我们旨在促进跨链技术的普及和应用，提供本地化支持和资源。
 
 
-**官网: [Hyperlane 中文](Hyperlane.cc)**
+**官网: [Hyperlane 中文](https://hyperlane.cc)**
 
 ## 🚀 核心特性
 
