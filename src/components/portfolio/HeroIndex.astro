@@ -12,8 +12,8 @@ const {
   profileLink = "/about-me", // 个人资料链接
   profileTitle = "Web3 & AI Dev", // 个人头衔
   profileName = "YaCo", // 个人姓名
-  githubLink = "https://github.com/OS-Lihua", // GitHub 链接
-  githubText = "Here is my GitHub~", // GitHub 文本
+  personalitiesLink = "https://www.16personalities.com/ch/%E6%A1%A3%E6%A1%88/eb6e85462533d", // GitHub 链接
+  personalitiesText = "ENFJ-A", // GitHub 文本
   portfolioImage = "images/projects/project.webp", // 作品集图片
   email = "yaco@yaco.email", // 邮箱
 } = Astro.props;
@@ -129,24 +129,24 @@ const {
         <div
           class="relative h-full w-full overflow-hidden rounded-2xl bg-gradient-to-tr from-riptide-100 to-white dark:from-transparent dark:bg-gradient-to-bl dark:to-transparent"
         >
-          <!-- GitHub链接 -->
+          <!-- 16性格 -->
           <!-- TODO: 后续需要修改 -->
           <a
             target="_blank"
-            href={githubLink}
+            href={personalitiesLink}
             aria-label="View this site's code repository on GitHub"
           >
             <div
               class="relative flex h-full flex-col gap-8 p-8 dark:before:[background-image:radial-gradient(circle,_rgba(13,188,130)_0,_rgba(1,45,34)_100%)] before:[background-image:radial-gradient(circle,_rgba(95,255,202)_0,_rgba(144,253,210)_100%)] before:absolute before:left-30 before:bottom-30 before:h-[30%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-90 before:transition before:z-0 max-xl:p-5 max-md:p-4 xl:before:bottom-10"
             >
               <div class="z-2">
-                <!-- 标题：你喜欢这个网站的设计吗？ -->
-                <Heading text="Here is my GitHub~" level={3} />
+                <!-- 标题：16性格-->
+                <Heading text={personalitiesText} level={3} />
               </div>
 
               <Icon
                 class="absolute -bottom-10 left-30 size-50 text-mint-500/30 group-hover:animate-pulse ease-in-out max-sm:left-10 max-md:left-30 xl:size-56 xl:-bottom-5 xl:-right-24"
-                name="github"
+                name="enfj-protagonist"
                 aria-hidden="true"
               />
             </div>
@@ -168,7 +168,7 @@ const {
             aria-hidden="true"
           />
           <!-- 标题：技术栈 -->
-          <Heading text="技术" textGradient="栈" level={3} />
+          <Heading textGradient="技术栈" level={3} />
         </div>
         <div class="overflow-y-auto">
           <!-- 工具组件 -->
@@ -202,7 +202,7 @@ const {
         >
           我热衷于<span
             class="bg-gradient-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"
-            >Web3 & AI 开发实践</span
+            >Web3 & AI 实践</span
           >
           <br /> 这里展示了我在<span
             class="bg-gradient-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"

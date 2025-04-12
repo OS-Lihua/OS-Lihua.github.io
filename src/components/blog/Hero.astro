@@ -11,8 +11,8 @@ const {
   profileLink = "/about-me",
   profileTitle = "Web3 & AI Dev",
   profileName = "YaCo",
-  githubLink = "https://github.com/OS-Lihua",
-  githubText = "Here is my GitHub~",
+  personalitiesLink = "https://www.16personalities.com/ch/%E6%A1%A3%E6%A1%88/eb6e85462533d",
+  personalitiesText = "ENFJ-A",
   techsTitle = "技术栈",
 } = Astro.props;
 ---
@@ -38,17 +38,17 @@ const {
         <div
           class="w-full h-full relative overflow-hidden rounded-2xl bg-gradient-to-tr from-riptide-100 to-white dark:from-transparent dark:bg-gradient-to-bl dark:to-transparent"
         >
-          <a target="_blank" href={githubLink}>
+          <a target="_blank" href={personalitiesLink}>
             <div
               class="p-8 h-full relative max-xl:p-5 max-md:p-4 flex flex-col gap-8 dark:before:[background-image:radial-gradient(circle,_rgba(13,188,130)_0,_rgba(1,45,34)_100%)] before:[background-image:radial-gradient(circle,_rgba(95,255,202)_0,_rgba(144,253,210)_100%)] before:h-[30%] before:absolute before:aspect-square xl:before:bottom-10 before:left-30 before:bottom-30 before:rounded-full before:blur-3xl before:opacity-90 before:transition before:z-0"
             >
               <div class="z-2">
-                <Heading text={githubText} textGradient="" level={3} />
+                <Heading text={personalitiesText} textGradient="" level={3} />
               </div>
 
               <Icon
                 class="group-hover:animate-pulse ease-in-out size-50 absolute -bottom-10 xl:size-56 xl:-bottom-5 left-30 max-sm:left-10 max-md:left-30 xl:-right-24 text-mint-500/30"
-                name="github"
+                name="enfj-protagonist"
               />
             </div>
           </a>
