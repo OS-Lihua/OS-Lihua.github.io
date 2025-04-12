@@ -303,76 +303,13 @@ const books = [
     ],
   },
 ];
+
+const pageTitle = "书架";
+const description = "我的书架";
+const ogimage = {
+  url: "/images/book.png",
+  alt: "我的书架",
+};
 ---
 
-<Layout title="我的书架">
-  <main class="book-page">
-    {
-      books.map((category) => (
-        <section class="book-section">
-          <h2 class="category-title">{category.class_name}</h2>
-          <ListBook
-            books={category.link_list.map((book) => ({
-              title: book.name,
-              author: book.author,
-              coverUrl: book.cover,
-              link: book.link,
-            }))}
-          />
-        </section>
-      ))
-    }
-  </main>
-</Layout>
-
-<style>
-  .book-page {
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .book-section {
-    margin-bottom: 4rem;
-  }
-
-  .category-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #07e032;
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #eaeaea;
-  }
-
-  /* 响应式设计 */
-  @media (max-width: 768px) {
-    .book-page {
-      padding: 1.5rem 0.8rem;
-    }
-
-    .book-section {
-      margin-bottom: 3rem;
-    }
-
-    .category-title {
-      font-size: 1.75rem;
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .book-page {
-      padding: 1rem 0.5rem;
-    }
-
-    .book-section {
-      margin-bottom: 2rem;
-    }
-
-    .category-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-  }
-</style>
+<Layout pageTitle={pageTitle} description={description} ogimage={ogimage} />
