@@ -1,4 +1,5 @@
 ---
+import AllPosts from "../../pages/blog/all-posts.astro";
 import Social from "../ui/Social.astro";
 
 const { items = [] }: { items: (keyof typeof menu)[] } = Astro.props as {
@@ -16,7 +17,7 @@ const menu = {
   experience: { name: "Experience", path: "/#experience" },
   projects: { name: "Projects", path: "/#projects" },
   // TODO: 完善以下内容
-  friends: { name: "Friends", path: "/" },
+  friends: { name: "Friends", path: "/friends" },
   link: {
     name: "Link",
     dropdown: [
