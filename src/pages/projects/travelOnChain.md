@@ -3,14 +3,14 @@ layout:  /src/layouts/ProjectLayout.astro
 title: 'Travel on Chain'
 pubDate: 2025-04-06
 author: YaCo
-description: '基于Web3技术的旅游激励平台，利用NFT和区块链技术让旅行变得更有趣且回报丰厚。'
+description: '基于区块链技术的旅游激励平台，利用NFT和区块链技术让旅行变得更有趣且回报丰厚。'
 languages: ["solidity", "go", "javascript"]
 image:
   url: "/images/projects/traveonchain.png"
   alt: "Travel on Chain缩略图"
 --- 
 
-**Travel on Chain** 是一个去中心化旅游应用平台，通过Web3技术为线下旅游体验提供全新的激励机制。我们的初衷是利用有趣且具有吸引力的活动，鼓励人们参与线下旅游，亲身体验世界的美好，同时借助Web3技术为旅行者提供实质性奖励。
+**Travel on Chain** 是一个去中心化旅游应用平台，通过区块链技术为线下旅游体验提供全新的激励机制。我们的初衷是利用有趣且具有吸引力的活动，鼓励人们参与线下旅游，亲身体验世界的美好，同时借助区块链技术为旅行者提供实质性奖励。
 
 ## 🌟 项目灵感
 
