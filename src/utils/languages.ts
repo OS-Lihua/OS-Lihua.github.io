@@ -63,7 +63,7 @@ export const languages: Record<string, Language> = {
   },
   cursor: {
     name: "Cursor",
-    iconName: "cursor-ia",
+    iconName: "cursor",
   },
   deepseek: {
     name: "DeepSeek",
@@ -81,6 +81,10 @@ export const languages: Record<string, Language> = {
     name: "Java",
     iconName: "java",
   },
+  react: {
+    name: "React",
+    iconName: "react" 
+  }
 };
 
 export const getLanguage = (lang: string): Language => {

@@ -1,7 +1,7 @@
 ---
-layout:  /src/layouts/ProjectLayout.astro
+layout: /src/layouts/ProjectLayout.astro
 title: 'Hyperlane CC'
-pubDate: 2025-04-05
+pubDate: 2025-03-05
 author: YaCo
 description: 'Hyperlane中文社区是无需许可的模块化跨链协议，构建Web3的通用互操作层。'
 languages: ["markdown"]

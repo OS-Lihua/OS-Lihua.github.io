@@ -1,7 +1,7 @@
 ---
-layout:  /src/layouts/ProjectLayout.astro
+layout: /src/layouts/ProjectLayout.astro
 title: 'Travel on Chain'
-pubDate: 2025-04-06
+pubDate: 2024-04-27
 author: YaCo
 description: '基于区块链技术的旅游激励平台，利用NFT和区块链技术让旅行变得更有趣且回报丰厚。'
 languages: ["solidity", "go", "javascript"]

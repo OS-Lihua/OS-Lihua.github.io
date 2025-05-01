@@ -9,8 +9,6 @@ pubDate: 2023-07-01
 tags: ["基础知识"]
 languages: ["markdown", "cpp"]
 ---
-# 类
-
 一般来说，类的声明形式：
 
 ```cpp

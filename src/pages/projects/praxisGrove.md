@@ -1,5 +1,5 @@
 ---
-layout:  /src/layouts/ProjectLayout.astro
+layout: /src/layouts/ProjectLayout.astro
 title: 'Praxis Grove'
 pubDate: 2025-04-07
 author: YaCo
@@ -9,7 +9,6 @@ image:
   url: "/images/projects/praxisgrove.png"
   alt: "Praxis Grove缩略图"
 --- 
-
 
 **Praxis Grove** 是一个专注于区块链和前沿技术的开放社区，致力于知识分享与技术探索。"Praxis"来源于希腊语，意为"实践"，而"Grove"意为"树林"，寓意我们希望建立一个由实践者组成的繁茂生态系统，共同成长与学习。我们的理念是：自我教育、自由主权、知行合一。
 

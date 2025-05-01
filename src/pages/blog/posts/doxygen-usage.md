@@ -1,6 +1,6 @@
 ---
 layout: /src/layouts/MarkdownPostLayout.astro
-title: Doxygen 用法
+title: 使用 Doxygen 从源代码生成 UML 类图
 author: YaCo
 image:
     url: "https://image.yaco.email/DargonEg.png"
@@ -9,7 +9,6 @@ pubDate: 2023-06-27
 tags: ["UML","自动生成","Tool"]
 languages: ["cpp"]
 ---
-# 使用 Doxygen 从源代码生成 UML 类图
 
 Doxygen是可以根据代码文档自动生成UML，保存在html内
 

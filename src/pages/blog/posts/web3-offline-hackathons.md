@@ -1,6 +1,6 @@
 ---
 layout: /src/layouts/MarkdownPostLayout.astro
-title: 第一次参加线下黑客松
+title: 参加 OpenBuild x Morph x Chainlink 举办的 线下黑客松
 author: YaCo
 image:
     url: "https://image.yaco.email/TraveOnChain.png"

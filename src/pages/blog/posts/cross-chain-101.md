@@ -1,16 +1,15 @@
 ---
 layout: /src/layouts/MarkdownPostLayout.astro
-title: 跨链桥
+title: 跨链桥 101
 author: YaCo
 image:
-    url: "![cross-chain101](https://image.yaco.email/cross-chain101.png)"
-    alt: "跨链"
+    url: "https://image.yaco.email/cross-chain101.png"
+    alt: "跨链101"
 tags: ["跨链桥"]
 pubDate: 2025-04-21
 languages: ["solidity", "rust"]
 ---
-# 跨链桥 101
-![cross-chain101](https://image.yaco.email/cross-chain101.png)
+
 ## 跨链的出现
 
 当下公链生态呈现爆炸式增长，从以太坊扩容方案（Rollups）到 Solana、Avalanche 等高性能链，区块链世界逐渐形成"多链宇宙"。但每条链都像一座孤岛：协议互不兼容、资产无法互通、数据难以共享。Chainlink 曾将区块链比作不同大陆——即便某条链能建起摩天大楼，若没有跨海大桥连接其他大陆，生态价值终将受限。与此同时，DeFi、NFT、GameFi 的爆发式创新，迫使资金需要在各链间高效流转，跨链的需求已成必然。

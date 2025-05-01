@@ -9,7 +9,7 @@ import ListPosts from "../components/blog/ListPosts.astro";
 import NavigationArticles from "../components/layout/NavigationArticles.astro";
 import Share from "../components/ui/Share.astro";
 const { frontmatter } = Astro.props;
-const currentUrl = `https://www.yaco.email${Astro.url.pathname}`;
+const currentUrl = `${Astro.site}${Astro.url.pathname}`;
 const tweetText = encodeURIComponent(
   `"${frontmatter.title}" - by ${frontmatter.author} `
 );

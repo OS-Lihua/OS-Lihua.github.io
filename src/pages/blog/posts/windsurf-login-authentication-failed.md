@@ -1,6 +1,6 @@
 ---
 layout: /src/layouts/MarkdownPostLayout.astro
-title: WindSurf 登录验证失败
+title: WindSurf 登录验证
 author: YaCo
 image:
     url: "https://image.yaco.email/windsurf-start.png"
@@ -9,8 +9,6 @@ pubDate: 2024-12-25
 tags: ["WindSurf","AI","解决问题","Tool"]
 languages: ["markdown"]
 ---
-
-# WindSurf 登录验证失败
 
 ## 学习 AI 工具开发
 看UP 主 吕老师发布的 [🙀 2小时开发AI应用](https://www.youtube.com/watch?v=w1Mo0NoiO7U)，感叹 v0/bolt -> cursor/windsurf 开发流程如此得心应手。对于一个mvp的开发来说，这套流程非常适合，尤其是黑客松。如果后续能够结合 dify/coze 这种软件，可能可以会有意想不到的结果。

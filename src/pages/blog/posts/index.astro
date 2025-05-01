@@ -1,8 +1,8 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/blog/Hero.astro";
-import Tags from "../../components/blog/Tags.astro";
-import ListPosts from "../../components/blog/ListPosts.astro";
+import Layout from "../../../layouts/Layout.astro";
+import Hero from "../../../components/blog/Hero.astro";
+import Tags from "../../../components/blog/Tags.astro";
+import ListPosts from "../../../components/blog/ListPosts.astro";
 const pageTitle = "YaCo's Blog | Crypto & AI Dev";
 const description =
   "欢迎来到我的博客，在这里分享我在这个世界的探索，以及crypto&AI的相关实践";
@@ -10,11 +10,11 @@ const ogimage = {
   url: "/images/blog.png",
   alt: "YaCo's Blog logo",
 };
-const currentUrl = `https://www.yaco.email${Astro.url.pathname}`;
+const currentUrl = `${Astro.site}${Astro.url.pathname}`;
 const tweetText = encodeURIComponent(`"${pageTitle}"`);
-import Heading from "../../components/ui/Heading.astro";
-import Share from "../../components/ui/Share.astro";
-import Languages from "../../components/blog/Languages.astro";
+import Heading from "../../../components/ui/Heading.astro";
+import Share from "../../../components/ui/Share.astro";
+import Languages from "../../../components/blog/Languages.astro";
 ---
 
 <Layout pageTitle={pageTitle} description={description} ogimage={ogimage}>

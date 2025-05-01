@@ -9,9 +9,6 @@ pubDate: 2023-06-19
 tags: ["智能指针","RAII"]
 languages: ["cpp"]
 ---
-# 手动实现智能指针
-
-
 
 ```cpp
 /// unique_ptr

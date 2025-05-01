@@ -1,8 +1,8 @@
 ---
-layout:  /src/layouts/ProjectLayout.astro
+layout: /src/layouts/ProjectLayout.astro
 title: 'NextWordApp'
 author: YaCo
-pubDate: 2025-04-06
+pubDate: 2024-07-25
 description: 'AI+Web3短视频单词学习平台，像看短视频一样学习词汇，边学边赚钱。'
 languages: ["javascript", "react", "solidity"]
 image:

@@ -48,9 +48,11 @@ image:
 我积极参与 Crypto 社区建设，主要贡献包括：
 
 - **[Hyperlane中文社区](Hyperlane.cc)**：参与创建和管理社区，撰写技术文章并解答开发者疑问
-- **[Praxis Grove](https://github.com/PraxisGrove)**：专注区块链和前沿技术的开放学习社区
-- **HackQuest & OpenBuild**：协助组织线下活动，包括开发者工作坊和技术分享会
-- **Chainlink Labs**：在Codio平台上为开发者教程进行中英翻译
+- **[Praxis Grove](https://github.com/PraxisGrove)**：创建并推动社区建设，起源于305 playground
+- **[Scihub 社区](https://t.me/WTFDeSci)**: 参与社区历史记录, 冲推组组长
+- **[VitaFlux 社区](https://t.me/+dpMW4p-s1lAxNTNl)**: 参与社区产品计划, 推动社区计划有效进行
+- **HackQuest / OpenBuild**：协助组织线下活动，包括开发者工作坊和技术分享会
+- **Chainlink Labs**：担任 Dev Expert, 在Codio平台上为开发者教程进行中英翻译, 以及活动内容翻译
 
 
 ## 技术能力 🧠
@@ -79,7 +81,7 @@ image:
 
 1. **[Hyperlane CC](Hyperlane.cc)**：无需许可的模块化跨链协议中文社区
 2. **[Praxis Grove](https://github.com/PraxisGrove)**：知识与实践的共同生长之地
-
+3. **[VitaFlux 社区](https://t.me/+dpMW4p-s1lAxNTNl)**:  Web3 x AI 创新平台 
 ## 未来规划 🎯
 
 我的目标是继续深耕 Web3 领域，特别是：

@@ -9,8 +9,6 @@ tags: ["博客"]
 languages: ["hexo"]
 ---
 
-# Hexo 
-
 ## Hexo 安装
 
 ```shell

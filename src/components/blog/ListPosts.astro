@@ -11,7 +11,12 @@ export interface Props {
 
 const { excludeLatest = false, currentPostUrl = "", all = false } = Astro.props;
 
-const allPosts = await Astro.glob("../../pages/blog/posts/*.md");
+// 使用import.meta.glob替代Astro.glob
+const posts = await import.meta.glob("../../pages/blog/posts/*.md", {
+  eager: true,
+});
+const allPosts = Object.values(posts);
+
 // Sort by date in descending order (newest first)
 allPosts.sort((a, b) => {
   const dateA = new Date(a.frontmatter.pubDate).getTime();
@@ -71,7 +76,7 @@ if (!all) {
     !all && (
       <div id="morePosts" class="w-full flex justify-center text-center my-12">
         <a
-          href="/blog/all-posts"
+          href="/blog/posts/"
           class="font-bold cursor-pointer text-mint-400 dark:text-mint-100 hover:text-mint-500 dark:hover:text-mint-300 transition-all"
         >
           View all posts...

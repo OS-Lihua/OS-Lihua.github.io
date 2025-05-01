@@ -10,9 +10,6 @@ tags: ["NMEA","GPS","Location"]
 languages: ["cpp","java"]
 ---
 
-
-# NMEA 信息获取
-
 **Android 设备获取地理信息位置**
 
 ### 步骤

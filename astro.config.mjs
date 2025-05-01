@@ -8,7 +8,12 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.yaco.email",
-  integrations: [preact(), icon(), sitemap()],
+  
+  integrations: [preact(), icon(), sitemap({
+    filter: (page) =>
+      !page.includes("/blog/tags") &&
+      !page.includes("/blog/techs"),
+  }),],
 
   vite: {
     plugins: [tailwindcss()],

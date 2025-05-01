@@ -8,8 +8,6 @@ image:
   alt: "Example of blog."
 pubDate: 2025-04-05
 tags:
-  [
-    "documentation", "tutorial", "web-development", "content-creation", "writing"
-  ]
+  ["documentation", "tutorial", "web-development", "content-creation", "writing"]
 languages: ["markdown", "html", "css"]
 ---

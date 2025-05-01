@@ -1,12 +1,11 @@
 ---
 layout: /src/layouts/MarkdownPostLayout.astro
-title: Java枚举
+title: 如何写一个优雅的 java 枚举
 author: YaCo
 pubDate: 2023-08-21
 tags: ["枚举"]
 languages: ["java"]
 ---
-# 如何写一个优雅的 java 枚举
 
 java 枚举 不能像 C++ 的枚举 可以和 "int" ，"char" 等基本类型直接转换 
 

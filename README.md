@@ -35,6 +35,7 @@
     │   │   ├── 📁friend               # 友链 
     │   │   ├── 📁blog
     │   │   │   ├── 📁posts              # 博客 提交
+    │   │   │   ├── index.astro           # All posts page
     │   │   │   ├── 📁tags               # 博客 标签
     │   │   │   ├── 📁techs              # 博客 技术栈/分类
     │   │   │   ├── all-posts.astro      # All posts page
@@ -156,6 +157,26 @@
 如果在此过程中遇到任何问题，请尝试重启开发服务器。在某些情况下，对配置文件或静态资源的更改需要重启才能正确检测。
 
 要验证新语言是否已正确添加，请在重启服务器后检查用户界面中的可用技术列表。
+
+<!-- ---
+### 🧷 Favicon Setup
+
+要自定义您网站的 favicon 和网络应用图标，您可以使用 [favicon.io](https://favicon.io/favicon-converter/) 生成所有必要的变体。上传您的徽标或图标，该工具将为各种设备和平台创建一整套优化文件。
+将生成的文件放置在 📂 public 目录中，如下所示：
+
+```bash
+📂 public
+├── 📄 android-chrome-192x192.png
+├── 📄 android-chrome-512x512.png
+├── 📄 apple-touch-icon.png
+├── 📄 favicon-16x16.png
+├── 📄 favicon-32x32.png
+├── 📄 favicon.ico
+└── 📄 site.webmanifest
+```
+
+> 💡 别忘了更新 site.webmanifest 的内容，以匹配您应用的名称、描述和主题颜色，以获得完整的 PWA 体验。
+--- -->
 
 ### 🎨 样式
 
