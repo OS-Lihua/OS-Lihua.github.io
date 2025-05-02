@@ -1,6 +1,6 @@
 ---
 layout: /src/layouts/MarkdownPostLayout.astro
-title: 跨链桥 101
+title: 跨链 101
 author: YaCo
 image:
     url: "https://image.yaco.email/cross-chain101.png"

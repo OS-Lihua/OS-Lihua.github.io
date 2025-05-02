@@ -1,7 +1,8 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
-import ListBook from "../../../components/link/book/ListBook.astro";
+import BookCard from "../../../components/link/book/BookCard.astro";
 
+// 书籍数据集合
 const books = [
   {
     class_name: "技术",
@@ -116,7 +117,7 @@ const books = [
         name: "类人",
         author: "刘慈欣",
         cover:
-          "https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/6d543005c0091e010fcd146205774e78288bb5116cb559175b1dca709ab27b4d.jpg",
+          "https://s3proxy.cdn-zlib.sk/covers150/collections/chinese/ce6068918810b8ac75da298b429fda3c96b2ae02a32e2c59b95181cd4751419c.jpg",
         link: "https://z-lib.rest/s/类人-刘慈欣",
       },
       {
@@ -199,6 +200,13 @@ const books = [
         author: "沉默的糕点",
         cover: "https://bookcover.yuewen.com/qdbimg/349573/3686556/600.webp",
         link: "https://www.qidian.com/book/3686556/",
+      },
+      {
+        name: "十宗罪",
+        author: "蜘蛛",
+        cover:
+          "https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/596cee52413b0cb4e30b6e3348c88080061e1109ac407fc7648f8e78181b1c37.jpg",
+        link: "https://z-lib.rest/s/十宗罪",
       },
     ],
   },
@@ -293,17 +301,11 @@ const books = [
         cover: "https://bookcover.yuewen.com/qdbimg/349573/1111193/180.webp",
         link: "https://m.qidian.com/book/1111193.html",
       },
-      {
-        name: "十宗罪",
-        author: "蜘蛛",
-        cover:
-          "https://s3proxy.cdn-zlib.sk/covers150/collections/userbooks/596cee52413b0cb4e30b6e3348c88080061e1109ac407fc7648f8e78181b1c37.jpg",
-        link: "https://z-lib.rest/s/十宗罪",
-      },
     ],
   },
 ];
 
+// 页面元数据
 const pageTitle = "书架";
 const description = "我的书架";
 const ogimage = {
@@ -312,4 +314,335 @@ const ogimage = {
 };
 ---
 
-<Layout pageTitle={pageTitle} description={description} ogimage={ogimage} />
+<Layout pageTitle={pageTitle} description={description} ogimage={ogimage}>
+  <main class="book-page">
+    <!-- 页面标题区域 -->
+    <div class="header">
+      <div class="animated-bg">
+        <div class="glow glow1"></div>
+        <div class="glow glow2"></div>
+        <div class="glow glow3"></div>
+        <div class="noise"></div>
+      </div>
+      <div class="header-content">
+        <h1>{pageTitle}</h1>
+        <p>{description}</p>
+      </div>
+    </div>
+
+    <!-- 书籍分类与展示 -->
+    <div class="books-container">
+      {
+        books.map((category) => (
+          <div class="category-section">
+            <h2 class="category-title">{category.class_name}</h2>
+            <div class="books-grid">
+              {category.link_list.map((book) => (
+                <div class="book-item">
+                  <BookCard
+                    name={book.name}
+                    author={book.author}
+                    cover={book.cover}
+                    link={book.link}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* 书架页面容器 */
+  .book-page {
+    min-height: 100vh;
+    background-color: var(--bg-color, #f9f9f9);
+    color: var(--text-color, #333);
+  }
+
+  /* 标题区域 */
+  .header {
+    position: relative;
+    text-align: center;
+    padding: 4rem 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    background-color: var(--header-bg, #0a392b);
+  }
+
+  /* 动态背景容器 */
+  .animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  /* 噪点效果 - 增加纹理感 */
+  .noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+    z-index: 2;
+  }
+
+  /* 光晕基本样式 */
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.6;
+    transition: all 0.8s ease;
+  }
+
+  /* 主要光晕 */
+  .glow1 {
+    width: 80%;
+    aspect-ratio: 1.6 / 1;
+    background: radial-gradient(
+      circle,
+      var(--glow1-center, #4ade80) 0%,
+      var(--glow1-edge, rgba(16, 185, 129, 0.5)) 50%,
+      transparent 80%
+    );
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation:
+      pulse 8s ease-in-out infinite alternate,
+      shift 20s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  /* 次要光晕 - 右侧 */
+  .glow2 {
+    width: 45%;
+    aspect-ratio: 1 / 1;
+    background: radial-gradient(
+      circle,
+      var(--glow2-center, #10b981) 0%,
+      var(--glow2-edge, rgba(5, 150, 105, 0.4)) 40%,
+      transparent 70%
+    );
+    bottom: -20%;
+    right: -10%;
+    animation:
+      pulse 9s ease-in-out infinite alternate-reverse,
+      shift-right 25s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  /* 次要光晕 - 左侧 */
+  .glow3 {
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    background: radial-gradient(
+      circle,
+      var(--glow3-center, #34d399) 0%,
+      var(--glow3-edge, rgba(16, 185, 129, 0.3)) 30%,
+      transparent 60%
+    );
+    top: -20%;
+    left: -10%;
+    animation:
+      pulse 7s ease-in-out infinite alternate,
+      shift-left 22s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  /* 呼吸动画 */
+  @keyframes pulse {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.05);
+      opacity: 0.7;
+    }
+  }
+
+  /* 中央光晕位移动画 */
+  @keyframes shift {
+    0% {
+      transform: translate(-52%, -48%);
+    }
+    25% {
+      transform: translate(-48%, -52%);
+    }
+    50% {
+      transform: translate(-51%, -47%);
+    }
+    75% {
+      transform: translate(-49%, -53%);
+    }
+    100% {
+      transform: translate(-52%, -48%);
+    }
+  }
+
+  /* 右侧光晕位移动画 */
+  @keyframes shift-right {
+    0% {
+      transform: translate(0, 0);
+    }
+    30% {
+      transform: translate(-5%, -5%);
+    }
+    60% {
+      transform: translate(-2%, 2%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  /* 左侧光晕位移动画 */
+  @keyframes shift-left {
+    0% {
+      transform: translate(0, 0);
+    }
+    30% {
+      transform: translate(5%, 5%);
+    }
+    60% {
+      transform: translate(2%, -2%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  /* 标题内容区 - 在动态背景上层 */
+  .header-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.05em;
+  }
+
+  .header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  /* 书籍内容容器 */
+  .books-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  /* 分类区域 */
+  .category-section {
+    margin-bottom: 3rem;
+  }
+
+  /* 分类标题 */
+  .category-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color, #f0f0f0);
+    color: var(--text-color, #333);
+    font-weight: 700;
+  }
+
+  /* 书籍网格布局 */
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* 单本书籍项 */
+  .book-item {
+    height: 100%;
+  }
+
+  /* 响应式布局 - 平板 */
+  @media (max-width: 768px) {
+    .books-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .category-title {
+      font-size: 1.5rem;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+    }
+
+    .header {
+      padding: 3rem 1rem;
+    }
+  }
+
+  /* 响应式布局 - 手机 */
+  @media (max-width: 480px) {
+    .books-grid {
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 0.8rem;
+    }
+
+    .category-title {
+      font-size: 1.3rem;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+    }
+
+    .header {
+      padding: 2.5rem 1rem;
+    }
+  }
+
+  /* 浅色模式变量 */
+  :root {
+    --header-bg: #0a392b;
+    --glow1-center: #4ade80;
+    --glow1-edge: rgba(16, 185, 129, 0.5);
+    --glow2-center: #10b981;
+    --glow2-edge: rgba(5, 150, 105, 0.4);
+    --glow3-center: #34d399;
+    --glow3-edge: rgba(16, 185, 129, 0.3);
+  }
+
+  /* 深色模式适配 */
+  :global(.dark) .book-page {
+    --bg-color: #121212;
+    --text-color: #e1e1e1;
+    --border-color: #333;
+  }
+
+  /* 深色模式下的光晕效果增强 */
+  :global(.dark) {
+    --header-bg: #042f23;
+    --glow1-center: #059669;
+    --glow1-edge: rgba(16, 185, 129, 0.4);
+    --glow2-center: #047857;
+    --glow2-edge: rgba(5, 150, 105, 0.3);
+    --glow3-center: #10b981;
+    --glow3-edge: rgba(16, 185, 129, 0.25);
+  }
+</style>
