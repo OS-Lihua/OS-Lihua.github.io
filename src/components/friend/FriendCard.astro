@@ -1,0 +1,231 @@
+---
+/**
+ * 友链卡片组件
+ * @param {string} name - 友链名称
+ * @param {string} link - 友链地址
+ * @param {string} avatar - 友链头像URL
+ */
+interface Props {
+  name: string;
+  link: string;
+  avatar: string;
+}
+
+const { name, link, avatar } = Astro.props;
+---
+
+<!-- 友链卡片，点击跳转到对应网站 -->
+<a href={link} target="_blank" rel="noopener noreferrer" class="friend-card">
+  <div class="card-inner">
+    <!-- 卡片渐变背景层 -->
+    <div class="card-bg"></div>
+    <div class="card-content">
+      <!-- 头像区域 -->
+      <div class="avatar-container">
+        <img src={avatar} alt={name} class="avatar" loading="lazy" />
+        <div class="avatar-ring"></div>
+      </div>
+      <!-- 信息区域 -->
+      <div class="info">
+        <h3 class="name">{name}</h3>
+        <div class="link-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+
+<style>
+  /* 卡片基础样式 */
+  .friend-card {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    perspective: 1000px; /* 3D视觉效果 */
+    z-index: 20; /* 提高z-index确保卡片可见并可点击 */
+    backface-visibility: hidden; /* 防止3D变换时背面可见 */
+    transform: translateZ(0); /* 强制GPU加速 */
+  }
+
+  /* 卡片内部容器 */
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 平滑过渡动画 */
+    transform-style: preserve-3d;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex; /* 确保内容正确排列 */
+    flex-direction: column; /* 垂直排列 */
+    justify-content: center; /* 垂直居中 */
+  }
+
+  /* 卡片背景渐变层 */
+  .card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      var(--accent-color) 0%,
+      var(--accent-color-secondary) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+  }
+
+  /* 卡片内容区域 */
+  .card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+  }
+
+  /* 头像容器 */
+  .avatar-container {
+    position: relative;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* 头像样式 */
+  .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    z-index: 2;
+    position: relative;
+    border: 2px solid transparent;
+    background-color: var(--card-bg);
+  }
+
+  /* 头像外环动画 */
+  .avatar-ring {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 1;
+  }
+
+  /* 信息区域 */
+  .info {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* 名称样式 */
+  .name {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  /* 链接图标 */
+  .link-icon {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    color: var(--accent-color);
+  }
+
+  /* ====== 悬停效果 ====== */
+  /* 卡片悬停效果 */
+  .friend-card:hover .card-inner {
+    transform: translateY(-8px) rotateX(5deg); /* 上浮并微微倾斜 */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  /* 背景渐变显示 */
+  .friend-card:hover .card-bg {
+    opacity: 0.1;
+  }
+
+  /* 头像缩放效果 */
+  .friend-card:hover .avatar {
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+  }
+
+  /* 头像外环动画 */
+  .friend-card:hover .avatar-ring {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /* 名称动画 */
+  .friend-card:hover .name {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+  }
+
+  /* 链接图标动画 */
+  .friend-card:hover .link-icon {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ====== 响应式调整 ====== */
+  @media (max-width: 640px) {
+    .avatar {
+      width: 56px;
+      height: 56px;
+    }
+
+    .name {
+      font-size: 1.1rem;
+    }
+
+    .card-inner {
+      padding: 1rem;
+    }
+  }
+
+  /* 确保AOS动画元素在正确的层级 */
+  :global([data-aos]) {
+    position: relative;
+    z-index: 5;
+    pointer-events: auto !important;
+  }
+</style>

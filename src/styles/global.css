@@ -32,6 +32,13 @@
 	--color-riptide-900: #124f4b;
 	--color-riptide-950: #03302f;
 
+	/* 友链页面共享CSS变量 */
+	--card-bg: #ffffff;
+	--text-color: #333333;
+	--accent-color: #0dd45a;
+	--accent-color-secondary: #279bd6;
+	--border-color: rgba(0, 0, 0, 0.1);
+
 	--animate-rotate: rotate 10s linear infinite;
 
 	--animate-rotate-border: border-rotate 3s linear infinite;
@@ -41,6 +48,15 @@
 		}
 	}
 	
+}
+
+/* 暗色模式下友链页面共享CSS变量 */
+:root.dark {
+	--card-bg: #1e1e24;
+	--text-color: #e0e0e0;
+	--accent-color: #088d3b;
+	--accent-color-secondary: #0d6a98; 
+	--border-color: rgba(255, 255, 255, 0.1);
 }
 
 @property --border-angle{

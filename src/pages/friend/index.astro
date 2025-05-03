@@ -1,0 +1,288 @@
+---
+/**
+ * 友链页面
+ * 集成了友链卡片组件和朋友数据，支持暗色/亮色模式
+ */
+import Layout from "../../layouts/Layout.astro";
+import FriendCard from "../../components/friend/FriendCard.astro";
+
+// 页面元数据
+const pageTitle = "友链";
+const description = "我的朋友们";
+const ogimage = {
+  url: "/images/friend.png",
+  alt: "我的朋友",
+};
+
+// 友链数据
+interface Friend {
+  name: string;
+  link: string;
+  avatar: string;
+}
+
+// 所有朋友列表
+const friends: Friend[] = [
+  {
+    name: "lewis",
+    link: "https://prelude-blog.vercel.app/",
+    avatar: "https://avatars.githubusercontent.com/u/108063429",
+  },
+  {
+    name: "unic",
+    link: "https://www.yunique.top/",
+    avatar: "https://www.yunique.top/upload/Yunique-vert.png",
+  },
+  {
+    name: "zitian",
+    link: "https://renkosky.github.io/",
+    avatar: "https://renkosky.github.io/images/avatar.gif",
+  },
+];
+---
+
+<Layout pageTitle={pageTitle} description={description} ogimage={ogimage}>
+  <!-- 友链页面主容器 -->
+  <main class="friend-page">
+    <!-- 页面装饰元素 -->
+    <div class="decoration decoration-1"></div>
+    <div class="decoration decoration-2"></div>
+
+    <div class="container">
+      <!-- 页面标题 -->
+      <div class="page-header" data-aos="fade-up">
+        <h1 class="page-title">我的朋友们</h1>
+        <p class="page-description">很高兴认识这些优秀的朋友，欢迎与他们交流</p>
+      </div>
+
+      <!-- 友链列表 -->
+      <div class="friend-group">
+        <div class="friend-grid">
+          {
+            friends.map((friend, index) => (
+              <div
+                class="friend-item"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <FriendCard
+                  name={friend.name}
+                  link={friend.link}
+                  avatar={friend.avatar}
+                />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- 添加友链区域 -->
+      <div class="add-friend-section" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="add-title">想要添加你的站点？</h3>
+        <p class="add-description">
+          如果你也想被添加到我的友链中，欢迎与我联系！
+        </p>
+        <a href="mailto:yaco@yaco.email" class="add-button">
+          申请友链
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* ====== 页面基础样式 ====== */
+  .friend-page {
+    min-height: 90vh;
+    padding: 3rem 0;
+    position: relative;
+    overflow: visible; /* 确保内容不被裁剪 */
+    z-index: 1;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 10; /* 提高容器z-index，确保内容可见 */
+  }
+
+  /* ====== 页面装饰元素 ====== */
+  .decoration {
+    position: fixed; /* 改为fixed，避免和其他元素发生层级冲突 */
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.1;
+    z-index: -5; /* 使用更小的负值，确保在所有内容之下 */
+    pointer-events: none; /* 确保装饰元素不拦截点击 */
+  }
+
+  .decoration-1 {
+    background: var(--accent-color);
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -100px;
+  }
+
+  .decoration-2 {
+    background: var(--accent-color-secondary);
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+    left: -200px;
+  }
+
+  /* ====== 页面标题区域 ====== */
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative; /* 确保标题正确定位 */
+    z-index: 5; /* 添加z-index */
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(
+      90deg,
+      var(--accent-color),
+      var(--accent-color-secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* 标准语法 */
+    color: transparent;
+    text-align: center;
+    position: relative; /* 确保标题文字在前景 */
+  }
+
+  .page-description {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* 确保描述文字在前景 */
+    color: var(--text-color); /* 使用CSS变量适配暗色/亮色模式 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+  }
+
+  /* ====== 友链卡片网格布局 ====== */
+  .friend-group {
+    margin-bottom: 4rem;
+    position: relative; /* 确保卡片组正确显示 */
+    z-index: 10; /* 提高友链卡片组z-index */
+  }
+
+  .friend-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    position: relative; /* 确保网格正确显示 */
+  }
+
+  .friend-item {
+    position: relative; /* 确保每个卡片项正确显示 */
+    z-index: 11; /* 提高卡片z-index */
+    height: 120px; /* 设置固定高度 */
+    margin-bottom: 15px; /* 增加底部间距 */
+    transform: translateZ(0); /* 强制使用GPU渲染 */
+  }
+
+  /* ====== 友链申请区域 ====== */
+  .add-friend-section {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    position: relative; /* 确保申请区域正确显示 */
+    z-index: 10; /* 提高申请区域z-index */
+  }
+
+  .add-friend-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .add-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(
+      90deg,
+      var(--accent-color),
+      var(--accent-color-secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+
+  .add-description {
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+    color: var(--text-color); /* 使用CSS变量适配暗色/亮色模式 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+  }
+
+  .add-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.6rem;
+    background: linear-gradient(
+      90deg,
+      var(--accent-color),
+      var(--accent-color-secondary)
+    );
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .add-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .add-button .arrow {
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+  }
+
+  .add-button:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  /* ====== 响应式布局 ====== */
+  @media (min-width: 640px) {
+    .friend-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 960px) {
+    .friend-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .page-title {
+      font-size: 3rem;
+    }
+  }
+</style>

@@ -58,6 +58,10 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <meta name="theme-color" content="#0E0E11" />
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- AOS 动画库 - 集中管理 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
   </head>
   <body class="overflow-x-hidden">
     <SpeedInsights />
@@ -76,6 +80,29 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <Footer />
     <script>
       import "../scripts/menu.js";
+    </script>
+
+    <!-- AOS 初始化 - 全站统一配置 -->
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof AOS !== "undefined" && !window.aosInitialized) {
+          AOS.init({
+            duration: 800,
+            easing: "ease-out",
+            once: true,
+            offset: 50,
+            disable: "mobile"
+          });
+          window.aosInitialized = true;
+          
+          // 使用事件委托监听页面变化，刷新AOS
+          document.addEventListener("astro:page-load", function() {
+            setTimeout(function() {
+              AOS.refresh();
+            }, 100);
+          });
+        }
+      });
     </script>
   </body>
 </html>
