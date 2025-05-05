@@ -37,6 +37,7 @@ image:
 
 通过开发者社区，我接触到了Web3领域，并被区块链技术的创新性所吸引。我开始自学智能合约开发，掌握了Solidity语言和相关开发工具（如Foundry、Remix）。我积极参与各类区块链项目的开发，包括：
 
+- [TestNet Telegram bot](https://t.me/VitaFlux_Faucet_bot)
 - [稳定币实践](https://sepolia.etherscan.io/address/0xED0dA07064546F7D12b169a1Bd1548016aD06829)
 - [ERC-20 Trump](https://sepolia.etherscan.io/address/0x619010ce97fd38c0e058687cf3e3a3d45da8214a)
 - [Decentralized Medical Records](https://github.com/hackathon-Decentralized-Medical-Records)
@@ -52,7 +53,7 @@ image:
 - **[Scihub 社区](https://t.me/WTFDeSci)**: 参与社区历史记录, 冲推组组长
 - **[VitaFlux 社区](https://t.me/+dpMW4p-s1lAxNTNl)**: 参与社区产品计划, 推动社区计划有效进行
 - **HackQuest / OpenBuild**：协助组织线下活动，包括开发者工作坊和技术分享会
-- **Chainlink Labs**：担任 Dev Expert, 在Codio平台上为开发者教程进行中英翻译, 以及活动内容翻译
+- **Chainlink Labs**：作为 Dev Expert, 在Codio平台上为开发者教程进行中英翻译, 以及活动内容翻译
 
 
 ## 技术能力 🧠
@@ -79,9 +80,9 @@ image:
 
 目前我正在专注于几个主要项目：
 
-1. **[Hyperlane CC](Hyperlane.cc)**：无需许可的模块化跨链协议中文社区
-2. **[Praxis Grove](https://github.com/PraxisGrove)**：知识与实践的共同生长之地
-3. **[VitaFlux 社区](https://t.me/+dpMW4p-s1lAxNTNl)**:  Web3 x AI 创新平台 
+1. **[Hyperlane CC](Hyperlane.cc)**：无需许可的模块化跨链协议中文社区(Part time)
+2. **[Praxis Grove](https://github.com/PraxisGrove)**：知识与实践的共同生长之地(Founder)
+3. **[VitaFlux 社区](https://t.me/+dpMW4p-s1lAxNTNl)**: Web3 x AI 创新平台(Part time)
 ## 未来规划 🎯
 
 我的目标是继续深耕 Web3 领域，特别是：
