@@ -5,7 +5,7 @@ author: YaCo
 image:
     url: "https://image.yaco.email/hyperlane-cook-book.png"
     alt: "Hyperlane 极简教程"
-tags: ["博客页面"]
+tags: ["hyperlane","教程"]
 pubDate: 2025-06-05
 languages: ["markdown", "md"]
 ---
