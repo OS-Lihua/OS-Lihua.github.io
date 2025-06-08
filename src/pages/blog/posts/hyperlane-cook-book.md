@@ -17,6 +17,16 @@ Hyperlane 被描述为跨链基础设施, 它提供命令行工具用于将 Hype
 
 ## Hyperlane 跨链最佳实践
 
+### 明确目标
+
+我们的目标是将 Monad 的原生代币跨链到 Sepolia，MON 在 monadtestnet 上是原生代币(native)，而在 sepolia 上并不存在，那么怎么做呢，我们授权给 hyperlane 直接发一个(synthetic)
+
+这是我做的最终结果，打开看看吧
+
+[Hyperlane Bridge MonadTestNet Sepolia](https://hyperlane.superbridge.app/?hyperlaneWarpRoutes=e3aade14-49c5-4e7f-b8bc-6980100cd341)
+
+![superbridge.mon.monadtest2sepolia](https://image.yaco.email/superbridge.mon.monadtest2sepolia.png)
+
 ### 部署 Hyperlane 环境
 
 _在国内搞开发的同学可能都知道，最复杂的不是coding环节，而是环境部署以及网络代理，来吧，跟着我一起 cook吧_
@@ -89,16 +99,6 @@ Hyperlane CLI
 ![hyperlane.testmonad2sepolia](https://image.yaco.email/hyperlane.testmonad2sepolia.png)
 
 可以看到有许多已经跨链成功的案例，好吧，我们也行动吧
-
-### 明确目标
-
-我们的目标是将 Monad 的原生代币跨链到 Sepolia，MON 在 monadtestnet 上是原生代币(native)，而在 sepolia 上并不存在，那么怎么做呢，我们授权给 hyperlane 直接发一个(synthetic)
-
-这是我做的最终结果，打开看看吧
-
-[Hyperlane Bridge MonadTestNet Sepolia](https://hyperlane.superbridge.app/?hyperlaneWarpRoutes=e3aade14-49c5-4e7f-b8bc-6980100cd341)
-
-![superbridge.mon.monadtest2sepolia](https://image.yaco.email/superbridge.mon.monadtest2sepolia.png)
 
 #### 初始化(洗菜)
 

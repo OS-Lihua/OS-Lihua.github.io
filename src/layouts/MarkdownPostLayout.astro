@@ -136,7 +136,8 @@ import Heading from "../components/ui/Heading.astro";
       <NavigationArticles />
       <hr class="text-mint-300/50" />
     </div>
-
-    <ListPosts currentPostUrl={Astro.url.pathname} />
+    <div class="px-8 max-sm:px-4">
+      <ListPosts currentPostUrl={Astro.url.pathname} />
+    </div>
   </div>
 </Layout>
