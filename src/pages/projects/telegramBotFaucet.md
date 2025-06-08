@@ -1,6 +1,6 @@
 ---
 layout: /src/layouts/ProjectLayout.astro
-title: 'VitaFlux Faucet'
+title: 'SevenFlux Faucet'
 pubDate: 2025-04-29
 author: YaCo
 description: '基于 Node.js 开发的 Telegram 机器人项目，旨在简化区块链开发者获取测试币的流程。'
@@ -10,9 +10,9 @@ image:
   alt: "VitaFlux Faucet缩略图"
 ---
 
-**VitaFlux Faucet** 是一个基于 Node.js 开发的 Telegram 机器人项目，旨在简化区块链开发者获取测试币的流程，为VitaFlux 社区使用。我们的理念是：简单、可靠、开放。
+**SevenFlux Faucet** 是一个基于 Node.js 开发的 Telegram 机器人项目，旨在简化区块链开发者获取测试币的流程，为VitaFlux 社区使用。我们的理念是：简单、可靠、开放。
 
-**官网: [VitaFlux Faucet](https://t.me/VitaFlux_Faucet_bot)**
+**官网: [SevenFlux Faucet](https://t.me/sevenflux_faucet_bot)**
 
 ![](/images/projects/tgbotfauceturl.png)
 
