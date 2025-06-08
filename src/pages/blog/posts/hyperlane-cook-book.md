@@ -9,6 +9,7 @@ tags: ["hyperlane","教程"]
 pubDate: 2025-06-05
 languages: ["markdown", "md"]
 ---
+![](https://fastly.jsdelivr.net/gh/bucketio/img2@main/2025/04/17/1744894164165-3a257cb7-f748-4701-a022-187fcf372b45.png)
 
 ## 什么是 Hyperlane
 
@@ -278,3 +279,11 @@ OK，完成了，太棒了，我们打开浏览器看看吧。
 [Hyperlane Bridge MonadTestNet Sepolia](https://hyperlane.superbridge.app/?hyperlaneWarpRoutes=e3aade14-49c5-4e7f-b8bc-6980100cd341) : https://hyperlane.superbridge.app/?hyperlaneWarpRoutes=e3aade14-49c5-4e7f-b8bc-6980100cd341
 
 跨链互操作性是未来区块链的基石，这期课程我们学习了如何使用默认的ISM 和 warp route 制作跨链桥，接下来 Hyperlane 中文社区 将为你分享 hyperlane 协议的跨链原理以及更多自定义化的技巧。
+
+## 关于 Hyperlane
+
+作为开源的互操作性框架，Hyperlane让开发者能够：
+🔗 连接任意区块链
+🌉 构建自由安全通信的多链应用
+所有代码完全开源，始终无需许可即可使用。
+![](https://fastly.jsdelivr.net/gh/bucketio/img9@main/2025/04/24/1745474625229-cc6c5943-9168-4da4-9b59-567effd8b7a4.png)
