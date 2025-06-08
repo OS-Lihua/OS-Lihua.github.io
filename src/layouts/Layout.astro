@@ -5,7 +5,7 @@ import Footer from "../components/layout/Footer.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 const {
   pageTitle = "YaCo | Crypto & AI Developer 🚀 🚀",
-  description = "欢迎来到 YaCo 的网站，在这里我对世界的理解。",
+  description = "欢迎来到 YaCo 的网站，在这里分享我对世界的理解和探索。",
   ogimage = {
     url: "/images/yaco.png",
     alt: "YaCo logo",
@@ -60,8 +60,12 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- AOS 动画库 - 集中管理 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer
+    ></script>
   </head>
   <body class="overflow-x-hidden">
     <SpeedInsights />
@@ -91,13 +95,13 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
             easing: "ease-out",
             once: true,
             offset: 50,
-            disable: "mobile"
+            disable: "mobile",
           });
           window.aosInitialized = true;
-          
+
           // 使用事件委托监听页面变化，刷新AOS
-          document.addEventListener("astro:page-load", function() {
-            setTimeout(function() {
+          document.addEventListener("astro:page-load", function () {
+            setTimeout(function () {
               AOS.refresh();
             }, 100);
           });

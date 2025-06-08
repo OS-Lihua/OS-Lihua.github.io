@@ -96,7 +96,7 @@ Hyperlane CLI
 
 这是我做的最终结果，打开看看吧
 
-[Hyperlane Bridge MonadTestNet Sepolia](https://hyperlane.superbridge.app/?hyperlaneWarpRoutes=e3aade14-49c5-4e7f-b8bc-6980100cd341) : https://hyperlane.superbridge.app/?hyperlaneWarpRoutes=e3aade14-49c5-4e7f-b8bc-6980100cd341
+[Hyperlane Bridge MonadTestNet Sepolia](https://hyperlane.superbridge.app/?hyperlaneWarpRoutes=e3aade14-49c5-4e7f-b8bc-6980100cd341)
 
 ![superbridge.mon.monadtest2sepolia](https://image.yaco.email/superbridge.mon.monadtest2sepolia.png)
 
@@ -276,7 +276,7 @@ OK，完成了，太棒了，我们打开浏览器看看吧。
 
 **我们自己做了一个桥，而且通过它完成了跨链，这是一件很有成就感的事情，你从 0~1 完成了warp route 制作和部署，现在可以把你的战绩(截图/hash)发在我们的 hyperlane 微信群，DisCord或者你的个人推特吧。**
 
-[Hyperlane Bridge MonadTestNet Sepolia](https://hyperlane.superbridge.app/?hyperlaneWarpRoutes=e3aade14-49c5-4e7f-b8bc-6980100cd341) : https://hyperlane.superbridge.app/?hyperlaneWarpRoutes=e3aade14-49c5-4e7f-b8bc-6980100cd341
+[Hyperlane Bridge MonadTestNet Sepolia](https://hyperlane.superbridge.app/?hyperlaneWarpRoutes=e3aade14-49c5-4e7f-b8bc-6980100cd341)
 
 跨链互操作性是未来区块链的基石，这期课程我们学习了如何使用默认的ISM 和 warp route 制作跨链桥，接下来 Hyperlane 中文社区 将为你分享 hyperlane 协议的跨链原理以及更多自定义化的技巧。
 
