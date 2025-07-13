@@ -7,6 +7,13 @@ import DatePub from "./DatePub.astro";
 import Capsule from "../ui/Capsule.astro";
 ---
 
+<!-- 给博客添加数学公式支持 -->
+<link
+  rel="stylesheet"
+  href="https://fastly.jsdelivr.net/npm/katex@0.15.1/dist/katex.css"
+  integrity="sha384-WsHMgfkABRyG494OmuiNmkAOk8nhO1qE+Y6wns6v+EoNoTNxrWxYpl5ZYWFOLPCM"
+  crossorigin="anonymous"
+/>
 <article
   class="bg-white dark:bg-zinc-900/25 dark:border dark:border-zinc-800 dark:hover:border-mint-300 backdrop-blur-lg shadow-sm overflow-auto hover:shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] p-8 max-md:p-6 w-full flex justify-between items-center bg-gradient-to-r hover:from-teal-200 hover:to-emerald-200 dark:hover:from-riptide-500 dark:hover:to-mint-500 transition-all hover:scale-105 duration-300 ease-in-out gap-8 max-md:gap-4 rounded-3xl max-md:flex-col-reverse"
 >
