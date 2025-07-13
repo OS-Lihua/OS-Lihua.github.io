@@ -56,6 +56,17 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile # 确保依赖锁定
 
+      - name: Install Playwright browsers
+        run: yarn playwright install --with-deps chromium
+
+      # 添加缓存（可选但推荐）
+      - name: Cache Playwright
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright
+
       - name: Build site
         run: |
           echo "Starting build..."

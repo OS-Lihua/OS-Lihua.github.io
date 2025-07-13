@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "postinstall": "yarn config set ignore-engines true"
+    "postinstall": "playwright install --with-deps chromium"
   },
   "dependencies": {
     "@astrojs/preact": "4.1.0",
