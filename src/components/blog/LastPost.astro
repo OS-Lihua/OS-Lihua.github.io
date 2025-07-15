@@ -57,7 +57,10 @@ const imageAlt =
           aria-label={`Read article: ${latestPost.frontmatter.title}`}
         >
           <div class="gap-3 flex flex-col justify-end drop-shadow-[1px_6px_1px_rgba(0,_0,_0,_0.3)]">
-            <DatePub date={latestPost.frontmatter.pubDate} class="text-mint-50" />
+            <DatePub
+              date={latestPost.frontmatter.pubDate}
+              class="text-mint-50"
+            />
             <h2
               id="post-title"
               class="text-4xl max-xl:text-3xl max-sm:text-2xl font-bold"
@@ -74,7 +77,9 @@ const imageAlt =
           aria-label="Article tags"
         >
           {tags.map((tag) => (
-            <Tag tag={tag} forceDark="true">{tag}</Tag>
+            <Tag tag={tag} forceDark="true">
+              {tag}
+            </Tag>
           ))}
         </div>
       </article>

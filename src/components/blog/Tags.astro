@@ -11,9 +11,10 @@ const baseClasses = "max-w-7xl";
 
 // Variant-specific classes
 const variantClasses: Record<VariantType, string> = {
-    default: "max-lg:px-8 py-8 max-md:py-4 flex-wrap mx-auto gap-4 max-sm:gap-3 justify-center items-center flex flex-row",
-    vertical: "gap-6 justify-start items-start flex flex-col",
-    compact: "flex-wrap mx-auto gap-2 max-sm:gap-3 justify-start flex flex-row"
+  default:
+    "max-lg:px-8 py-8 max-md:py-4 flex-wrap mx-auto gap-4 max-sm:gap-3 justify-center items-center flex flex-row",
+  vertical: "gap-6 justify-start items-start flex flex-col",
+  compact: "flex-wrap mx-auto gap-2 max-sm:gap-3 justify-start flex flex-row",
 };
 
 // Combine base classes with variant-specific classes
@@ -21,12 +22,5 @@ const classes = `${baseClasses} ${variantClasses[variant]}`;
 ---
 
 <div id="tags" class={classes}>
-    {tags.map((tag) => <Tag tag={tag}></Tag>)}
+  {tags.map((tag) => <Tag tag={tag} />)}
 </div>
-
-
-
-
-
-
-

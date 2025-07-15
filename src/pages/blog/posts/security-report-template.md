@@ -15,9 +15,6 @@ languages: ["md","solidity"]
    - [需要项目方确定的问题](https://github.com/Cyfrin/security-and-auditing-full-course-s23/blob/main/extensive-onboarding-questions.md)
 
 2. 进行 审计/Review 分析
-   - 审计工具
-     1. Slither
-     2. Aderyn 
 3. 确定漏洞级别
 4. 
     ```md
@@ -53,4 +50,10 @@ languages: ["md","solidity"]
 
 3. 从小合约开始读
 
-4. https://github.com/ConsenSysDiligence/solidity-metrics
+4. 合约审计工具列表
+   - [solidity-metrics](https://github.com/ConsenSysDiligence/solidity-metrics)
+   - [Slither](https://github.com/crytic/slither)
+     - 静态分析工具
+   - [Aderyn](https://github.com/Cyfrin/aderyn)
+     - 静态分析工具
+
