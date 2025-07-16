@@ -15,14 +15,14 @@ const ogimage = {
 };
 
 // 友链数据
-interface Friend {
+interface People {
   name: string;
   link: string;
   avatar: string;
 }
 
 // 所有朋友列表
-const friends: Friend[] = [
+const friends: People[] = [
   {
     name: "lewis",
     link: "https://prelude-blog.vercel.app/",
@@ -37,6 +37,15 @@ const friends: Friend[] = [
     name: "zitian",
     link: "https://renkosky.github.io/",
     avatar: "https://renkosky.github.io/images/avatar.gif",
+  },
+];
+
+const follows: People[] = [
+  {
+    name: "rareskills",
+    link: "https://rareskills.io/",
+    avatar:
+      "https://rareskills.io/wp-content/uploads/2025/06/rareskills_logo_dark.svg",
   },
 ];
 ---
@@ -69,6 +78,33 @@ const friends: Friend[] = [
                   name={friend.name}
                   link={friend.link}
                   avatar={friend.avatar}
+                />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- 页面标题 -->
+      <div class="page-header" data-aos="fade-up">
+        <h1 class="page-title">我关注的人</h1>
+        <p class="page-description">我在关注这些人，他们写的内容非常不错</p>
+      </div>
+
+      <!-- 友链列表 -->
+      <div class="friend-group">
+        <div class="friend-grid">
+          {
+            friends.map((follows, index) => (
+              <div
+                class="friend-item"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <FriendCard
+                  name={follows.name}
+                  link={follows.link}
+                  avatar={follows.avatar}
                 />
               </div>
             ))
