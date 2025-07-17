@@ -14,7 +14,7 @@ languages: ["cpp","java"]
 
 ### 步骤
 
-1. 声明权限，动态申请权限
+1. 声明权限, 动态申请权限
 2. 重写回调接口 OnNmeaMessageListener
 3. 注册监听
 4. 请求更新
@@ -82,4 +82,4 @@ locationManager.removeNmeaListener(mLocationInfoManager);
 locationManager.removeUpdates(XXX);
 ```
 
-- 做完以上步骤，就可以收到标准格式的NMEA格式的GPS数据
+- 做完以上步骤, 就可以收到标准格式的NMEA格式的GPS数据

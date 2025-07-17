@@ -10,7 +10,7 @@ tags: ["智能合约","安全"]
 languages: ["md","solidity"]
 ---
 
-在进行智能合约审计之前，我们要做几项确认工作。
+在进行智能合约审计之前, 我们要做几项确认工作。
 1. 确定审计范围
    - [需要项目方确定的问题](https://github.com/Cyfrin/security-and-auditing-full-course-s23/blob/main/extensive-onboarding-questions.md)
 
