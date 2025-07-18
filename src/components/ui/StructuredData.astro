@@ -1,0 +1,169 @@
+---
+interface Props {
+  type: 'website' | 'person' | 'article' | 'breadcrumb' | 'organization';
+  data: Record<string, any>;
+}
+
+const { type, data } = Astro.props;
+
+const generateStructuredData = (type: string, data: Record<string, any>) => {
+  const baseUrl = 'https://www.yaco.email';
+  
+  switch (type) {
+    case 'website':
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: data.name || 'YaCo',
+        description: data.description || 'YaCo的个人网站，专注于加密货币和人工智能开发',
+        url: baseUrl,
+        author: {
+          '@type': 'Person',
+          name: 'YaCo',
+          url: baseUrl,
+          jobTitle: 'Crypto & AI Developer',
+          knowsAbout: ['Cryptocurrency', 'Artificial Intelligence', 'Web Development', 'Blockchain']
+        },
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: `${baseUrl}/search?q={search_term_string}`,
+          'query-input': 'required name=search_term_string'
+        }
+      };
+
+    case 'person':
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: data.name || 'YaCo',
+        jobTitle: data.jobTitle || 'Crypto & AI Developer',
+        description: data.description || '专注于加密货币和人工智能开发的工程师',
+        url: baseUrl,
+        image: data.image || `${baseUrl}/images/yaco.png`,
+        sameAs: data.socialLinks || [
+          'https://github.com/yaco-dev',
+          'https://twitter.com/yaco_dev',
+          'https://linkedin.com/in/yaco-dev'
+        ],
+        knowsAbout: data.skills || ['Cryptocurrency', 'Artificial Intelligence', 'Web Development', 'Blockchain'],
+        worksFor: {
+          '@type': 'Organization',
+          name: data.company || 'Freelancer'
+        },
+        alumniOf: data.education || [],
+        award: data.awards || [],
+        hasOccupation: {
+          '@type': 'Occupation',
+          name: data.jobTitle || 'Software Developer',
+          occupationLocation: {
+            '@type': 'City',
+            name: data.location || 'Remote'
+          }
+        }
+      };
+
+    case 'article':
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: data.title,
+        description: data.description,
+        image: data.image || `${baseUrl}/images/default-article.png`,
+        author: {
+          '@type': 'Person',
+          name: data.author || 'YaCo',
+          url: baseUrl
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'YaCo Blog',
+          logo: {
+            '@type': 'ImageObject',
+            url: `${baseUrl}/images/logo.png`
+          }
+        },
+        datePublished: data.publishedTime,
+        dateModified: data.modifiedTime || data.publishedTime,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': data.url || baseUrl
+        },
+        keywords: data.tags || [],
+        articleSection: data.category || 'Technology',
+        wordCount: data.wordCount || 0,
+        timeRequired: data.readingTime || 'PT5M',
+        inLanguage: 'zh-CN'
+      };
+
+    case 'breadcrumb':
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: data.items.map((item: any, index: number) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: item.name,
+          item: item.url.startsWith('http') ? item.url : `${baseUrl}${item.url}`
+        }))
+      };
+
+    case 'organization':
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: data.name || 'YaCo',
+        description: data.description || 'Personal website and blog',
+        url: baseUrl,
+        logo: data.logo || `${baseUrl}/images/logo.png`,
+        foundingDate: data.foundingDate || '2024',
+        founder: {
+          '@type': 'Person',
+          name: 'YaCo'
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          email: data.email || 'contact@yaco.email',
+          contactType: 'customer service'
+        },
+        sameAs: data.socialLinks || []
+      };
+
+    default:
+      return {};
+  }
+};
+
+const structuredData = generateStructuredData(type, data);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+<!-- 额外的微数据标记（如果需要） -->
+{type === 'article' && (
+  <div itemscope itemtype="https://schema.org/BlogPosting" style="display: none;">
+    <meta itemprop="headline" content={data.title} />
+    <meta itemprop="description" content={data.description} />
+    <meta itemprop="image" content={data.image} />
+    <meta itemprop="datePublished" content={data.publishedTime} />
+    <meta itemprop="dateModified" content={data.modifiedTime || data.publishedTime} />
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content={data.author || 'YaCo'} />
+    </div>
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <meta itemprop="name" content="YaCo Blog" />
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content={`https://www.yaco.email/images/logo.png`} />
+      </div>
+    </div>
+  </div>
+)}
+
+{type === 'person' && (
+  <div itemscope itemtype="https://schema.org/Person" style="display: none;">
+    <meta itemprop="name" content={data.name || 'YaCo'} />
+    <meta itemprop="jobTitle" content={data.jobTitle || 'Crypto & AI Developer'} />
+    <meta itemprop="description" content={data.description} />
+    <meta itemprop="image" content={data.image} />
+    <meta itemprop="url" content="https://www.yaco.email" />
+  </div>
+)}

@@ -8,7 +8,16 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "postinstall": "playwright install --with-deps chromium"
+    "postinstall": "playwright install --with-deps chromium",
+    "lint": "eslint . --ext .js,.ts,.astro --fix",
+    "lint:check": "eslint . --ext .js,.ts,.astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "astro check && tsc --noEmit",
+    "audit": "npm audit --audit-level moderate",
+    "clean": "rm -rf dist .astro node_modules/.cache",
+    "clean-svg": "node scripts/clean-svg.js",
+    "dev:clean": "yarn clean && yarn dev"
   },
   "dependencies": {
     "@astrojs/preact": "4.1.0",
@@ -30,10 +39,16 @@
     "typescript": "^5.0.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/upgrade": "^0.6.0",
     "@babel/core": "7.x",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "astro-eslint-parser": "^1.0.3",
     "eslint": "^9.22.0",
     "eslint-plugin-astro": "^1.3.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.15.1",
     "tailwindcss-animated": "^2.0.0",
     "vite": "^6.0.0"
   },

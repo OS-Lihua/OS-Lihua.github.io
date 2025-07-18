@@ -1,0 +1,33 @@
+# Build outputs
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Environment files
+.env*
+
+# Cache directories
+.cache/
+.parcel-cache/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Package manager files
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Generated files
+public/sitemap*.xml
+public/robots.txt

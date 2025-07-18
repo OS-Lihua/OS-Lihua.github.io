@@ -1,12 +1,9 @@
 ---
-import Project from "./Project.astro";
-const allPosts = await Astro.glob("../../pages/projects/*.md");
-// Sort by descending date (most recent first)
-allPosts.sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).getTime() -
-    new Date(a.frontmatter.pubDate).getTime()
-);
+import Project from './Project.astro';
+import { projectsCache } from '../../utils/projects-cache';
+
+// 使用缓存优化性能
+const allPosts = await projectsCache.getProjects();
 ---
 
 <section class="relative pt-8 pb-32 max-2xl:px-8 max-md:pt-4">
@@ -19,7 +16,7 @@ allPosts.sort(
     class="mx-auto max-w-7xl grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-5 p-2 py-4 max-h-[150vh] overflow-hidden transition-[max-height] duration-500 ease-in-out"
   >
     {
-      allPosts.map((post) => (
+      allPosts.map(post => (
         <Project
           url={post.url}
           title={post.frontmatter.title}
@@ -45,18 +42,18 @@ allPosts.sort(
 </section>
 
 <script>
-  document.querySelector("#moreProjects")?.addEventListener("click", () => {
+  document.querySelector('#moreProjects')?.addEventListener('click', () => {
     const contenedor = document.querySelector(
-      "#containerProjects"
+      '#containerProjects'
     ) as HTMLElement;
-    const moreprojects = document.querySelector("#moreProjects");
+    const moreprojects = document.querySelector('#moreProjects');
 
     if (contenedor && moreprojects) {
       // Use a very large max height to show all content
-      contenedor.style.maxHeight = "15000px";
+      contenedor.style.maxHeight = '15000px';
       // Hide the view more button
       setTimeout(() => {
-        moreprojects.classList.add("hidden");
+        moreprojects.classList.add('hidden');
       }, 5000);
     }
   });

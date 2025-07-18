@@ -1,10 +1,12 @@
 ---
-const allPosts = await Astro.glob("../../pages/blog/posts/*.md");
+import Tag from '../ui/Tag.astro';
+import ReadMore from '../ui/ReadMore.astro';
+import Capsule from '../ui/Capsule.astro';
+import DatePub from './DatePub.astro';
+import { postsCache } from '../../utils/posts-cache';
 
-import Tag from "../ui/Tag.astro";
-import ReadMore from "../ui/ReadMore.astro";
-import Capsule from "../ui/Capsule.astro";
-import DatePub from "./DatePub.astro";
+// 使用缓存优化性能
+const allPosts = await postsCache.getLatestPosts(1);
 
 // Get the latest post using reduce
 const latestPost = allPosts.reduce((latest, current) => {
@@ -15,9 +17,11 @@ const latestPost = allPosts.reduce((latest, current) => {
 
 const tags = [...new Set(latestPost.frontmatter.tags ?? [])];
 const languages = [...new Set(latestPost.frontmatter.languages ?? [])];
-const image = latestPost.frontmatter.image.url;
-const imageAlt =
-  latestPost.frontmatter.image.alt || latestPost.frontmatter.title;
+
+// 安全处理图片数据
+const imageData = latestPost.frontmatter.image as any;
+const image = typeof imageData === 'string' ? imageData : imageData?.url;
+const imageAlt = imageData?.alt || latestPost.frontmatter.title;
 ---
 
 {
@@ -47,7 +51,7 @@ const imageAlt =
           aria-label="Programming languages"
         >
           {languages.map((language: unknown) => (
-            <Capsule lang={language?.toString() || ""} />
+            <Capsule lang={language?.toString() || ''} />
           ))}
         </div>
 
@@ -76,7 +80,7 @@ const imageAlt =
           role="list"
           aria-label="Article tags"
         >
-          {tags.map((tag) => (
+          {tags.map(tag => (
             <Tag tag={tag} forceDark="true">
               {tag}
             </Tag>

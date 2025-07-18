@@ -73,46 +73,77 @@
 ## ✨ 主要特性
 
 1. **🚀 性能优化**
-   - 静态站点生成
+   - 静态站点生成 (SSG)
    - 使用 Preact 的部分水合
-   - 优化的图片和资源
+   - 图片自动优化 (WebP/AVIF)
+   - 字体预加载和优化
+   - 代码分割和懒加载
+   - 性能监控和 Web Vitals
 
 2. **💻 现代开发体验**
-   - TypeScript 支持
-   - 热模块替换
-   - ESLint 集成
+   - TypeScript 严格模式
+   - ESLint + Prettier 代码规范
+   - 热模块替换 (HMR)
+   - 自动类型检查
+   - VS Code 集成配置
+   - Git Hooks 和 Husky
 
 3. **🔍 SEO 和分析**
-   - 内置站点地图生成
+   - 完整的 SEO 元数据
+   - 结构化数据 (JSON-LD)
+   - 自动站点地图生成
    - RSS 订阅支持
+   - Open Graph 和 Twitter Cards
    - Vercel 速度分析
 
 4. **🎨 样式和 UI**
-   - 使用 TailwindCSS 实现功能优先的样式
-   - 动画组件
+   - TailwindCSS v4 最新版本
    - 响应式设计
    - 暗色模式支持
+   - 动画和过渡效果
+   - 自定义设计系统
+   - 可访问性优化
+
+5. **🛡️ 安全和质量**
+   - 内容安全策略 (CSP)
+   - 错误边界和异常处理
+   - 依赖安全扫描
+   - 代码质量检查
+   - 自动化测试准备
 
 ## 🚀 开始使用
 
-1. **📦 安装**
+1. **📦 安装依赖**
    ```bash
    yarn install
    ```
 
-2. **⚡ 开发**
+2. **⚡ 开发模式**
    ```bash
    yarn dev
    ```
 
-3. **🏗️ 构建**
+3. **🔍 代码检查**
+   ```bash
+   yarn lint        # 运行 ESLint 检查并自动修复
+   yarn lint:check  # 仅检查，不修复
+   yarn format      # 格式化代码
+   yarn type-check  # TypeScript 类型检查
+   ```
+
+4. **🏗️ 构建项目**
    ```bash
    yarn build
    ```
 
-4. **👀 预览**
+5. **👀 预览构建**
    ```bash
    yarn preview
+   ```
+
+6. **🧹 清理缓存**
+   ```bash
+   yarn clean
    ```
 
 ## ⚙️ 配置

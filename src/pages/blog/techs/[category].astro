@@ -1,32 +1,24 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import BlogPost from "../../../components/blog/BlogPost.astro";
-import Heading from "../../../components/ui/Heading.astro";
-import type { MarkdownInstance } from "astro";
-
-interface Frontmatter {
-  languages: string[];
-  title: string;
-  pubDate: string;
-  tags: string[];
-  image: string;
-}
+import Layout from '../../../layouts/Layout.astro';
+import BlogPost from '../../../components/blog/BlogPost.astro';
+import Heading from '../../../components/ui/Heading.astro';
 
 // 保持 getStaticPaths 原结构不变
 export async function getStaticPaths() {
-  // 获取所有文章
-  const allPosts = await Astro.glob<Frontmatter>("../posts/*.md");
+  // 使用 import.meta.glob 替代 Astro.glob
+  const posts = import.meta.glob('../posts/*.md', {
+    eager: true,
+  });
+  const allPosts = Object.values(posts) as any[];
 
   // 提取所有不重复的 language 标签
-  const allLanguages = allPosts
-    .map((post) => post.frontmatter.languages)
-    .flat();
+  const allLanguages = allPosts.map(post => post.frontmatter.languages).flat();
   const uniqueLanguages = [...new Set(allLanguages)];
 
   // 生成路径（保持原有逻辑）
-  return uniqueLanguages.map((language) => {
+  return uniqueLanguages.map(language => {
     // 筛选包含当前 language 的文章
-    const filteredPosts = allPosts.filter((post) =>
+    const filteredPosts = allPosts.filter(post =>
       post.frontmatter.languages.includes(language)
     );
 
@@ -48,7 +40,7 @@ const { posts } = Astro.props;
       <Heading text="Posts about" textGradient={category} />
 
       {
-        posts.map((post) => (
+        posts.map(post => (
           <BlogPost
             url={post.url}
             title={post.frontmatter.title}

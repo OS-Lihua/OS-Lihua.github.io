@@ -1,12 +1,17 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import Languages from "../../../components/blog/Languages.astro";
-import Heading from "../../../components/ui/Heading.astro";
+import Layout from '../../../layouts/Layout.astro';
+import Languages from '../../../components/blog/Languages.astro';
+import Heading from '../../../components/ui/Heading.astro';
 
-const pageTitle = "Technologies"; // Fixed: Title was "Languages" but heading shows "Technologies"
-const allPosts = await Astro.glob("../posts/*.md");
+const pageTitle = 'Technologies'; // Fixed: Title was "Languages" but heading shows "Technologies"
+
+// 使用 import.meta.glob 替代 Astro.glob
+const posts = import.meta.glob('../posts/*.md', {
+  eager: true,
+});
+const allPosts = Object.values(posts) as any[];
 const languages = [
-  ...new Set(allPosts.map((post) => post.frontmatter.languages).flat()),
+  ...new Set(allPosts.map((post: any) => post.frontmatter.languages).flat()),
 ];
 ---
 

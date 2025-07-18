@@ -1,0 +1,315 @@
+---
+interface Props {
+  fallback?: string;
+  showDetails?: boolean;
+  logErrors?: boolean;
+}
+
+const {
+  fallback = '抱歉，出现了一些问题。请刷新页面重试。',
+  showDetails = false,
+  logErrors = true
+} = Astro.props;
+---
+
+<div id="error-boundary" class="error-boundary">
+  <slot />
+</div>
+
+<div id="error-fallback" class="error-fallback hidden">
+  <div class="error-content">
+    <div class="error-icon">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L2 22h20L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 9v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h2 class="error-title">出现错误</h2>
+    <p class="error-message">{fallback}</p>
+    <div class="error-actions">
+      <button id="retry-button" class="retry-button">重试</button>
+      <button id="report-button" class="report-button">报告问题</button>
+    </div>
+    {showDetails && (
+      <details class="error-details">
+        <summary>错误详情</summary>
+        <pre id="error-stack" class="error-stack"></pre>
+      </details>
+    )}
+  </div>
+</div>
+
+<script is:inline define:vars={{ logErrors, showDetails }}>
+  class ErrorBoundary {
+    constructor() {
+      this.setupErrorHandlers();
+      this.setupRetryButton();
+      this.setupReportButton();
+    }
+
+    setupErrorHandlers() {
+      // 捕获 JavaScript 错误
+      window.addEventListener('error', (event) => {
+        this.handleError(event.error, event.message, event.filename, event.lineno, event.colno);
+      });
+
+      // 捕获 Promise 拒绝
+      window.addEventListener('unhandledrejection', (event) => {
+        this.handleError(event.reason, 'Unhandled Promise Rejection', '', 0, 0);
+      });
+
+      // 捕获资源加载错误
+      window.addEventListener('error', (event) => {
+        if (event.target !== window) {
+          this.handleResourceError(event.target);
+        }
+      }, true);
+    }
+
+    handleError(error, message, filename, lineno, colno) {
+      const errorInfo = {
+        message: message || error?.message || 'Unknown error',
+        filename: filename || 'Unknown file',
+        lineno: lineno || 0,
+        colno: colno || 0,
+        stack: error?.stack || 'No stack trace available',
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
+      };
+
+      if (logErrors) {
+        console.error('Error caught by boundary:', errorInfo);
+        this.logError(errorInfo);
+      }
+
+      this.showErrorFallback(errorInfo);
+    }
+
+    handleResourceError(element) {
+      const errorInfo = {
+        type: 'Resource Error',
+        element: element.tagName,
+        source: element.src || element.href || 'Unknown source',
+        timestamp: new Date().toISOString(),
+        url: window.location.href
+      };
+
+      if (logErrors) {
+        console.warn('Resource failed to load:', errorInfo);
+      }
+
+      // 尝试重新加载资源
+      this.retryResourceLoad(element);
+    }
+
+    retryResourceLoad(element) {
+      if (element.tagName === 'IMG') {
+        // 为图片设置备用源
+        if (!element.dataset.retried) {
+          element.dataset.retried = 'true';
+          const fallbackSrc = '/images/placeholder.png';
+          if (element.src !== fallbackSrc) {
+            element.src = fallbackSrc;
+          }
+        }
+      } else if (element.tagName === 'SCRIPT') {
+        // 对于脚本，可以尝试从备用CDN加载
+        if (!element.dataset.retried) {
+          element.dataset.retried = 'true';
+          // 这里可以实现备用脚本加载逻辑
+        }
+      }
+    }
+
+    showErrorFallback(errorInfo) {
+      const boundary = document.getElementById('error-boundary');
+      const fallback = document.getElementById('error-fallback');
+      
+      if (boundary && fallback) {
+        boundary.style.display = 'none';
+        fallback.classList.remove('hidden');
+
+        if (showDetails) {
+          const stackElement = document.getElementById('error-stack');
+          if (stackElement) {
+            stackElement.textContent = JSON.stringify(errorInfo, null, 2);
+          }
+        }
+      }
+    }
+
+    setupRetryButton() {
+      const retryButton = document.getElementById('retry-button');
+      if (retryButton) {
+        retryButton.addEventListener('click', () => {
+          window.location.reload();
+        });
+      }
+    }
+
+    setupReportButton() {
+      const reportButton = document.getElementById('report-button');
+      if (reportButton) {
+        reportButton.addEventListener('click', () => {
+          this.reportError();
+        });
+      }
+    }
+
+    logError(errorInfo) {
+      // 发送错误到日志服务
+      try {
+        fetch('/api/log-error', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(errorInfo)
+        }).catch(() => {
+          // 如果日志服务不可用，存储到本地
+          this.storeErrorLocally(errorInfo);
+        });
+      } catch (e) {
+        this.storeErrorLocally(errorInfo);
+      }
+    }
+
+    storeErrorLocally(errorInfo) {
+      try {
+        const errors = JSON.parse(localStorage.getItem('errorLog') || '[]');
+        errors.push(errorInfo);
+        // 只保留最近的10个错误
+        if (errors.length > 10) {
+          errors.splice(0, errors.length - 10);
+        }
+        localStorage.setItem('errorLog', JSON.stringify(errors));
+      } catch (e) {
+        console.warn('Failed to store error locally:', e);
+      }
+    }
+
+    reportError() {
+      const subject = encodeURIComponent('网站错误报告');
+      const body = encodeURIComponent(`我在使用网站时遇到了问题。
+
+页面: ${window.location.href}
+时间: ${new Date().toLocaleString()}
+浏览器: ${navigator.userAgent}
+
+请查看并修复此问题。谢谢！`);
+      
+      window.open(`mailto:support@yaco.email?subject=${subject}&body=${body}`);
+    }
+  }
+
+  // 初始化错误边界
+  new ErrorBoundary();
+</script>
+
+<style>
+  .error-boundary {
+    min-height: 200px;
+  }
+
+  .error-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+  }
+
+  .error-content {
+    text-align: center;
+    max-width: 500px;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .error-icon {
+    color: #ef4444;
+    margin-bottom: 1rem;
+  }
+
+  .error-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .error-message {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .retry-button, .report-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .retry-button {
+    background: #0dbc82;
+    color: white;
+  }
+
+  .retry-button:hover {
+    background: #0a9d6b;
+  }
+
+  .report-button {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+  }
+
+  .report-button:hover {
+    background: #e5e7eb;
+  }
+
+  .error-details {
+    margin-top: 1rem;
+    text-align: left;
+  }
+
+  .error-details summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: #6b7280;
+  }
+
+  .error-stack {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+</style>

@@ -1,0 +1,107 @@
+---
+// 性能监控组件
+interface Props {
+  enableWebVitals?: boolean;
+  enableResourceTiming?: boolean;
+  enableNavigationTiming?: boolean;
+}
+
+const {
+  enableWebVitals = true,
+  enableResourceTiming = false,
+  enableNavigationTiming = false
+} = Astro.props;
+---
+
+<script is:inline define:vars={{ enableWebVitals, enableResourceTiming, enableNavigationTiming }}>
+  // Web Vitals 监控
+  if (enableWebVitals && 'PerformanceObserver' in window) {
+    // 监控 Largest Contentful Paint (LCP)
+    new PerformanceObserver((entryList) => {
+      for (const entry of entryList.getEntries()) {
+        console.log('LCP:', entry.startTime);
+        // 可以发送到分析服务
+      }
+    }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // 监控 First Input Delay (FID)
+    new PerformanceObserver((entryList) => {
+      for (const entry of entryList.getEntries()) {
+        console.log('FID:', entry.processingStart - entry.startTime);
+        // 可以发送到分析服务
+      }
+    }).observe({ entryTypes: ['first-input'] });
+
+    // 监控 Cumulative Layout Shift (CLS)
+    let clsValue = 0;
+    new PerformanceObserver((entryList) => {
+      for (const entry of entryList.getEntries()) {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+          console.log('CLS:', clsValue);
+          // 可以发送到分析服务
+        }
+      }
+    }).observe({ entryTypes: ['layout-shift'] });
+  }
+
+  // 资源加载时间监控
+  if (enableResourceTiming && 'performance' in window) {
+    window.addEventListener('load', () => {
+      const resources = performance.getEntriesByType('resource');
+      const slowResources = resources.filter(resource => resource.duration > 1000);
+      
+      if (slowResources.length > 0) {
+        console.warn('Slow resources detected:', slowResources);
+        // 可以发送到分析服务
+      }
+    });
+  }
+
+  // 导航时间监控
+  if (enableNavigationTiming && 'performance' in window) {
+    window.addEventListener('load', () => {
+      const navigation = performance.getEntriesByType('navigation')[0];
+      if (navigation) {
+        const metrics = {
+          dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+          tcp: navigation.connectEnd - navigation.connectStart,
+          request: navigation.responseStart - navigation.requestStart,
+          response: navigation.responseEnd - navigation.responseStart,
+          dom: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          load: navigation.loadEventEnd - navigation.loadEventStart,
+          total: navigation.loadEventEnd - navigation.navigationStart
+        };
+        
+        console.log('Navigation timing:', metrics);
+        // 可以发送到分析服务
+      }
+    });
+  }
+
+  // 内存使用监控（仅在支持的浏览器中）
+  if ('memory' in performance) {
+    setInterval(() => {
+      const memory = performance.memory;
+      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.9) {
+        console.warn('High memory usage detected:', {
+          used: memory.usedJSHeapSize,
+          total: memory.totalJSHeapSize,
+          limit: memory.jsHeapSizeLimit
+        });
+      }
+    }, 30000); // 每30秒检查一次
+  }
+
+  // 长任务监控
+  if ('PerformanceObserver' in window) {
+    new PerformanceObserver((entryList) => {
+      for (const entry of entryList.getEntries()) {
+        if (entry.duration > 50) {
+          console.warn('Long task detected:', entry.duration + 'ms');
+          // 可以发送到分析服务
+        }
+      }
+    }).observe({ entryTypes: ['longtask'] });
+  }
+</script>

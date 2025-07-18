@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  loading?: 'lazy' | 'eager';
+  decoding?: 'async' | 'sync' | 'auto';
+  class?: string;
+  sizes?: string;
+  quality?: number;
+  format?: 'webp' | 'avif' | 'png' | 'jpg' | 'jpeg';
+}
+
+const {
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  loading = 'lazy',
+  decoding = 'async',
+  class: className = '',
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  quality = 80,
+  format = 'webp',
+  ...rest
+} = Astro.props;
+
+// 检查是否为外部图片
+const isExternal = src.startsWith('http') || src.startsWith('//');
+---
+
+{isExternal ? (
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={loading}
+    decoding={decoding}
+    class={className}
+    {...rest}
+  />
+) : (
+  <Image
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={loading}
+    decoding={decoding}
+    class={className}
+    sizes={sizes}
+    quality={quality}
+    format={format}
+    {...rest}
+  />
+)}
+
+<style>
+  img {
+    /* 防止图片布局偏移 */
+    aspect-ratio: attr(width) / attr(height);
+    object-fit: cover;
+    
+    /* 优化图片渲染 */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* 响应式图片优化 */
+  @media (max-width: 768px) {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>

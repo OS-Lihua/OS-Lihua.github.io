@@ -1,0 +1,103 @@
+---
+interface Props {
+  fonts?: string[];
+  images?: string[];
+  scripts?: string[];
+  styles?: string[];
+}
+
+const {
+  fonts = [
+    'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap',
+    'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap',
+    'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap'
+  ],
+  images = [],
+  scripts = [],
+  styles = []
+} = Astro.props;
+---
+
+<!-- DNS 预解析 -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+
+<!-- 预连接重要资源 -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- 预加载关键字体 -->
+{fonts.map(font => (
+  <link rel="preload" href={font} as="style" onload="this.onload=null;this.rel='stylesheet'" />
+))}
+
+<!-- 预加载关键图片 -->
+{images.map(image => (
+  <link rel="preload" href={image} as="image" />
+))}
+
+<!-- 预加载关键脚本 -->
+{scripts.map(script => (
+  <link rel="preload" href={script} as="script" />
+))}
+
+<!-- 预加载关键样式 -->
+{styles.map(style => (
+  <link rel="preload" href={style} as="style" />
+))}
+
+<!-- 资源提示 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no" />
+
+<script is:inline>
+  // 优化字体加载
+  if ('fonts' in document) {
+    Promise.all([
+      document.fonts.load('400 1em Montserrat'),
+      document.fonts.load('600 1em Montserrat'),
+      document.fonts.load('400 1em "Open Sans"'),
+      document.fonts.load('400 1em Roboto')
+    ]).then(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    });
+  }
+
+  // 预加载关键资源
+  const criticalResources = [
+    '/images/yaco.png',
+    // 添加其他关键资源
+  ];
+
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = resource;
+    document.head.appendChild(link);
+  });
+</script>
+
+<style>
+  /* 字体加载优化 */
+  html {
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .fonts-loaded {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  }
+  
+  /* 防止字体闪烁 */
+  .font-montserrat {
+    font-display: swap;
+  }
+  
+  .font-opensans {
+    font-display: swap;
+  }
+  
+  .font-roboto {
+    font-display: swap;
+  }
+</style>

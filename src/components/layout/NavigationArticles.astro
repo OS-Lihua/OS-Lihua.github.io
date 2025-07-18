@@ -1,18 +1,22 @@
 ---
-const allPosts = await Astro.glob("../../pages/blog/posts/*.md");
+// 使用 import.meta.glob 替代 Astro.glob
+const posts = import.meta.glob('../../pages/blog/posts/*.md', {
+  eager: true,
+});
+const allPosts = Object.values(posts) as any[];
 
 // Ensure posts have a date before sorting them
 const sortedPosts = allPosts
-  .filter((post) => post.frontmatter.pubDate)
+  .filter(post => post.frontmatter.pubDate)
   .sort(
     (a, b) =>
       new Date(b.frontmatter.pubDate).getTime() -
       new Date(a.frontmatter.pubDate).getTime()
   );
 
-const currentSlug = Astro.url.pathname.split("/").filter(Boolean).pop();
+const currentSlug = Astro.url.pathname.split('/').filter(Boolean).pop();
 const currentIndex = sortedPosts.findIndex(
-  (post) => post.url && post.url.includes(currentSlug || "")
+  post => post.url && post.url.includes(currentSlug || '')
 );
 const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
 const prevPost =
