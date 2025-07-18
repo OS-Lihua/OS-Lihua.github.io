@@ -5103,7 +5103,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier-plugin-astro@^0.15.1:
+prettier-plugin-astro@^0.14.1:
   version "0.14.1"
   resolved "https://registry.yarnpkg.com/prettier-plugin-astro/-/prettier-plugin-astro-0.14.1.tgz#50bff8a659f2a6a4ff3b1d7ea73f2de93c95b213"
   integrity sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==
