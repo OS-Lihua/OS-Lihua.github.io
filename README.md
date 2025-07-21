@@ -51,10 +51,9 @@
     │       └── languages.ts           # 技术栈 配置
     ├── .gitignore
     ├── astro.config.mjs
-    ├── package-lock.json
     ├── package.json
+    ├── pnpm-lock.yaml
     ├── README.md
-    ├── yarn.lock
     └── tsconfig.json
 ```
 # 项目说明文档
@@ -115,35 +114,35 @@
 
 1. **📦 安装依赖**
    ```bash
-   yarn install
+   pnpm install
    ```
 
 2. **⚡ 开发模式**
    ```bash
-   yarn dev
+   pnpm dev
    ```
 
 3. **🔍 代码检查**
    ```bash
-   yarn lint        # 运行 ESLint 检查并自动修复
-   yarn lint:check  # 仅检查，不修复
-   yarn format      # 格式化代码
-   yarn type-check  # TypeScript 类型检查
+   pnpm lint        # 运行 ESLint 检查并自动修复
+   pnpm lint:check  # 仅检查，不修复
+   pnpm format      # 格式化代码
+   pnpm type-check  # TypeScript 类型检查
    ```
 
 4. **🏗️ 构建项目**
    ```bash
-   yarn build
+   pnpm build
    ```
 
 5. **👀 预览构建**
    ```bash
-   yarn preview
+   pnpm preview
    ```
 
 6. **🧹 清理缓存**
    ```bash
-   yarn clean
+   pnpm clean
    ```
 
 ## ⚙️ 配置

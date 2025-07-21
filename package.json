@@ -14,16 +14,16 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "type-check": "astro check && tsc --noEmit",
-    "audit": "npm audit --audit-level moderate",
+    "audit": "pnpm audit --audit-level moderate",
     "clean": "powershell -Command \"Remove-Item -Recurse -Force -ErrorAction SilentlyContinue dist, .astro, node_modules/.cache\"",
     "clean-svg": "node scripts/clean-svg.js",
     "download-fonts": "node scripts/download-fonts.js",
     "analyze": "node scripts/analyze-bundle.js",
     "analyze:images": "node scripts/optimize-images.js",
     "analyze:css": "node scripts/analyze-css.js",
-    "build:analyze": "yarn build && yarn analyze",
+    "build:analyze": "pnpm build && pnpm analyze",
     "audit:performance": "node scripts/performance-audit.js",
-    "dev:clean": "yarn clean && yarn dev"
+    "dev:clean": "pnpm clean && pnpm dev"
   },
   "dependencies": {
     "@astrojs/preact": "4.1.0",
@@ -59,10 +59,12 @@
     "vite": "^6.0.0"
   },
   "engines": {
-    "yarn": ">=1.22.0",
+    "pnpm": ">=8.0.0",
     "node": ">=16.0.0"
   },
-  "resolutions": {
-    "astro": "5.12.0"
+  "pnpm": {
+    "overrides": {
+      "astro": "5.12.0"
+    }
   }
 }

@@ -22,7 +22,7 @@ permissions:
 # 环境变量
 env:
   NODE_VERSION: 20 # Node.js 版本
-  YARN_VERSION: 1.22.19 # 使用yarn
+  PNPM_VERSION: 8.15.0 # 使用pnpm
   BUILD_PATH: "dist" # Astro 默认输出目录
 
 jobs:
@@ -35,29 +35,22 @@ jobs:
         with:
           fetch-depth: 0 # 获取完整的git历史用于更好的缓存
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: "yarn" # 使用内置的yarn缓存
-
-      - name: Get Yarn cache directory
-        id: yarn-cache
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-
-      - name: Setup Yarn cache
-        uses: actions/cache@v4 # 更新到最新版本
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          cache: "pnpm" # 使用内置的pnpm缓存
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile # 确保依赖锁定
+        run: pnpm install --frozen-lockfile # 确保依赖锁定
 
       - name: Install Playwright browsers
-        run: yarn playwright install --with-deps chromium
+        run: pnpm playwright install --with-deps chromium
 
       # 添加缓存（可选但推荐）
       - name: Cache Playwright
@@ -70,7 +63,7 @@ jobs:
       - name: Build site
         run: |
           echo "Starting build..."
-          yarn build
+          pnpm build
           echo "Build completed successfully."
 
       - name: Upload Pages artifact
