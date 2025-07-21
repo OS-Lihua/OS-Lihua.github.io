@@ -1,0 +1,162 @@
+---
+// UI 组件库集成演示页面
+import Layout from '../layouts/Layout.astro';
+import { Button } from '../components/ui/button';
+import { AnimatedCard } from '../components/react-bits/animated-card';
+// import { ClientOnlySpline } from '../components/spline/ClientOnlySpline';
+---
+
+<Layout title="UI 组件库集成演示">
+  <main class="container mx-auto px-4 py-8 space-y-12">
+    <!-- 页面标题 -->
+    <section class="text-center space-y-4">
+      <h1 class="text-4xl font-bold text-foreground">UI 组件库集成演示</h1>
+      <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+        展示 shadcn/ui、React Bits 和 Spline 3D 组件在 Astro + TailwindCSS + Preact 项目中的集成效果
+      </p>
+    </section>
+
+    <!-- shadcn/ui 组件演示 -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-semibold text-foreground">shadcn/ui 组件</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="p-6 border rounded-lg space-y-4">
+          <h3 class="text-lg font-medium">按钮变体</h3>
+          <div class="flex flex-wrap gap-2">
+            <Button client:load>默认按钮</Button>
+            <Button variant="secondary" client:load>次要按钮</Button>
+            <Button variant="outline" client:load>轮廓按钮</Button>
+            <Button variant="ghost" client:load>幽灵按钮</Button>
+            <Button variant="link" client:load>链接按钮</Button>
+          </div>
+        </div>
+        
+        <div class="p-6 border rounded-lg space-y-4">
+          <h3 class="text-lg font-medium">按钮尺寸</h3>
+          <div class="flex flex-col gap-2">
+            <Button size="sm" client:load>小按钮</Button>
+            <Button size="default" client:load>默认按钮</Button>
+            <Button size="lg" client:load>大按钮</Button>
+          </div>
+        </div>
+
+        <div class="p-6 border rounded-lg space-y-4">
+          <h3 class="text-lg font-medium">特殊状态</h3>
+          <div class="flex flex-col gap-2">
+            <Button variant="destructive" client:load>危险按钮</Button>
+            <Button disabled client:load>禁用按钮</Button>
+            <Button size="icon" client:load>🚀</Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- React Bits 组件演示 -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-semibold text-foreground">React Bits 动画组件</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <AnimatedCard delay={0} client:load>
+          <h3 class="text-lg font-semibold mb-2">动画卡片 1</h3>
+          <p class="text-muted-foreground">
+            这是一个使用 framer-motion 制作的动画卡片，具有淡入和悬停效果。
+          </p>
+        </AnimatedCard>
+
+        <AnimatedCard delay={0.1} client:load>
+          <h3 class="text-lg font-semibold mb-2">动画卡片 2</h3>
+          <p class="text-muted-foreground">
+            卡片具有延迟动画效果，创造出优雅的序列动画。
+          </p>
+        </AnimatedCard>
+
+        <AnimatedCard delay={0.2} client:load>
+          <h3 class="text-lg font-semibold mb-2">动画卡片 3</h3>
+          <p class="text-muted-foreground">
+            悬停时卡片会轻微上升，提供良好的交互反馈。
+          </p>
+        </AnimatedCard>
+      </div>
+    </section>
+
+    <!-- Spline 3D 组件演示 -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-semibold text-foreground">Spline 3D 组件</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="space-y-4">
+          <h3 class="text-lg font-medium">3D 场景展示</h3>
+          <p class="text-muted-foreground">
+            Spline 3D 组件已成功集成。要使用真实的 3D 场景，请：
+          </p>
+          <ol class="list-decimal list-inside space-y-1 text-sm text-muted-foreground">
+            <li>在 Spline.design 创建你的 3D 场景</li>
+            <li>导出为 React 代码</li>
+            <li>复制场景 URL</li>
+            <li>替换 ClientOnlySpline 组件中的 URL</li>
+          </ol>
+        </div>
+        
+        <div class="h-[400px]">
+          <div class="flex items-center justify-center w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg border">
+            <div class="text-center p-6">
+              <h4 class="text-lg font-medium text-foreground mb-2">Spline 3D 组件演示</h4>
+              <p class="text-muted-foreground mb-4">
+                Spline 3D 组件已成功集成。要查看实际效果，请：
+              </p>
+              <ol class="text-sm text-muted-foreground text-left space-y-1">
+                <li>1. 在 Spline.design 创建 3D 场景</li>
+                <li>2. 获取场景的公开 URL</li>
+                <li>3. 替换组件中的占位符 URL</li>
+                <li>4. 使用 client:only="preact" 指令</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使用说明 -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-semibold text-foreground">使用说明</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 border rounded-lg space-y-3">
+          <h3 class="text-lg font-semibold text-primary">shadcn/ui</h3>
+          <p class="text-sm text-muted-foreground">
+            现代化的 UI 组件库，提供一致的设计系统和可访问性支持。
+          </p>
+          <ul class="text-xs space-y-1 text-muted-foreground">
+            <li>• 完全可定制的组件</li>
+            <li>• 内置暗色模式支持</li>
+            <li>• TypeScript 类型安全</li>
+            <li>• 与 Preact 完全兼容</li>
+          </ul>
+        </div>
+
+        <div class="p-6 border rounded-lg space-y-3">
+          <h3 class="text-lg font-semibold text-primary">React Bits</h3>
+          <p class="text-sm text-muted-foreground">
+            提供精美动画效果的现代 React 组件集合。
+          </p>
+          <ul class="text-xs space-y-1 text-muted-foreground">
+            <li>• 基于 framer-motion</li>
+            <li>• 即插即用的动画组件</li>
+            <li>• 高性能动画效果</li>
+            <li>• 响应式设计</li>
+          </ul>
+        </div>
+
+        <div class="p-6 border rounded-lg space-y-3">
+          <h3 class="text-lg font-semibold text-primary">Spline 3D</h3>
+          <p class="text-sm text-muted-foreground">
+            轻松集成交互式 3D 场景到你的网站中。
+          </p>
+          <ul class="text-xs space-y-1 text-muted-foreground">
+            <li>• 无需 3D 编程知识</li>
+            <li>• 可视化 3D 编辑器</li>
+            <li>• 优化的 Web 性能</li>
+            <li>• 支持交互和动画</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

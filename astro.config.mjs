@@ -120,6 +120,10 @@ export default defineConfig({
       include: [
         'preact',
         'preact/hooks',
+        '@preact/compat',
+        'framer-motion',
+        '@splinetool/react-spline',
+        '@splinetool/runtime',
         'alpinejs',
         'katex',
         'prismjs'
