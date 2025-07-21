@@ -1,0 +1,135 @@
+{
+  "totalImages": 14,
+  "totalSize": 15660921,
+  "largeImages": [
+    {
+      "path": "public\\images\\projects\\traveonchain.png",
+      "size": 3819596,
+      "formattedSize": "3.64 MB"
+    },
+    {
+      "path": "public\\images\\posts\\security-report-template.png",
+      "size": 1674157,
+      "formattedSize": "1.6 MB"
+    },
+    {
+      "path": "public\\images\\posts\\the-next-decade-of-bitcoin.png",
+      "size": 1571469,
+      "formattedSize": "1.5 MB"
+    },
+    {
+      "path": "public\\images\\posts\\shuffling-algorithm.png",
+      "size": 1516645,
+      "formattedSize": "1.45 MB"
+    },
+    {
+      "path": "public\\images\\projects\\tgbotfauceturl.png",
+      "size": 1364197,
+      "formattedSize": "1.3 MB"
+    },
+    {
+      "path": "public\\images\\projects\\tgbotFaucet.png",
+      "size": 1350370,
+      "formattedSize": "1.29 MB"
+    },
+    {
+      "path": "public\\images\\projects\\hyperlane.png",
+      "size": 1180439,
+      "formattedSize": "1.13 MB"
+    },
+    {
+      "path": "public\\images\\blog.png",
+      "size": 1176175,
+      "formattedSize": "1.12 MB"
+    },
+    {
+      "path": "public\\images\\posts\\smart-contract-design.png",
+      "size": 988040,
+      "formattedSize": "964.88 KB"
+    },
+    {
+      "path": "public\\images\\projects\\praxisgrove.png",
+      "size": 512465,
+      "formattedSize": "500.45 KB"
+    }
+  ],
+  "imagesByType": {
+    ".png": {
+      "count": 14,
+      "totalSize": 15660921,
+      "files": [
+        {
+          "path": "public\\images\\blog.png",
+          "size": 1176175,
+          "formattedSize": "1.12 MB"
+        },
+        {
+          "path": "public\\images\\posts\\ethernaut-openzeppelin.png",
+          "size": 182085,
+          "formattedSize": "177.82 KB"
+        },
+        {
+          "path": "public\\images\\posts\\security-report-template.png",
+          "size": 1674157,
+          "formattedSize": "1.6 MB"
+        },
+        {
+          "path": "public\\images\\posts\\shuffling-algorithm.png",
+          "size": 1516645,
+          "formattedSize": "1.45 MB"
+        },
+        {
+          "path": "public\\images\\posts\\smart-contract-design.png",
+          "size": 988040,
+          "formattedSize": "964.88 KB"
+        },
+        {
+          "path": "public\\images\\posts\\the-next-decade-of-bitcoin.png",
+          "size": 1571469,
+          "formattedSize": "1.5 MB"
+        },
+        {
+          "path": "public\\images\\posts\\uniswap.png",
+          "size": 3743,
+          "formattedSize": "3.66 KB"
+        },
+        {
+          "path": "public\\images\\projects\\hyperlane.png",
+          "size": 1180439,
+          "formattedSize": "1.13 MB"
+        },
+        {
+          "path": "public\\images\\projects\\nextword.png",
+          "size": 26215,
+          "formattedSize": "25.6 KB"
+        },
+        {
+          "path": "public\\images\\projects\\praxisgrove.png",
+          "size": 512465,
+          "formattedSize": "500.45 KB"
+        },
+        {
+          "path": "public\\images\\projects\\tgbotFaucet.png",
+          "size": 1350370,
+          "formattedSize": "1.29 MB"
+        },
+        {
+          "path": "public\\images\\projects\\tgbotfauceturl.png",
+          "size": 1364197,
+          "formattedSize": "1.3 MB"
+        },
+        {
+          "path": "public\\images\\projects\\traveonchain.png",
+          "size": 3819596,
+          "formattedSize": "3.64 MB"
+        },
+        {
+          "path": "public\\images\\yaco.png",
+          "size": 295325,
+          "formattedSize": "288.4 KB"
+        }
+      ]
+    }
+  },
+  "potentialSavings": 4698276.3
+}

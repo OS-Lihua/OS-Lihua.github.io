@@ -1,0 +1,1153 @@
+{
+  "timestamp": "2025-07-21T10:19:03.874Z",
+  "reports": {
+    "bundle": {
+      "timestamp": "2025-07-21T10:19:02.899Z",
+      "summary": {
+        "totalFiles": 147,
+        "totalSize": 23193471,
+        "formattedTotalSize": "22.12 MB"
+      },
+      "fileTypes": {
+        ".html": {
+          "count": 102,
+          "totalSize": 5251910,
+          "files": [
+            {
+              "name": "index.html",
+              "size": 402714,
+              "path": "blog\\posts\\ethernaut-openzeppelin\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 234091,
+              "path": "blog\\posts\\Uniswap\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 205311,
+              "path": "blog\\posts\\cross-chain-101\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 191805,
+              "path": "blog\\posts\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 162507,
+              "path": "blog\\posts\\smart-contract-design\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 116939,
+              "path": "index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 90541,
+              "path": "blog\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 89521,
+              "path": "blog\\posts\\hyperlane-cook-book\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 88730,
+              "path": "blog\\techs\\markdown\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 82228,
+              "path": "blog\\posts\\manually-implementing-smart-pointers\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 82008,
+              "path": "about-me\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 77727,
+              "path": "blog\\posts\\NMEA\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 77305,
+              "path": "blog\\posts\\doxygen-usage\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 71926,
+              "path": "blog\\posts\\gof-of-singleton-pattern\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 71453,
+              "path": "blog\\posts\\blog-pages-disposition\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 70800,
+              "path": "blog\\posts\\cpp-development-knowledge-combing\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 70428,
+              "path": "blog\\posts\\half-yearly review-of-experience\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 70425,
+              "path": "blog\\posts\\Class\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 70221,
+              "path": "blog\\posts\\web3-offline-hackathons\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 70019,
+              "path": "blog\\posts\\the-next-decade-of-btc\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 69930,
+              "path": "blog\\posts\\java-enum\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 69147,
+              "path": "blog\\techs\\cpp\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 68988,
+              "path": "blog\\posts\\Hexo\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 67743,
+              "path": "blog\\posts\\security-report-template\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 67601,
+              "path": "blog\\posts\\blog-template\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 67231,
+              "path": "blog\\posts\\windsurf-login-authentication-failed\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 66120,
+              "path": "blog\\techs\\solidity\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 64879,
+              "path": "blog\\posts\\community-and-ai-impact-on-people\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 64810,
+              "path": "blog\\posts\\media-operations tools\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 64130,
+              "path": "blog\\posts\\rule\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 63560,
+              "path": "blog\\posts\\shuffling-algorithm\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 48477,
+              "path": "link\\book\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 40074,
+              "path": "blog\\techs\\md\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 37217,
+              "path": "blog\\techs\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 36671,
+              "path": "projects\\nextWordApp\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 36016,
+              "path": "projects\\travelOnChain\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 35621,
+              "path": "projects\\praxisGrove\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 35549,
+              "path": "blog\\techs\\java\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 35209,
+              "path": "projects\\telegramBotFaucet\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 34573,
+              "path": "blog\\tags\\Tool\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 34146,
+              "path": "blog\\tags\\智能合约\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 33912,
+              "path": "blog\\tags\\算法\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 33793,
+              "path": "blog\\tags\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 33335,
+              "path": "blog\\tags\\AI\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 33164,
+              "path": "blog\\tags\\DeFi\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 33030,
+              "path": "blog\\tags\\security\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 32917,
+              "path": "blog\\techs\\hexo\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 32060,
+              "path": "blog\\tags\\content-creation\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 32053,
+              "path": "blog\\tags\\web-development\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 32039,
+              "path": "blog\\tags\\documentation\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 32004,
+              "path": "blog\\tags\\tutorial\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 31997,
+              "path": "blog\\tags\\writing\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 31983,
+              "path": "blog\\techs\\html\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 31976,
+              "path": "blog\\techs\\css\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 31584,
+              "path": "blog\\tags\\团队\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 31584,
+              "path": "blog\\tags\\荣誉\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 31546,
+              "path": "blog\\tags\\Web3\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 31539,
+              "path": "blog\\techs\\go\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 30790,
+              "path": "blog\\tags\\Location\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 30762,
+              "path": "blog\\tags\\NMEA\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 30755,
+              "path": "blog\\tags\\GPS\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 30363,
+              "path": "projects\\hyperlaneCC\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 29659,
+              "path": "projects\\cocchi\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 29053,
+              "path": "blog\\tags\\知识梳理\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28981,
+              "path": "blog\\tags\\基础知识\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28528,
+              "path": "blog\\tags\\自动生成\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28518,
+              "path": "blog\\tags\\安全\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28517,
+              "path": "blog\\tags\\跨链桥\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28484,
+              "path": "blog\\tags\\分析\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28461,
+              "path": "blog\\tags\\媒体\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28461,
+              "path": "blog\\tags\\工具\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28461,
+              "path": "blog\\tags\\运营\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28453,
+              "path": "blog\\techs\\rust\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28417,
+              "path": "blog\\tags\\UML\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28302,
+              "path": "blog\\tags\\单例模式\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28299,
+              "path": "blog\\tags\\教程\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28298,
+              "path": "blog\\tags\\智能指针\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28296,
+              "path": "blog\\tags\\hyperlane\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28269,
+              "path": "blog\\tags\\创建型\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28236,
+              "path": "blog\\tags\\思考\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28194,
+              "path": "blog\\tags\\RAII\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28191,
+              "path": "blog\\tags\\GOF\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28099,
+              "path": "blog\\tags\\枚举\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 28053,
+              "path": "blog\\tags\\博客页面\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 27934,
+              "path": "friend\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 27856,
+              "path": "blog\\tags\\解决问题\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 27780,
+              "path": "blog\\tags\\WindSurf\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 27595,
+              "path": "blog\\tags\\AMM\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 27528,
+              "path": "blog\\tags\\教育\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 27528,
+              "path": "blog\\tags\\社区\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 27475,
+              "path": "blog\\tags\\ethernaut\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 27228,
+              "path": "blog\\tags\\Crypto\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 27207,
+              "path": "blog\\tags\\BTC\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 26908,
+              "path": "blog\\tags\\原则\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 26906,
+              "path": "blog\\tags\\博客\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 21178,
+              "path": "link\\music\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 20852,
+              "path": "link\\idol\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 20844,
+              "path": "link\\movie\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 20826,
+              "path": "link\\video\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 20822,
+              "path": "link\\game\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 20822,
+              "path": "link\\tool\\index.html"
+            },
+            {
+              "name": "index.html",
+              "size": 20814,
+              "path": "link\\photo\\index.html"
+            }
+          ]
+        },
+        ".png": {
+          "count": 19,
+          "totalSize": 16163542,
+          "files": [
+            {
+              "name": "traveonchain.png",
+              "size": 3819596,
+              "path": "images\\projects\\traveonchain.png"
+            },
+            {
+              "name": "security-report-template.png",
+              "size": 1674157,
+              "path": "images\\posts\\security-report-template.png"
+            },
+            {
+              "name": "the-next-decade-of-bitcoin.png",
+              "size": 1571469,
+              "path": "images\\posts\\the-next-decade-of-bitcoin.png"
+            },
+            {
+              "name": "shuffling-algorithm.png",
+              "size": 1516645,
+              "path": "images\\posts\\shuffling-algorithm.png"
+            },
+            {
+              "name": "tgbotfauceturl.png",
+              "size": 1364197,
+              "path": "images\\projects\\tgbotfauceturl.png"
+            },
+            {
+              "name": "tgbotFaucet.png",
+              "size": 1350370,
+              "path": "images\\projects\\tgbotFaucet.png"
+            },
+            {
+              "name": "hyperlane.png",
+              "size": 1180439,
+              "path": "images\\projects\\hyperlane.png"
+            },
+            {
+              "name": "blog.png",
+              "size": 1176175,
+              "path": "images\\blog.png"
+            },
+            {
+              "name": "smart-contract-design.png",
+              "size": 988040,
+              "path": "images\\posts\\smart-contract-design.png"
+            },
+            {
+              "name": "praxisgrove.png",
+              "size": 512465,
+              "path": "images\\projects\\praxisgrove.png"
+            },
+            {
+              "name": "android-chrome-512x512.png",
+              "size": 378448,
+              "path": "android-chrome-512x512.png"
+            },
+            {
+              "name": "yaco.png",
+              "size": 295325,
+              "path": "images\\yaco.png"
+            },
+            {
+              "name": "ethernaut-openzeppelin.png",
+              "size": 182085,
+              "path": "images\\posts\\ethernaut-openzeppelin.png"
+            },
+            {
+              "name": "android-chrome-192x192.png",
+              "size": 63508,
+              "path": "android-chrome-192x192.png"
+            },
+            {
+              "name": "apple-touch-icon.png",
+              "size": 57132,
+              "path": "apple-touch-icon.png"
+            },
+            {
+              "name": "nextword.png",
+              "size": 26215,
+              "path": "images\\projects\\nextword.png"
+            },
+            {
+              "name": "uniswap.png",
+              "size": 3743,
+              "path": "images\\posts\\uniswap.png"
+            },
+            {
+              "name": "favicon-32x32.png",
+              "size": 2655,
+              "path": "favicon-32x32.png"
+            },
+            {
+              "name": "favicon-16x16.png",
+              "size": 878,
+              "path": "favicon-16x16.png"
+            }
+          ]
+        },
+        ".css": {
+          "count": 3,
+          "totalSize": 107697,
+          "files": [
+            {
+              "name": "about-me-CRc2R-Nt.css",
+              "size": 95356,
+              "path": "assets\\css\\about-me-CRc2R-Nt.css"
+            },
+            {
+              "name": "pages-DXk0uPLp.css",
+              "size": 8067,
+              "path": "assets\\css\\pages-DXk0uPLp.css"
+            },
+            {
+              "name": "components-GLsuj4xX.css",
+              "size": 4274,
+              "path": "assets\\css\\components-GLsuj4xX.css"
+            }
+          ]
+        },
+        ".js": {
+          "count": 11,
+          "totalSize": 1479404,
+          "files": [
+            {
+              "name": "pages-Du8i8aUc.js",
+              "size": 1169754,
+              "path": "assets\\js\\pages-Du8i8aUc.js"
+            },
+            {
+              "name": "astro-vendor-CHp3wCve.js",
+              "size": 197307,
+              "path": "assets\\js\\astro-vendor-CHp3wCve.js"
+            },
+            {
+              "name": "components-C5hvVVQe.js",
+              "size": 66467,
+              "path": "assets\\js\\components-C5hvVVQe.js"
+            },
+            {
+              "name": "client-DjqIN5ic.js",
+              "size": 22273,
+              "path": "assets\\js\\client-DjqIN5ic.js"
+            },
+            {
+              "name": "utils-CoKO1AQf.js",
+              "size": 11512,
+              "path": "assets\\js\\utils-CoKO1AQf.js"
+            },
+            {
+              "name": "preact-vendor-Djup2Y0T.js",
+              "size": 5989,
+              "path": "assets\\js\\preact-vendor-Djup2Y0T.js"
+            },
+            {
+              "name": "ListProjects.astro_astro_type_script_index_0_lang-CHz8p9rz.js",
+              "size": 3238,
+              "path": "assets\\js\\ListProjects.astro_astro_type_script_index_0_lang-CHz8p9rz.js"
+            },
+            {
+              "name": "vendor-CvfTLJVk.js",
+              "size": 2119,
+              "path": "assets\\js\\vendor-CvfTLJVk.js"
+            },
+            {
+              "name": "index.astro_astro_type_script_index_0_lang-Dr2xdWep.js",
+              "size": 599,
+              "path": "assets\\js\\index.astro_astro_type_script_index_0_lang-Dr2xdWep.js"
+            },
+            {
+              "name": "NavArticle.astro_astro_type_script_index_0_lang-BppTOFsH.js",
+              "size": 73,
+              "path": "assets\\js\\NavArticle.astro_astro_type_script_index_0_lang-BppTOFsH.js"
+            },
+            {
+              "name": "Navigation.astro_astro_type_script_index_0_lang-BppTOFsH.js",
+              "size": 73,
+              "path": "assets\\js\\Navigation.astro_astro_type_script_index_0_lang-BppTOFsH.js"
+            }
+          ]
+        },
+        "": {
+          "count": 1,
+          "totalSize": 14,
+          "files": [
+            {
+              "name": "CNAME",
+              "size": 14,
+              "path": "CNAME"
+            }
+          ]
+        },
+        ".ico": {
+          "count": 1,
+          "totalSize": 15406,
+          "files": [
+            {
+              "name": "favicon.ico",
+              "size": 15406,
+              "path": "favicon.ico"
+            }
+          ]
+        },
+        ".woff2": {
+          "count": 3,
+          "totalSize": 144,
+          "files": [
+            {
+              "name": "montserrat-400.woff2",
+              "size": 48,
+              "path": "fonts\\montserrat-400.woff2"
+            },
+            {
+              "name": "montserrat-600.woff2",
+              "size": 48,
+              "path": "fonts\\montserrat-600.woff2"
+            },
+            {
+              "name": "opensans-400.woff2",
+              "size": 48,
+              "path": "fonts\\opensans-400.woff2"
+            }
+          ]
+        },
+        ".webp": {
+          "count": 2,
+          "totalSize": 158032,
+          "files": [
+            {
+              "name": "project.webp",
+              "size": 116852,
+              "path": "images\\projects\\project.webp"
+            },
+            {
+              "name": "markdown.webp",
+              "size": 41180,
+              "path": "images\\posts\\markdown.webp"
+            }
+          ]
+        },
+        ".txt": {
+          "count": 1,
+          "totalSize": 77,
+          "files": [
+            {
+              "name": "robots.txt",
+              "size": 77,
+              "path": "robots.txt"
+            }
+          ]
+        },
+        ".xml": {
+          "count": 3,
+          "totalSize": 16982,
+          "files": [
+            {
+              "name": "rss.xml",
+              "size": 9315,
+              "path": "rss.xml"
+            },
+            {
+              "name": "sitemap-0.xml",
+              "size": 7482,
+              "path": "sitemap-0.xml"
+            },
+            {
+              "name": "sitemap-index.xml",
+              "size": 185,
+              "path": "sitemap-index.xml"
+            }
+          ]
+        },
+        ".webmanifest": {
+          "count": 1,
+          "totalSize": 263,
+          "files": [
+            {
+              "name": "site.webmanifest",
+              "size": 263,
+              "path": "site.webmanifest"
+            }
+          ]
+        }
+      },
+      "javascript": {
+        "totalFiles": 11,
+        "totalSize": 1479404,
+        "chunks": [],
+        "vendors": [
+          {
+            "name": "astro-vendor-CHp3wCve.js",
+            "size": 197307,
+            "path": "assets\\js\\astro-vendor-CHp3wCve.js",
+            "formattedSize": "192.68 KB"
+          },
+          {
+            "name": "preact-vendor-Djup2Y0T.js",
+            "size": 5989,
+            "path": "assets\\js\\preact-vendor-Djup2Y0T.js",
+            "formattedSize": "5.85 KB"
+          },
+          {
+            "name": "vendor-CvfTLJVk.js",
+            "size": 2119,
+            "path": "assets\\js\\vendor-CvfTLJVk.js",
+            "formattedSize": "2.07 KB"
+          }
+        ],
+        "pages": [
+          {
+            "name": "pages-Du8i8aUc.js",
+            "size": 1169754,
+            "path": "assets\\js\\pages-Du8i8aUc.js",
+            "formattedSize": "1.12 MB"
+          },
+          {
+            "name": "components-C5hvVVQe.js",
+            "size": 66467,
+            "path": "assets\\js\\components-C5hvVVQe.js",
+            "formattedSize": "64.91 KB"
+          },
+          {
+            "name": "client-DjqIN5ic.js",
+            "size": 22273,
+            "path": "assets\\js\\client-DjqIN5ic.js",
+            "formattedSize": "21.75 KB"
+          },
+          {
+            "name": "utils-CoKO1AQf.js",
+            "size": 11512,
+            "path": "assets\\js\\utils-CoKO1AQf.js",
+            "formattedSize": "11.24 KB"
+          },
+          {
+            "name": "ListProjects.astro_astro_type_script_index_0_lang-CHz8p9rz.js",
+            "size": 3238,
+            "path": "assets\\js\\ListProjects.astro_astro_type_script_index_0_lang-CHz8p9rz.js",
+            "formattedSize": "3.16 KB"
+          },
+          {
+            "name": "index.astro_astro_type_script_index_0_lang-Dr2xdWep.js",
+            "size": 599,
+            "path": "assets\\js\\index.astro_astro_type_script_index_0_lang-Dr2xdWep.js",
+            "formattedSize": "599 Bytes"
+          },
+          {
+            "name": "NavArticle.astro_astro_type_script_index_0_lang-BppTOFsH.js",
+            "size": 73,
+            "path": "assets\\js\\NavArticle.astro_astro_type_script_index_0_lang-BppTOFsH.js",
+            "formattedSize": "73 Bytes"
+          },
+          {
+            "name": "Navigation.astro_astro_type_script_index_0_lang-BppTOFsH.js",
+            "size": 73,
+            "path": "assets\\js\\Navigation.astro_astro_type_script_index_0_lang-BppTOFsH.js",
+            "formattedSize": "73 Bytes"
+          }
+        ]
+      },
+      "css": {
+        "totalFiles": 3,
+        "totalSize": 107697,
+        "files": [
+          {
+            "name": "about-me-CRc2R-Nt.css",
+            "size": 95356,
+            "path": "assets\\css\\about-me-CRc2R-Nt.css",
+            "formattedSize": "93.12 KB"
+          },
+          {
+            "name": "pages-DXk0uPLp.css",
+            "size": 8067,
+            "path": "assets\\css\\pages-DXk0uPLp.css",
+            "formattedSize": "7.88 KB"
+          },
+          {
+            "name": "components-GLsuj4xX.css",
+            "size": 4274,
+            "path": "assets\\css\\components-GLsuj4xX.css",
+            "formattedSize": "4.17 KB"
+          }
+        ]
+      },
+      "recommendations": [
+        {
+          "type": "warning",
+          "category": "JavaScript",
+          "message": "JavaScript总大小 1.41 MB 较大，建议进一步优化代码分割"
+        },
+        {
+          "type": "warning",
+          "category": "CSS",
+          "message": "CSS总大小 105.17 KB 较大，建议移除未使用的样式"
+        },
+        {
+          "type": "info",
+          "category": "Large Files",
+          "message": "发现 16 个大文件 (>200KB)",
+          "files": [
+            "index.html (393.28 KB)",
+            "index.html (228.6 KB)",
+            "index.html (200.5 KB)",
+            "traveonchain.png (3.64 MB)",
+            "security-report-template.png (1.6 MB)",
+            "the-next-decade-of-bitcoin.png (1.5 MB)",
+            "shuffling-algorithm.png (1.45 MB)",
+            "tgbotfauceturl.png (1.3 MB)",
+            "tgbotFaucet.png (1.29 MB)",
+            "hyperlane.png (1.13 MB)",
+            "blog.png (1.12 MB)",
+            "smart-contract-design.png (964.88 KB)",
+            "praxisgrove.png (500.45 KB)",
+            "android-chrome-512x512.png (369.58 KB)",
+            "yaco.png (288.4 KB)",
+            "pages-Du8i8aUc.js (1.12 MB)"
+          ]
+        }
+      ]
+    },
+    "images": {
+      "totalImages": 14,
+      "totalSize": 15660921,
+      "largeImages": [
+        {
+          "path": "public\\images\\projects\\traveonchain.png",
+          "size": 3819596,
+          "formattedSize": "3.64 MB"
+        },
+        {
+          "path": "public\\images\\posts\\security-report-template.png",
+          "size": 1674157,
+          "formattedSize": "1.6 MB"
+        },
+        {
+          "path": "public\\images\\posts\\the-next-decade-of-bitcoin.png",
+          "size": 1571469,
+          "formattedSize": "1.5 MB"
+        },
+        {
+          "path": "public\\images\\posts\\shuffling-algorithm.png",
+          "size": 1516645,
+          "formattedSize": "1.45 MB"
+        },
+        {
+          "path": "public\\images\\projects\\tgbotfauceturl.png",
+          "size": 1364197,
+          "formattedSize": "1.3 MB"
+        },
+        {
+          "path": "public\\images\\projects\\tgbotFaucet.png",
+          "size": 1350370,
+          "formattedSize": "1.29 MB"
+        },
+        {
+          "path": "public\\images\\projects\\hyperlane.png",
+          "size": 1180439,
+          "formattedSize": "1.13 MB"
+        },
+        {
+          "path": "public\\images\\blog.png",
+          "size": 1176175,
+          "formattedSize": "1.12 MB"
+        },
+        {
+          "path": "public\\images\\posts\\smart-contract-design.png",
+          "size": 988040,
+          "formattedSize": "964.88 KB"
+        },
+        {
+          "path": "public\\images\\projects\\praxisgrove.png",
+          "size": 512465,
+          "formattedSize": "500.45 KB"
+        }
+      ],
+      "imagesByType": {
+        ".png": {
+          "count": 14,
+          "totalSize": 15660921,
+          "files": [
+            {
+              "path": "public\\images\\blog.png",
+              "size": 1176175,
+              "formattedSize": "1.12 MB"
+            },
+            {
+              "path": "public\\images\\posts\\ethernaut-openzeppelin.png",
+              "size": 182085,
+              "formattedSize": "177.82 KB"
+            },
+            {
+              "path": "public\\images\\posts\\security-report-template.png",
+              "size": 1674157,
+              "formattedSize": "1.6 MB"
+            },
+            {
+              "path": "public\\images\\posts\\shuffling-algorithm.png",
+              "size": 1516645,
+              "formattedSize": "1.45 MB"
+            },
+            {
+              "path": "public\\images\\posts\\smart-contract-design.png",
+              "size": 988040,
+              "formattedSize": "964.88 KB"
+            },
+            {
+              "path": "public\\images\\posts\\the-next-decade-of-bitcoin.png",
+              "size": 1571469,
+              "formattedSize": "1.5 MB"
+            },
+            {
+              "path": "public\\images\\posts\\uniswap.png",
+              "size": 3743,
+              "formattedSize": "3.66 KB"
+            },
+            {
+              "path": "public\\images\\projects\\hyperlane.png",
+              "size": 1180439,
+              "formattedSize": "1.13 MB"
+            },
+            {
+              "path": "public\\images\\projects\\nextword.png",
+              "size": 26215,
+              "formattedSize": "25.6 KB"
+            },
+            {
+              "path": "public\\images\\projects\\praxisgrove.png",
+              "size": 512465,
+              "formattedSize": "500.45 KB"
+            },
+            {
+              "path": "public\\images\\projects\\tgbotFaucet.png",
+              "size": 1350370,
+              "formattedSize": "1.29 MB"
+            },
+            {
+              "path": "public\\images\\projects\\tgbotfauceturl.png",
+              "size": 1364197,
+              "formattedSize": "1.3 MB"
+            },
+            {
+              "path": "public\\images\\projects\\traveonchain.png",
+              "size": 3819596,
+              "formattedSize": "3.64 MB"
+            },
+            {
+              "path": "public\\images\\yaco.png",
+              "size": 295325,
+              "formattedSize": "288.4 KB"
+            }
+          ]
+        }
+      },
+      "potentialSavings": 4698276.3
+    },
+    "css": {
+      "totalSelectors": 53,
+      "usedSelectors": 33,
+      "unusedSelectors": 12,
+      "unusedList": [
+        "100%",
+        ".fonts-loading",
+        ".fonts-loaded",
+        ".hamburger-icon",
+        ".nav-links",
+        ".expanded",
+        ".code-block-efe",
+        ".contains-task-list",
+        ".task-list-item",
+        ".task-list-item span",
+        ".font-opensans",
+        ".font-roboto"
+      ],
+      "unusedPercentage": 22.6
+    }
+  },
+  "performanceScore": {
+    "score": 67,
+    "issues": [
+      "JavaScript包较大 (>1MB)",
+      "CSS文件较大 (>100KB)",
+      "图片总大小较大 (>10MB)",
+      "大图片文件较多 (10个 >500KB)"
+    ],
+    "grade": "D"
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "JavaScript优化",
+      "action": "进一步优化代码分割，移除未使用的代码",
+      "impact": "减少首屏加载时间"
+    },
+    {
+      "priority": "medium",
+      "category": "CSS优化",
+      "action": "使用PurgeCSS移除未使用的样式",
+      "impact": "减少样式文件大小"
+    },
+    {
+      "priority": "high",
+      "category": "图片优化",
+      "action": "压缩图片，转换为WebP/AVIF格式",
+      "impact": "显著减少页面加载时间"
+    },
+    {
+      "priority": "high",
+      "category": "图片优化",
+      "action": "压缩图片，转换为WebP/AVIF格式",
+      "impact": "显著减少页面加载时间"
+    },
+    {
+      "priority": "medium",
+      "category": "缓存策略",
+      "action": "配置适当的浏览器缓存头",
+      "impact": "提升回访用户体验"
+    },
+    {
+      "priority": "low",
+      "category": "监控",
+      "action": "设置性能监控和告警",
+      "impact": "及时发现性能问题"
+    }
+  ]
+}

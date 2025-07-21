@@ -1,0 +1,118 @@
+/* 组件样式 - 可重用的UI组件 */
+
+/* 导航组件 */
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+.hamburger .bars-icon {
+  display: block;
+}
+
+.hamburger.active .bars-icon {
+  display: none;
+}
+
+.hamburger.active .xmark-icon {
+  display: block;
+}
+
+.nav-links {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* 展开菜单样式 */
+.expanded {
+  @apply transition-all duration-700 w-full !flex !flex-col left-0 top-full mt-4 absolute shadow-xl dark:text-zinc-300 bg-gradient-to-t from-white to-white/90 dark:from-zinc-950 dark:to-zinc-950/80 bg-clip-padding backdrop-filter backdrop-blur backdrop-saturate-100 backdrop-contrast-100;
+}
+
+/* 代码块组件 */
+.code-block-efe {
+  @apply w-full rounded-lg h-auto overflow-hidden my-8;
+}
+
+.copy-code svg {
+  @apply size-5;
+}
+
+.copy-code {
+  @apply absolute text-slate-400 text-xs cursor-pointer bg-slate-600/50 border hover:bg-transparent border-slate-500 p-2.5 rounded-md top-4 right-4 flex transition-all duration-300 max-md:opacity-100 min-md:opacity-0 group-hover:opacity-100 items-center justify-center;
+}
+
+/* 任务列表组件 */
+.contains-task-list {
+  @apply space-y-2;
+}
+
+.task-list-item {
+  @apply flex items-center gap-4;
+}
+
+.task-list-item input[type="checkbox"] {
+  @apply w-5 h-5 accent-mint-300;
+}
+
+.task-list-item input[type="checkbox"]:checked + span {
+  @apply line-through text-mint-600;
+}
+
+.task-list-item span {
+  @apply text-gray-800;
+}
+
+/* 背景装饰组件 */
+.blur-circle {
+  background-color: rgba(87, 253, 228, 0.29);
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  right: 100px;
+  border-radius: 999px;
+  filter: blur(150px);
+  overflow: hidden;
+  z-index: -1;
+}
+
+.blur-circle::after {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 400px;
+  background: #31d69a40;
+  bottom: -400px;
+  right: -300px;
+  position: fixed;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(159px);
+}
+
+/* 暗色模式下的背景装饰 */
+.dark .blur-circle::after {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 500px;
+  background: #50fd8f25 !important;
+  bottom: -150px;
+  right: -150px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(10px);
+}

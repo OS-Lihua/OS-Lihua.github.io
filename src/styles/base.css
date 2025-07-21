@@ -1,0 +1,79 @@
+/* 基础样式 - 重置和全局设置 */
+
+/* 性能优化：减少重绘和回流 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 优化滚动性能 */
+html {
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 减少动画对性能的影响 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 选择文本样式 */
+::selection {
+  @apply text-white bg-mint-500;
+}
+
+/* 滚动条样式 */
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+}
+
+.dark * {
+  scrollbar-color: #6ce9b7 #012d22;
+  scrollbar-width: thin;
+}
+
+* {
+  scrollbar-color: #6ce9b7 #d0fbe5;
+  scrollbar-width: thin;
+}
+
+/* 代码块滚动条特殊样式 */
+pre,
+.dark pre {
+  scrollbar-color: #686868 #424242;
+  scrollbar-width: initial;
+}
+
+/* CSS属性定义 */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* 动画定义 */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(10);
+  }
+  100% {
+    transform: rotate(-360deg) scale(10);
+  }
+}
+
+@keyframes border-rotate {
+  to {
+    --border-angle: 360deg;
+  }
+}

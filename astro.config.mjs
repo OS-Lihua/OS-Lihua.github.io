@@ -39,13 +39,67 @@ export default defineConfig({
     plugins: [tailwindcss()],
     build: {
       cssMinify: 'lightningcss',
+      minify: 'esbuild',
+      target: 'es2020',
+      sourcemap: false, // 生产环境关闭sourcemap以减小包体积
+      reportCompressedSize: true, // 报告压缩后的大小
+      chunkSizeWarningLimit: 1000, // 块大小警告限制 (KB)
       rollupOptions: {
         output: {
-          manualChunks: {
-            vendor: ['preact', 'preact/hooks'],
-            utils: ['src/utils/languages.ts'],
+          // 改进的代码分割策略
+          manualChunks: (id) => {
+            // 第三方库分割
+            if (id.includes('node_modules')) {
+              if (id.includes('preact')) {
+                return 'preact-vendor';
+              }
+              if (id.includes('astro')) {
+                return 'astro-vendor';
+              }
+              if (id.includes('tailwindcss')) {
+                return 'tailwind-vendor';
+              }
+              return 'vendor';
+            }
+
+            // 工具类分割
+            if (id.includes('src/utils/')) {
+              return 'utils';
+            }
+
+            // 组件分割
+            if (id.includes('src/components/')) {
+              return 'components';
+            }
+
+            // 页面分割
+            if (id.includes('src/pages/')) {
+              return 'pages';
+            }
+
+            // 默认返回undefined，让Rollup自动处理
+            return undefined;
+          },
+          // 优化文件命名
+          chunkFileNames: 'assets/js/[name]-[hash].js',
+          entryFileNames: 'assets/js/[name]-[hash].js',
+          assetFileNames: (assetInfo) => {
+            if (!assetInfo.name) return 'assets/[name]-[hash].[ext]';
+
+            if (/\.(css)$/.test(assetInfo.name)) {
+              return 'assets/css/[name]-[hash].[ext]';
+            }
+            if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
+              return 'assets/images/[name]-[hash].[ext]';
+            }
+            if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
+              return 'assets/fonts/[name]-[hash].[ext]';
+            }
+            return 'assets/misc/[name]-[hash].[ext]';
           },
         },
+        // 外部依赖优化
+        external: [],
       },
     },
     ssr: {
@@ -61,12 +115,29 @@ export default defineConfig({
         allow: ['..'],
       },
     },
-    // 优化模块解析
+    // 优化模块解析和依赖预构建
     optimizeDeps: {
-      include: ['preact', 'preact/hooks'],
-      exclude: ['@astrojs/preact'],
+      include: [
+        'preact',
+        'preact/hooks',
+        'alpinejs',
+        'katex',
+        'prismjs'
+      ],
+      exclude: [
+        '@astrojs/preact',
+        'astro-icon',
+        '@vercel/speed-insights'
+      ],
       // 强制预构建依赖
       force: false,
+      // 预构建时的esbuild配置
+      esbuildOptions: {
+        target: 'es2020',
+        supported: {
+          'top-level-await': true
+        }
+      }
     },
     // 缓存配置
     cacheDir: 'node_modules/.vite',
@@ -76,10 +147,20 @@ export default defineConfig({
         process.env.NODE_ENV || 'development'
       ),
     },
-    // 性能优化
+    // 性能优化和分析
     esbuild: {
       target: 'es2020',
       keepNames: true,
+      legalComments: 'none', // 移除法律注释以减小包体积
+      minifyIdentifiers: true,
+      minifySyntax: true,
+      minifyWhitespace: true,
+    },
+    // 构建分析配置
+    logLevel: 'info',
+    // 实验性功能
+    experimental: {
+      // contentCollectionCache: true, // 暂时注释掉，等待Astro支持
     },
   },
   markdown: {

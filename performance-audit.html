@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>性能审计报告</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 8px; padding: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 40px; }
+        .score { font-size: 4em; font-weight: bold; margin: 20px 0; }
+        .score.A { color: #22c55e; }
+        .score.B { color: #84cc16; }
+        .score.C { color: #eab308; }
+        .score.D { color: #f97316; }
+        .score.F { color: #ef4444; }
+        .section { margin: 30px 0; }
+        .section h2 { color: #1f2937; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; }
+        .metric { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f3f4f6; }
+        .recommendations { display: grid; gap: 15px; }
+        .recommendation { padding: 15px; border-left: 4px solid #3b82f6; background: #f8fafc; }
+        .recommendation.high { border-color: #ef4444; }
+        .recommendation.medium { border-color: #f59e0b; }
+        .recommendation.low { border-color: #10b981; }
+        .timestamp { text-align: center; color: #6b7280; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>性能审计报告</h1>
+            <div class="score D">67</div>
+            <p>性能评分: D 级</p>
+        </div>
+        
+        <div class="section">
+            <h2>📊 构建分析</h2>
+            
+                <div class="metric"><span>JavaScript大小:</span><span>1.41 MB</span></div>
+                <div class="metric"><span>CSS大小:</span><span>105.17 KB</span></div>
+                <div class="metric"><span>总文件数:</span><span>147</span></div>
+            
+        </div>
+        
+        <div class="section">
+            <h2>🖼️ 图片分析</h2>
+            
+                <div class="metric"><span>图片总数:</span><span>14</span></div>
+                <div class="metric"><span>图片总大小:</span><span>14.94 MB</span></div>
+                <div class="metric"><span>大文件数 (>500KB):</span><span>10</span></div>
+            
+        </div>
+        
+        <div class="section">
+            <h2>🎨 CSS分析</h2>
+            
+                <div class="metric"><span>总选择器数:</span><span>53</span></div>
+                <div class="metric"><span>已使用选择器:</span><span>33</span></div>
+                <div class="metric"><span>未使用比例:</span><span>22.6%</span></div>
+            
+        </div>
+        
+        <div class="section">
+            <h2>💡 优化建议</h2>
+            <div class="recommendations">
+                
+                    <div class="recommendation high">
+                        <h3>JavaScript优化</h3>
+                        <p><strong>建议:</strong> 进一步优化代码分割，移除未使用的代码</p>
+                        <p><strong>影响:</strong> 减少首屏加载时间</p>
+                        <p><strong>优先级:</strong> 高</p>
+                    </div>
+                
+                    <div class="recommendation medium">
+                        <h3>CSS优化</h3>
+                        <p><strong>建议:</strong> 使用PurgeCSS移除未使用的样式</p>
+                        <p><strong>影响:</strong> 减少样式文件大小</p>
+                        <p><strong>优先级:</strong> 中</p>
+                    </div>
+                
+                    <div class="recommendation high">
+                        <h3>图片优化</h3>
+                        <p><strong>建议:</strong> 压缩图片，转换为WebP/AVIF格式</p>
+                        <p><strong>影响:</strong> 显著减少页面加载时间</p>
+                        <p><strong>优先级:</strong> 高</p>
+                    </div>
+                
+                    <div class="recommendation high">
+                        <h3>图片优化</h3>
+                        <p><strong>建议:</strong> 压缩图片，转换为WebP/AVIF格式</p>
+                        <p><strong>影响:</strong> 显著减少页面加载时间</p>
+                        <p><strong>优先级:</strong> 高</p>
+                    </div>
+                
+                    <div class="recommendation medium">
+                        <h3>缓存策略</h3>
+                        <p><strong>建议:</strong> 配置适当的浏览器缓存头</p>
+                        <p><strong>影响:</strong> 提升回访用户体验</p>
+                        <p><strong>优先级:</strong> 中</p>
+                    </div>
+                
+                    <div class="recommendation low">
+                        <h3>监控</h3>
+                        <p><strong>建议:</strong> 设置性能监控和告警</p>
+                        <p><strong>影响:</strong> 及时发现性能问题</p>
+                        <p><strong>优先级:</strong> 低</p>
+                    </div>
+                
+            </div>
+        </div>
+        
+        <div class="timestamp">
+            报告生成时间: 2025/7/21 18:19:03
+        </div>
+    </div>
+</body>
+</html>

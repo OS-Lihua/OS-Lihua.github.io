@@ -43,6 +43,11 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <!-- Web manifest -->
     <link rel="manifest" href="/site.webmanifest" />
 
+    <!-- 字体预加载 - 优化首屏性能 -->
+    <link rel="preload" href="/fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/montserrat-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/opensans-400.woff2" as="font" type="font/woff2" crossorigin />
+
     <meta name="description" content={description} />
     <meta name="author" content={SEO.author} />
     <meta name="robots" content="index, follow" />

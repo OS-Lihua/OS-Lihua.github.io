@@ -1,0 +1,20 @@
+{
+  "totalSelectors": 53,
+  "usedSelectors": 33,
+  "unusedSelectors": 12,
+  "unusedList": [
+    "100%",
+    ".fonts-loading",
+    ".fonts-loaded",
+    ".hamburger-icon",
+    ".nav-links",
+    ".expanded",
+    ".code-block-efe",
+    ".contains-task-list",
+    ".task-list-item",
+    ".task-list-item span",
+    ".font-opensans",
+    ".font-roboto"
+  ],
+  "unusedPercentage": 22.6
+}
