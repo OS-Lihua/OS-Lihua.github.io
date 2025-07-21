@@ -4,6 +4,8 @@ dist/
 # vscode settings
 .vscode/
 
+.augment/
+
 # generated types
 .astro/
 
