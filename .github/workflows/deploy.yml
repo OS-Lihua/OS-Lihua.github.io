@@ -22,7 +22,7 @@ permissions:
 # 环境变量
 env:
   NODE_VERSION: 20 # Node.js 版本
-  PNPM_VERSION: 8.15.0 # 使用pnpm
+  PNPM_VERSION: 10.13.1 # 使用pnpm (与本地版本保持一致)
   BUILD_PATH: "dist" # Astro 默认输出目录
 
 jobs:
