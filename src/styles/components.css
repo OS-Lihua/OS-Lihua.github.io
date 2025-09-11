@@ -116,3 +116,244 @@
   border-radius: 50%;
   filter: blur(10px);
 }
+
+/* 毛玻璃效果增强组件 */
+.glassmorphism-nav {
+  @apply backdrop-blur-xl bg-white/80 dark:bg-gray-900/80;
+  @apply border border-white/20 dark:border-gray-700/50;
+  @apply shadow-lg shadow-black/5 dark:shadow-black/20;
+  @apply rounded-2xl;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glassmorphism-nav:hover {
+  @apply backdrop-blur-2xl bg-white/85 dark:bg-gray-900/85;
+  @apply shadow-xl shadow-black/10 dark:shadow-black/30;
+}
+
+/* 增强的项目卡片毛玻璃效果 */
+.project-card-enhanced {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 确保卡片间隙透明 */
+  margin: 0;
+}
+
+.dark .project-card-enhanced {
+  background: rgba(30, 30, 36, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.project-card-enhanced:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.dark .project-card-enhanced:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* 项目卡片内容布局 */
+.project-image-container {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  gap: 1rem;
+}
+
+.project-description {
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px;
+}
+
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.project-tags {
+  margin: 1rem 0;
+  min-height: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+/* 智能网格系统 */
+.projects-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+  background: transparent;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .projects-grid-enhanced {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid-enhanced {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: none;
+  }
+}
+
+/* 全宽渐变背景组件 */
+.gradient-full-width {
+  @apply w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw];
+  @apply bg-gradient-to-b from-mint-100 to-transparent;
+  @apply dark:from-mint-800 dark:to-transparent;
+}
+
+/* 项目卡片区域优化 - 移除背景干扰 */
+.projects-section-clean {
+  background: transparent;
+  position: relative;
+}
+
+/* 确保项目网格背景透明 */
+.projects-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+  background: transparent;
+  position: relative;
+}
+
+/* 项目卡片优化 - 确保卡片间隙透明 */
+.project-card-enhanced {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 确保卡片间隙透明 */
+  margin: 0;
+}
+
+.dark .project-card-enhanced {
+  background: rgba(30, 30, 36, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* 移除任何可能影响卡片间隙的背景 */
+.projects-container {
+  background: transparent;
+  padding: 0;
+}
+
+/* 联系区域背景优化 */
+.contact-section-enhanced {
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.contact-background-layer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  min-height: 200px;
+  background: linear-gradient(to bottom, 
+    theme('colors.mint.100') 0%, 
+    transparent 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.dark .contact-background-layer {
+  background: linear-gradient(to bottom, 
+    theme('colors.mint.800') 0%, 
+    transparent 100%
+  );
+}
+
+.contact-content-container {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: theme('maxWidth.5xl');
+  padding: theme('spacing.24') theme('spacing.8');
+}
+
+@media (max-width: 640px) {
+  .contact-content-container {
+    padding: theme('spacing.12') theme('spacing.8');
+  }
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  .contact-background-layer {
+    width: 100%;
+    left: 0;
+    transform: none;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+/* 导航栏容器增强 */
+.header-glass-container {
+  @apply sticky top-0 z-50 w-full p-4 transition-all;
+}
+
+.nav-glass-enhanced {
+  @apply mx-auto max-w-7xl;
+  @apply backdrop-blur-xl bg-white/85 dark:bg-gray-900/85;
+  @apply border border-white/20 dark:border-gray-700/50;
+  @apply shadow-lg shadow-black/5 dark:shadow-black/20;
+  @apply rounded-2xl px-6 py-3;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-glass-enhanced:hover {
+  @apply backdrop-blur-2xl bg-white/90 dark:bg-gray-900/90;
+  @apply shadow-xl shadow-black/10 dark:shadow-black/30;
+}

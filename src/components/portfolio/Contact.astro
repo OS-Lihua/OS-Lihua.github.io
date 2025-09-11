@@ -1,9 +1,7 @@
 ---
-import { Icon } from "astro-icon/components";
 import Heading from "../ui/Heading.astro";
 import Button from "../ui/Button.astro";
 // 联系信息配置
-const mail = "yaco@yaco.email";
 const title = "一起来玩！";
 const subtitle = "交个朋友~";
 const buttonText = "联系我";
@@ -11,28 +9,57 @@ const buttonIcon = "paperplane";
 ---
 
 <!-- 联系信息部分 -->
-<section>
-  <div
-    class="w-full border-b bg-gradient-to-b from-mint-100 to-transparent dark:from-mint-800 dark:border-mint-950 border-mint-100"
-  >
-    <div class="mx-auto max-w-5xl px-8 py-24 max-sm:py-12">
+<section class="contact-section-enhanced">
+  <div class="contact-background-layer"></div>
+  <div class="contact-content-container border-b dark:border-mint-950 border-mint-100">
+    <div
+      class="flex items-center justify-between max-sm:flex-col max-sm:gap-8 max-sm:text-center"
+    >
+      <div class="max-w-lg">
+        <Heading text={title} textGradient={subtitle} level={2} />
+      </div>
       <div
-        class="flex items-center justify-between max-sm:flex-col max-sm:gap-8 max-sm:text-center"
+        class="transition-all duration-500 group-hover:animate-jump group-hover:animate-duration-[300ms] group-hover:animate-ease-in-out group-hover:scale-105 hover:scale-125"
       >
-        <div class="max-w-lg">
-          <Heading text={title} textGradient={subtitle} level={2} />
-        </div>
-        <div
-          class="transition-all duration-500 group-hover:animate-jump group-hover:animate-duration-[300ms] group-hover:animate-ease-in-out group-hover:scale-105 hover:scale-125"
-        >
-          <Button
-            variant="big"
-            link={`https://linktr.ee/0xYaCo`}
-            text={buttonText}
-            iconName={buttonIcon}
-          />
-        </div>
+        <Button
+          variant="big"
+          link={`https://linktr.ee/0xYaCo`}
+          text={buttonText}
+          iconName={buttonIcon}
+        />
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  // 确保背景正确渲染
+  function initContactBackground() {
+    const backgroundLayer = document.querySelector('.contact-background-layer') as HTMLElement;
+    if (backgroundLayer) {
+      // 确保背景层正确定位
+      const rect = backgroundLayer.parentElement?.getBoundingClientRect();
+      if (rect) {
+        backgroundLayer.style.minHeight = `${Math.max(200, rect.height)}px`;
+      }
+    }
+  }
+
+  // 页面加载完成后初始化
+  document.addEventListener('DOMContentLoaded', initContactBackground);
+  
+  // 响应式调整
+  window.addEventListener('resize', debounce(initContactBackground, 100));
+  
+  function debounce(func: Function, wait: number) {
+    let timeout: NodeJS.Timeout;
+    return function executedFunction(...args: any[]) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+</script>
