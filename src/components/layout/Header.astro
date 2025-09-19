@@ -7,6 +7,7 @@ import { Icon } from "astro-icon/components";
 const currentPath = Astro.url.pathname;
 const routes = ["/", "/about-me"];
 
+const gitbook = "https://gitbook.yaco.email";
 const github = "https://github.com/OS-Lihua";
 const twitter = "https://www.x.com/0xYaCo";
 const linktree = "https://linktr.ee/0xYaCo";
@@ -15,8 +16,8 @@ const linktree = "https://linktr.ee/0xYaCo";
 const isActiveRoute = routes.includes(currentPath);
 
 const navItems = isActiveRoute
-  ? ["home", "experience", "projects", "blog", "friend", "about", "link"]
-  : ["home", "blog", "friend", "about", "link"]; // Change the items
+  ? ["experience", "projects", "blog", "friend", "about", "link"]
+  : ["blog", "friend", "about", "link"]; // Change the items
 ---
 
 <header
@@ -43,6 +44,7 @@ const navItems = isActiveRoute
         class="max-md:hidden flex items-center justify-center gap-5"
         role="list"
       >
+        <Social link={gitbook} iconName="gitbook" />
         <Social link={github} iconName="github" />
         <Social link={twitter} iconName="twitter" />
         <Social link={linktree} iconName="linktree" />
