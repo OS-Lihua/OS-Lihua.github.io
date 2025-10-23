@@ -10,6 +10,17 @@ image:
 
 我是YaCo, 一名充满热情的 `Web3` 开发者与社区贡献者。虽然我的专业背景与编程不直接相关, 但我对技术始终保持着浓厚的兴趣。通过开发者社区接触到 `Web3` 世界后, 我被区块链的去中心化理念深深吸引, 开始了我的 `Web3` 技术之旅。
 
+我们在被 AI 训练的时代，我无时无刻不使用 AI 训练自己。
+
+我是:
+- AI Agent 开发者(langchain,langgraph:js/py)
+- AI 工作流 开发者(n8n)
+- Web3 合约开发者(evm,neovm:solidity,rust,C#)
+- 前端开发者(react:ts/js)
+- 后端开发者(golang,rust,cpp)
+- 全栈开发者(next.js:ts/js)
+- vibe coding 开发者(cursor,roocode:openrouter,mcp)
+
 ## 教育背景 📚
 
 **哈尔滨师范大学** `2019.09 - 2023.06`
